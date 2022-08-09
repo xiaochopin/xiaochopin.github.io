@@ -1,0 +1,37 @@
+# Site settings
+title: 重生云
+author: chopin
+description: "在碧蓝中肆意遨游,缕缕阳光也为你闪耀."
+encoding: utf-8
+markdown: kramdown
+baseurl: 
+# Menu
+menu:
+  - archive.md
+  - about.md
+# Contact Icons
+contact:
+  - link: chopin:asdfqwerzxcv51@163.com
+    icon: fa-envelope-o
+  - link: https://github.com/xiao-chopin
+    icon: fa-github
+#  - link: https://twitter.com/crispgm
+#    icon: fa-twitter
+# GitHub Repo for your site
+issue_report:
+  github: xiao-chopin/blog.github.io
+# Google Analytics
+#google_analytics: UA-50708664-1
+# Disqus
+disqus:
+  shortname: chopin
+# Exclusion
+exclude:
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - jekyll-crisp-minimal-theme.gemspec
+  - screenshot.jpg
+  - /docs

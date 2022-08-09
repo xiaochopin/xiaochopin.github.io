@@ -1,0 +1,28 @@
+I"<div class="page-title" id="latest-posts">Latest Posts</div>
+<div class="archive-main">
+  
+    <div class="archive-item">
+      <div class="archive-date">August 08, 2022</div>
+      <div class="archive-title"><a href="/2022/08/08/%E5%B0%B1%E8%BF%99%E6%A0%B7%E5%90%A7,%E4%BD%A0%E5%A5%BD.html">就这样吧，你好</a></div>
+    </div>
+  
+    <div class="archive-item">
+      <div class="archive-date">July 24, 2017</div>
+      <div class="archive-title"><a href="/2017/07/24/introduction-to-jekyll-crisp-theme.html">Introduction to Jekyll Crisp Theme</a></div>
+    </div>
+  
+    <div class="archive-item">
+      <div class="archive-date">July 23, 2017</div>
+      <div class="archive-title"><a href="/2017/07/23/test-for-styles.html">Test for Styles</a></div>
+    </div>
+  
+    <div class="archive-item">
+      <div class="archive-date">July 22, 2017</div>
+      <div class="archive-title"><a href="/2017/07/22/pure-text.html">Pure Text Article</a></div>
+    </div>
+  
+</div>
+<p class="archive-more">
+  <a href="/archive.html">More...</a>
+</p>
+:ET
