@@ -1,6 +1,6 @@
 # Site settings
 title: 重生云
-author: chopin
+author: Chopin
 description: "在碧蓝中肆意遨游,缕缕阳光也为你闪耀."
 encoding: utf-8
 markdown: kramdown
@@ -11,7 +11,7 @@ menu:
   - about.md
 # Contact Icons
 contact:
-  - link: chopin:asdfqwerzxcv51@163.com
+  - link: Chopin:asdfqwerzxcv51@163.com
     icon: fa-envelope-o
   - link: https://github.com/xiao-chopin
     icon: fa-github
@@ -24,7 +24,7 @@ issue_report:
 #google_analytics: UA-50708664-1
 # Disqus
 disqus:
-  shortname: chopin
+  shortname: xiao-chopin
 # Exclusion
 exclude:
   - Rakefile
@@ -33,5 +33,5 @@ exclude:
   - LICENSE
   - README.md
   - jekyll-crisp-minimal-theme.gemspec
-  - screenshot.jpg
+#  - screenshot.jpg
   - /docs
