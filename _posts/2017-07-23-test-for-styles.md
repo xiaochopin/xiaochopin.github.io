@@ -64,4 +64,4 @@ And, I need some `inline code` here, which should be `long` enough. It is becaus
 2. Ordered 2
 
 
-[Go To Home Page](https://crispgm.com/)
+[Go To Home Page](https://blog.home-chopin.xyz/)
