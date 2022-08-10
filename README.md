@@ -1,1 +1,1 @@
-blog.home-chopin.xyz
+[blog.home-chopin.xyz](https://blog.home-chopin.xyz)
