@@ -23,3 +23,5 @@ permalink: /about.html
 
 想访问旧的网站?已迁移到
 [backup.home-chopin.xyz](https://backup.home-chopin.xyz/)
+
+>在碧蓝中肆意遨游,缕缕阳光也为你闪耀.
