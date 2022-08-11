@@ -6,9 +6,9 @@ permalink: /about.html
 
 <div class="page-title">关于重生云</div>
 
-重生云是我的个人blog,基于jekyll和github page.
+重生云是我的个人Blog,基于Jekyll和Github Page.
 
-虽然这个网站听起来像个跑路云服务器提供商,但这真的是一个blog(认真脸).
+虽然这个网站听起来像个跑路云服务器提供商,但这真的是一个Blog(认真脸).
 
 重生云,听起来个不明所以的名字,其实它真的是个不明所以的名字.
 
