@@ -8,12 +8,13 @@ baseurl:
 # Menu
 menu:
   - archive.md
+  - friends.md
   - about.md
 # Contact Icons
 contact:
-  - link: Chopin:asdfqwerzxcv51@163.com
+  - link: asdfqwerzxcv51@163.com
     icon: fa-envelope-o
-  - link: https://github.com/xiao-chopin
+  - link: xiao-chopin
     icon: fa-github
 #  - link: https://twitter.com/crispgm
 #    icon: fa-twitter
