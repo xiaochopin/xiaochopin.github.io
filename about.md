@@ -14,14 +14,14 @@ permalink: /about.html
 
 理所当然,这个站里的Posts都是不明所以的(莫名自豪).
 
-{% highlight js %}
+```ruby
 正在搜索 重生云
 你要找的是不是 姜米條
 //好奇怪诶
-{% endhighlight %}
+```
+
 不管怎么样,很高兴见到你.
 
-想访问旧的网站?已迁移到
-[backup.home-chopin.xyz](https://backup.home-chopin.xyz/)
+想访问旧的网站?已迁移到[backup.home-chopin.xyz](https://backup.home-chopin.xyz/)
 
 >在碧蓝中肆意遨游,缕缕阳光也为你闪耀.

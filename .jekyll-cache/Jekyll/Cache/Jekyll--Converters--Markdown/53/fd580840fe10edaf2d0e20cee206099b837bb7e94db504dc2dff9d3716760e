@@ -1,4 +1,4 @@
-I"�<div class="page-title">404 Not Found</div>
+I"�<div class="page-title">404 Not Found</div>
 
 <p>The resource you requested was not found. To (help me) handle the problem, please report the problem by <a href="https://github.com/xiao-chopin/blog.github.io/issues/new?title=[Report]%20404%20Not%20Found" target="_blank">creating an issue</a>.</p>
 
@@ -6,11 +6,11 @@
 
 <ul>
 
+  <li><a href="/2022/08/13/chatbot.html">基于Python的中文聊天bot</a></li>
+
   <li><a href="/2022/08/11/thunder7mb.html">只有7mb的精简版迅雷</a></li>
 
   <li><a href="/2022/08/08/hello.html">就这样吧，你好</a></li>
-
-  <li><a href="/2017/07/23/test-for-styles.html">Test for Styles</a></li>
 
 </ul>
 

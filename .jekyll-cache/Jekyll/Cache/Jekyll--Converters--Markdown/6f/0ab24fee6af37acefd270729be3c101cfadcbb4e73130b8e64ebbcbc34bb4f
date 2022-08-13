@@ -1,5 +1,10 @@
-I"<div class="page-title" id="latest-posts">Latest Posts</div>
+I"�<div class="page-title" id="archive">存档</div>
 <div class="archive-main">
+  
+    <div class="archive-item">
+      <div class="archive-date">August 13, 2022</div>
+      <div class="archive-title"><a href="/2022/08/13/chatbot.html">基于Python的中文聊天bot</a></div>
+    </div>
   
     <div class="archive-item">
       <div class="archive-date">August 11, 2022</div>
@@ -17,7 +22,4 @@
     </div>
   
 </div>
-<p class="archive-more">
-  <a href="/archive.html">More...</a>
-</p>
 :ET
