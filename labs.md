@@ -9,6 +9,6 @@ permalink: /labs.html
 
 量子虫洞(测试中)→[点击访问](https://xiao-chopin.github.io/Cyber-Wormhole/)
 
-项目已开源→[Cyber-Wormhole](https://xiao-chopin.github.io/Cyber-Wormhole/)
+项目已开源→[Cyber-Wormhole](https://github.com/xiao-chopin/Cyber-Wormhole)
 
 
