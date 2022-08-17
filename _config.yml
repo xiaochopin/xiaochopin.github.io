@@ -9,6 +9,7 @@ baseurl:
 menu:
   - archive.md
   - friends.md
+  - labs.md
   - about.md
 # Contact Icons
 contact:
