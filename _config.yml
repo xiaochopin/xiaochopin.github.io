@@ -1,4 +1,4 @@
-# Site settings
+﻿# Site settings
 title: 重生云
 author: Chopin
 description: "在碧蓝中肆意遨游,缕缕阳光也为你闪耀."
@@ -8,8 +8,7 @@ baseurl:
 # Menu
 menu:
   - archive.md
-  - friends.md
-  - labs.md
+  - menu.md
   - about.md
 # Contact Icons
 contact:

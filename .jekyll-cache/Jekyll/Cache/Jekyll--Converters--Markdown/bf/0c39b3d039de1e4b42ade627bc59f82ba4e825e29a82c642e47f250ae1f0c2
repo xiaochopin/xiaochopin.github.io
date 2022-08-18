@@ -1,13 +1,6 @@
----
-title: Labs
-layout: page
-permalink: /labs.html
----
-<div class="page-title">实验室</div>
+I"�<div class="page-title">实验室</div>
 
-
-<div id="project" class="things">
-  <div class="things-item">
+<div class="things-item">
     <div class="things-title">
       量子虫洞
     </div>
@@ -25,4 +18,5 @@ permalink: /labs.html
       </div>
     </div>
   </div>
-</div>
+
+:ET

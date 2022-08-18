@@ -1,4 +1,4 @@
-I"�<h4 id="简介">简介</h4>
+I"1<h4 id="简介">简介</h4>
 
 <p>基于<code class="language-plaintext highlighter-rouge">Python</code>直接调用大厂的<code class="language-plaintext highlighter-rouge">API</code>实现的聊天效果,项目已开源→<a href="https://github.com/xiao-chopin/SimplifiedChinese-chatbot">SimplifiedChinese-chatbot</a>,欢迎给我star.</p>
 
@@ -18,12 +18,12 @@
 
 <h4 id="代码解析">代码解析</h4>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">start</span> <span class="o">=</span> <span class="n">input</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
-<span class="c1">#获取初始化输入</span>
-<span class="k">while</span> <span class="n">start</span> <span class="o">==</span> <span class="s2">"start"</span><span class="p">:</span>
-<span class="c1">#判断初始化口令</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">input</span><span class="p">(</span><span class="s2">""</span><span class="p">).</span><span class="nf">replace</span><span class="p">(</span><span class="s2">"你"</span><span class="p">,</span><span class="s2">"我"</span><span class="p">).</span><span class="nf">replace</span><span class="p">(</span><span class="s2">"吗"</span><span class="p">,</span><span class="s2">""</span><span class="p">).</span><span class="nf">replace</span><span class="p">(</span><span class="s2">"？"</span><span class="p">,</span><span class="s2">"！"</span><span class="p">)</span>
-<span class="c1">#获取用户输入并调用API进行输出</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>start = input("")
+#获取初始化输入
+while start == "start":
+#判断初始化口令
+print(input("").replace("你","我").replace("吗","").replace("？","！")
+#获取用户输入并调用API进行输出
 </code></pre></div></div>
 
 <p>在最后一行代码中,<code class="language-plaintext highlighter-rouge">input("")</code>为获取输入用,而后面一长串东西为<code class="language-plaintext highlighter-rouge">老师好我是萧同学文化传媒有限公司</code>AI聊天bot的<code class="language-plaintext highlighter-rouge">API密钥</code>,我搞了一下午才编出来的().</p>
