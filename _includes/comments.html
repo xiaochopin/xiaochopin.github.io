@@ -1,20 +1,3 @@
----
-layout: default
----
-<div class="article">
-  <div class="article-head">
-    <div class="article-title">{{page.title}}</div>
-    <div class="article-date">{{page.date | date:"%B %d, %Y"}}</div>
-  </div>
-  <div class="article-main">
-    {{ content }}
-  </div>
-      <section class="post-footer-item comment">
-      <h2 id="comments">评论</h2>
-      
-
-
-
 <!-- Gitalk评论框 start -->
 <!-- Link Gitalk 的支持文件  -->
         <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
@@ -34,10 +17,3 @@ layout: default
             gitalk.render('gitalk-container');
         </script> 
 <!-- Gitalk end -->
-
-
-    </section>
-	
-  <div id="disqus_thread" class="article-comment"></div>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
