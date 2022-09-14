@@ -1,0 +1,18 @@
+I"<<p>Github设置找到<code class="language-plaintext highlighter-rouge">Settings-Developer settings-OAuth Apps</code>,点击<code class="language-plaintext highlighter-rouge">New OAuth App</code>进行申请.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Application name //名称
+Homepage URL //你的主页链接,要加上https://
+Application description //描述
+Authorization callback URL //也是填写主页链接,注意事项同上
+</code></pre></div></div>
+
+<p>点击<code class="language-plaintext highlighter-rouge">Resgister application</code></p>
+
+<p>进入刚刚申请的<code class="language-plaintext highlighter-rouge">OAuth App</code>的详情页,你可以找到你的<code class="language-plaintext highlighter-rouge">Client ID</code>.</p>
+
+<p>通过<code class="language-plaintext highlighter-rouge">Generate a new a client secret</code>获取一个<code class="language-plaintext highlighter-rouge">Client secrets</code></p>
+
+<blockquote>
+  <p>只会显示一次(好像),注意保存.</p>
+</blockquote>
+:ET
