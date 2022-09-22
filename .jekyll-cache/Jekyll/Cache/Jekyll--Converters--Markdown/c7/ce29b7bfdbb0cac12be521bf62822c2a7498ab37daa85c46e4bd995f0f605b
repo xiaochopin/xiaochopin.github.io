@@ -1,5 +1,15 @@
-I"�<div class="page-title" id="archive">存档</div>
+I"$<div class="page-title" id="archive">存档</div>
 <div class="archive-main">
+  
+    <div class="archive-item">
+      <div class="archive-date">September 19, 2022</div>
+      <div class="archive-title"><a href="/2022/09/19/gitalk.html">为Jekyll添加Gitalk评论插件</a></div>
+    </div>
+  
+    <div class="archive-item">
+      <div class="archive-date">September 14, 2022</div>
+      <div class="archive-title"><a href="/2022/09/14/oauthapp.html">申请Github OAuth App</a></div>
+    </div>
   
     <div class="archive-item">
       <div class="archive-date">August 13, 2022</div>

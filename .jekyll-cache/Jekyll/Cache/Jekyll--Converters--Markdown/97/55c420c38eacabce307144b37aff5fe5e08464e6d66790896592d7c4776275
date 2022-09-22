@@ -1,4 +1,4 @@
-I"<<p>Github设置找到<code class="language-plaintext highlighter-rouge">Settings-Developer settings-OAuth Apps</code>,点击<code class="language-plaintext highlighter-rouge">New OAuth App</code>进行申请.</p>
+I"J<p>Github设置找到<code class="language-plaintext highlighter-rouge">Settings-Developer settings-OAuth Apps</code>,点击<code class="language-plaintext highlighter-rouge">New OAuth App</code>进行申请.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Application name //名称
 Homepage URL //你的主页链接,要加上https://
@@ -13,6 +13,6 @@ Authorization callback URL //也是填写主页链接,注意事项同上
 <p>通过<code class="language-plaintext highlighter-rouge">Generate a new a client secret</code>获取一个<code class="language-plaintext highlighter-rouge">Client secrets</code></p>
 
 <blockquote>
-  <p>只会显示一次(好像),注意保存.</p>
+  <p>Client secrets只会显示一次(好像),注意保存.</p>
 </blockquote>
 :ET
