@@ -7,7 +7,6 @@ markdown: kramdown
 baseurl: 
 # Menu
 menu:
-  - archive.md
   - menu.md
   - about.md
 # Contact Icons
