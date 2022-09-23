@@ -1,0 +1,50 @@
+I"�<p>我的博客基于<code class="language-plaintext highlighter-rouge">Jekyll</code>静态博客生成器,托管在<code class="language-plaintext highlighter-rouge">Github</code>上,自然而然是没有评论功能的,不过可以使用前端评论插件<code class="language-plaintext highlighter-rouge">Gitalk</code>解决这个问题.</p>
+
+<blockquote>
+  <p>注:本教程基于主题<code class="language-plaintext highlighter-rouge">Minimal</code>,其他主题应该也适用(应该).<a href="https://github.com/crispgm/minimal">crispgm/minimal</a>.</p>
+</blockquote>
+
+<p>申请<code class="language-plaintext highlighter-rouge">OAuth App</code>,获取<code class="language-plaintext highlighter-rouge">Client ID</code>和<code class="language-plaintext highlighter-rouge">Client secrets</code>备用→<a href="https://blog.home-chopin.xyz/2022/09/14/oauthapp.html">教程</a>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Gitalk</code>基于<code class="language-plaintext highlighter-rouge">Github</code>的<code class="language-plaintext highlighter-rouge">issue</code>功能,需新建一个<code class="language-plaintext highlighter-rouge">Github仓库</code>用于存放issue,或者也可以直接使用你用于托管Jekyll博客的Github仓库.</p>
+
+<p>进入<code class="language-plaintext highlighter-rouge">Jekyll</code>根目录,编辑<code class="language-plaintext highlighter-rouge">\_layouts\post.html</code>,在末尾另起一行引入.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Gitalk评论框 start --&gt;
+&lt;!-- Link Gitalk 的支持文件  --&gt;
+  &lt;link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"&gt;
+  &lt;script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js&gt;&lt;/script&gt; 
+  &lt;div id="gitalk-container"&gt;&lt;/div&gt;
+  &lt;script type="text/javascript"&gt;
+  var gitalk = new Gitalk({
+  // gitalk的主要参数
+  clientID: '你的ClientID',
+  clientSecret: '你的ClientSecret',
+  repo: '你用于储存评论的Github仓库地址',
+  owner: '你的Github账户名',
+  admin: ['你的Github账户名'],
+  id:window.location.pathname,
+  });
+  gitalk.render('gitalk-container');
+  &lt;/script&gt; 
+&lt;!-- Gitalk end --&gt;
+</code></pre></div></div>
+
+<p>终端执行<code class="language-plaintext highlighter-rouge">jekyll server --watch</code>启动本地Jekyll服务</p>
+
+<p>访问<code class="language-plaintext highlighter-rouge">127.0.0.1:4000</code>进入网站,进入一篇博文的页面确认评论区位置是否正常.</p>
+
+<p>把你的修改<code class="language-plaintext highlighter-rouge">push</code>到<code class="language-plaintext highlighter-rouge">Github</code>上.</p>
+
+<p>按理来说一切都搞定了,我的心灵获得了暂时的平静.</p>
+
+<p>吗?</p>
+
+<p>发现如下提示.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>未找到相关的 Issues 进行评论
+请联系 @xiao-chopin 初始化创建
+</code></pre></div></div>
+
+<p>问题不大,首先准备好<code class="language-plaintext highlighter-rouge">科学网络工具</code>,点击<code class="language-plaintext highlighter-rouge">使用GitHub登录</code>,然后就搞定了.</p>
+:ET
