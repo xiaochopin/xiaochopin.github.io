@@ -22,6 +22,4 @@ permalink: /about.html
 
 不管怎么样,很高兴见到你.
 
-想访问旧的网站?已迁移到[backup.home-chopin.xyz](https://backup.home-chopin.xyz/)
-
 >在碧蓝中肆意遨游,缕缕阳光也为你闪耀.
