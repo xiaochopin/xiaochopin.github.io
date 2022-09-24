@@ -22,9 +22,6 @@ issue_report:
   github: xiaochopin/xiaochopin.github.io
 # Google Analytics
 #google_analytics: 
-# Disqus
-disqus:
-  shortname: xiaochopin
 # Exclusion
 exclude:
   - Rakefile
