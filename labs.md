@@ -13,10 +13,10 @@ permalink: /labs.html
     </div>
     <div class="things-link">
       <div>
-        <a href="https://xiao-chopin.github.io/Cyber-Wormhole/">Cyber-Wormhole</a>
+        <a href="https://xiaochopin.github.io/Cyber-Wormhole/">Cyber-Wormhole</a>
       </div>
       <div>
-        <a href="https://github.com/xiao-chopin/Cyber-Wormhole">GitHub</a>
+        <a href="https://github.com/xiaochopin/Cyber-Wormhole">GitHub</a>
       </div>
     </div>
     <div class="things-list">

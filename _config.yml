@@ -13,18 +13,18 @@ menu:
 contact:
   - link: mailto:asdfqwerzxcv51@163.com
     icon: fa-envelope-o
-  - link: https://github.com/xiao-chopin
+  - link: https://github.com/xiaochopin
     icon: fa-github
 #  - link: 
 #    icon: fa-twitter
 # GitHub Repo for your site
 issue_report:
-  github: xiao-chopin/blog.github.io
+  github: xiaochopin/xiaochopin.github.io
 # Google Analytics
 #google_analytics: 
 # Disqus
 disqus:
-  shortname: xiao-chopin
+  shortname: xiaochopin
 # Exclusion
 exclude:
   - Rakefile
@@ -33,4 +33,3 @@ exclude:
   - LICENSE
   - README.md
   - jekyll-crisp-minimal-theme.gemspec
-  - /docs
