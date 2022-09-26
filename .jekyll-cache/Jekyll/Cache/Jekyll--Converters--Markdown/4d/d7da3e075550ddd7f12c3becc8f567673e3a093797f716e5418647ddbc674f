@@ -1,4 +1,4 @@
-I"-<div class="page-title">关于重生云</div>
+I"�<div class="page-title">关于重生云</div>
 
 <p><code class="language-plaintext highlighter-rouge">重生云</code>是我的个人Blog,基于<code class="language-plaintext highlighter-rouge">Jekyll</code>和<code class="language-plaintext highlighter-rouge">Github Page</code>.</p>
 
@@ -24,7 +24,7 @@
     <p>本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-NC-SA 4.0</a>许可协议。转载请注明来自<a href="https://github.com/xiaochopin">xiaochopin</a></p>
   </li>
   <li>
-    <p><a href="https://github.com/xiaochopin/xiaochopin.github.io">站点源码</a>采用MIT许可协议</p>
+    <p><a href="https://github.com/xiaochopin/xiaochopin.github.io">站点源码</a>采用<a href="https://github.com/xiaochopin/xiaochopin.github.io/blob/main/LICENSE">MIT</a>许可协议</p>
   </li>
 </ul>
 :ET
