@@ -22,7 +22,10 @@ permalink: /about.html
 
 不管怎么样,很高兴见到你.
 
->在碧蓝中肆意遨游,缕缕阳光也为你闪耀.
+>在天空上,自由飞翔.  
+朵朵白云都为你护航.  
+在碧蓝中肆意遨游.  
+缕缕阳光也为你闪耀.
 
 * 本博客所有文章除特别声明外，均采用[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)许可协议。转载请注明来自[xiaochopin](https://github.com/xiaochopin)
 
