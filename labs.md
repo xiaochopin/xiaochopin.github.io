@@ -18,6 +18,17 @@ permalink: /labs.html
       <div>
         <a href="https://github.com/xiaochopin/Cyber-Wormhole">GitHub</a>
       </div>
+      <div class="things-item">
+    <div class="things-title">
+      恶臭数字便成器
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="https://xiaochopin.github.io/homo/">homo</a>
+      </div>
+      <div>
+        <a href="https://github.com/xiaochopin/homo">GitHub</a>
+      </div>
     </div>
     <div class="things-list">
       <div>
