@@ -5,11 +5,10 @@ permalink: /labs.html
 ---
 <div class="page-title">实验室</div>
 
-
 <div id="project" class="things">
   <div class="things-item">
     <div class="things-title">
-      量子虫洞
+      赛博虫洞
     </div>
     <div class="things-link">
       <div>
@@ -18,13 +17,20 @@ permalink: /labs.html
       <div>
         <a href="https://github.com/xiaochopin/Cyber-Wormhole">GitHub</a>
       </div>
-      <div class="things-item">
+    </div>
+    <div class="things-list">
+      <div>
+        来自东方的神秘力量,别让掌海知道了捏.
+      </div>
+    </div>
+  </div>
+  <div class="things-item">
     <div class="things-title">
-      恶臭数字便成器
+      恶臭数字便证器
     </div>
     <div class="things-link">
       <div>
-        <a href="https://xiaochopin.github.io/homo/">homo</a>
+        <a href="https://xiaochopin.github.io/homo/">Homo</a>
       </div>
       <div>
         <a href="https://github.com/xiaochopin/homo">GitHub</a>
@@ -32,7 +38,7 @@ permalink: /labs.html
     </div>
     <div class="things-list">
       <div>
-        别让掌海知道了捏.
+        一个将任意数字分解成 114514 构成的公式的工具.
       </div>
     </div>
   </div>
