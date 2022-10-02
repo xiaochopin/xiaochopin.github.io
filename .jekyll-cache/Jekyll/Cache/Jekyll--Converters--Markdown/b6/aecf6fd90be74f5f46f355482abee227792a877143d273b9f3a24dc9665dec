@@ -1,4 +1,4 @@
-I"<div class="page-title">实验室</div>
+I"V<div class="page-title">实验室</div>
 
 <div id="project" class="things">
   <div class="things-item">
@@ -12,12 +12,24 @@
       <div>
         <a href="https://github.com/xiaochopin/Cyber-Wormhole">GitHub</a>
       </div>
-    </div>
+    <div class="things-item">
+      <div class="things-title">
+      恶臭数字便成器
+      </div>
+      <div class="things-link">
+        <div>
+          <a href="https://xiaochopin.github.io/homo/">homo</a>
+        </div>
+        <div>
+          <a href="https://github.com/xiaochopin/homo">GitHub</a>
+        </div>
+      </div>
     <div class="things-list">
       <div>
-        别让掌海知道了捏.
+        哼哼啊啊.
       </div>
     </div>
   </div>
 </div>
+</div></div>
 :ET

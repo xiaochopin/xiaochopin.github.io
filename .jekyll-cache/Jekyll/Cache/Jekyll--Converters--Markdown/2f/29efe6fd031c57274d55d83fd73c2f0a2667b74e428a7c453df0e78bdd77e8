@@ -1,0 +1,106 @@
+I"N<p>This is not an actual post. It is a test post for styles, which contains all available markdown syntax to prove the effect of UI styles.</p>
+
+<h1 id="h1---heading-1">H1 - heading 1</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<h2 id="h2---heading-2">H2 - heading 2</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<h3 id="h3---heading-3">H3 - heading 3</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<h4 id="h4---heading-4">H4 - heading 4</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<h5 id="h5---heading-5">H5 - heading 5</h5>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hello_world</span>
+  <span class="nb">puts</span> <span class="s2">"hello, world"</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>And, I need some <code class="language-plaintext highlighter-rouge">inline code</code> here, which should be <code class="language-plaintext highlighter-rouge">long</code> enough. It is because that <code class="language-plaintext highlighter-rouge">inline code</code> in different <code class="language-plaintext highlighter-rouge">lines</code> can <code class="language-plaintext highlighter-rouge">overflow</code> on each other.</p>
+
+<hr />
+
+<blockquote>
+  <p>Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</blockquote>
+
+<blockquote>
+  <p>Nested blockquote:</p>
+  <blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </blockquote>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Style</th>
+      <th>Is</th>
+      <th>Here</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>gold</td>
+      <td>David</td>
+      <td>Tokyo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>platinum</td>
+      <td>Aaron</td>
+      <td>Beijing</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>silver</td>
+      <td>Gareth</td>
+      <td>San Francisco</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>diamond</td>
+      <td>Mitchell</td>
+      <td>London</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>List 1
+    <ul>
+      <li>Item 1</li>
+      <li><a href="/">Item 2</a></li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <code class="language-plaintext highlighter-rouge">labore</code> et dolore magna aliqua.</li>
+    </ul>
+  </li>
+  <li>List 2</li>
+  <li><a href="/">List 3</a></li>
+</ul>
+
+<ol>
+  <li>
+    <p>Ordered 1</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <code class="language-plaintext highlighter-rouge">labore</code> et dolore magna aliqua.</p>
+  </li>
+  <li>
+    <p>Ordered 2</p>
+  </li>
+</ol>
+
+<p><a href="/">Go To Home Page</a></p>
+:ET
