@@ -1,0 +1,37 @@
+I".<h4 id="简介">简介</h4>
+
+<p>基于<code class="language-plaintext highlighter-rouge">Python</code>直接调用大厂的<code class="language-plaintext highlighter-rouge">API</code>实现的聊天效果,项目已开源→<a href="https://github.com/xiaochopin/SimplifiedChinese-chatbot">SimplifiedChinese-chatbot</a>,欢迎给我star.</p>
+
+<h4 id="项目演示">项目演示</h4>
+
+<p>首先<code class="language-plaintext highlighter-rouge">clone</code>项目文件.<br />
+进入项目文件夹.</p>
+
+<p>在该目录打开终端.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">python</span> <span class="n">chatbot</span><span class="p">.</span><span class="nf">py</span> <span class="sr">//</span><span class="err">启动项目</span>
+<span class="n">start</span> <span class="sr">//</span><span class="err">初始化</span>
+<span class="err">你有病啊？</span> <span class="o">/</span><span class="sr">/输入
+我有病啊！ /</span><span class="o">/</span><span class="err">输出</span>
+</code></pre></div></div>
+
+<h4 id="代码解析">代码解析</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>start = input("")
+#获取初始化输入
+while start == "start":
+#判断初始化口令
+print(input("").replace("你","我").replace("吗","").replace("？","！")
+#获取用户输入并调用API进行输出
+</code></pre></div></div>
+
+<p>在最后一行代码中,<code class="language-plaintext highlighter-rouge">input("")</code>为获取输入用,而后面一长串东西为<code class="language-plaintext highlighter-rouge">老师好我是萧同学文化传媒有限公司</code>AI聊天bot的<code class="language-plaintext highlighter-rouge">API密钥</code>,我搞了一下午才编出来的().</p>
+
+<blockquote>
+  <p>太美丽啦北邮,哎呀这不是赛博丁真吗.</p>
+</blockquote>
+
+<p>给!我!star!啊啊啊啊啊啊啊!</p>
+
+<p><img src="https://s2.loli.net/2022/08/13/bYXWiam1PZfKec9.jpg" alt="ecdc2611bd831ffde4d1a0b02bb053ca.jpeg" /></p>
+:ET
