@@ -1,11 +1,12 @@
 ---
-title: Labs
+title: Lab
 layout: page
-permalink: /labs.html
+permalink: /lab.html
 ---
 <div class="page-title">实验室</div>
 
 <div id="project" class="things">
+
   <div class="things-item">
     <div class="things-title">
       赛博虫洞
@@ -24,6 +25,7 @@ permalink: /labs.html
       </div>
     </div>
   </div>
+
   <div class="things-item">
     <div class="things-title">
       恶臭数字便证器
@@ -42,6 +44,7 @@ permalink: /labs.html
       </div>
     </div>
   </div>
+
   <div class="things-item">
     <div class="things-title">
       B Power
@@ -57,6 +60,7 @@ permalink: /labs.html
       </div>
     </div>
   </div>
+
   <div class="things-item">
     <div class="things-title">
       简体中文聊天bot
@@ -75,4 +79,21 @@ permalink: /labs.html
       </div>
     </div>
   </div>
+
+  <div class="things-item">
+    <div class="things-title">
+      Never gonna give VB up
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="https://github.com/xiaochopin/Never-gonna-give-VB-up">GitHub</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        24kb纯骗.
+      </div>
+    </div>
+  </div>
+
 </div>
