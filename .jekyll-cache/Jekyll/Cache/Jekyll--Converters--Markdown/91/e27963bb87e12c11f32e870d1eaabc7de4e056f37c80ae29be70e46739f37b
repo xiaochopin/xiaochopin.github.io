@@ -1,6 +1,7 @@
-I"<div class="page-title">实验室</div>
+I"U<div class="page-title">实验室</div>
 
 <div id="project" class="things">
+
   <div class="things-item">
     <div class="things-title">
       赛博虫洞
@@ -19,6 +20,7 @@
       </div>
     </div>
   </div>
+
   <div class="things-item">
     <div class="things-title">
       恶臭数字便证器
@@ -37,6 +39,7 @@
       </div>
     </div>
   </div>
+
   <div class="things-item">
     <div class="things-title">
       B Power
@@ -52,13 +55,14 @@
       </div>
     </div>
   </div>
+
   <div class="things-item">
     <div class="things-title">
-      SimplifiedChinese-chatbot
+      简体中文聊天bot
     </div>
     <div class="things-link">
       <div>
-        <a href="/2022/08/13/chatbot.html">基于Python的中文聊天bot</a>
+        <a href="/2022/08/13/chatbot.html">详情</a>
       </div>
       <div>
         <a href="https://github.com/xiaochopin/SimplifiedChinese-chatbot">GitHub</a>
@@ -70,5 +74,22 @@
       </div>
     </div>
   </div>
+
+  <div class="things-item">
+    <div class="things-title">
+      Never gonna give VB up
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="https://github.com/xiaochopin/Never-gonna-give-VB-up">GitHub</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        24kb纯骗.
+      </div>
+    </div>
+  </div>
+
 </div>
 :ET
