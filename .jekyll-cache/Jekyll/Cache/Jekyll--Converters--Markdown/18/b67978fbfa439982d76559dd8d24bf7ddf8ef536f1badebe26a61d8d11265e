@@ -1,6 +1,7 @@
-I"�<div class="page-title">实验室</div>
+I"�	<div class="page-title">实验室</div>
 
 <div id="project" class="things">
+
   <div class="things-item">
     <div class="things-title">
       赛博虫洞
@@ -19,6 +20,7 @@
       </div>
     </div>
   </div>
+
   <div class="things-item">
     <div class="things-title">
       恶臭数字便证器
@@ -37,6 +39,7 @@
       </div>
     </div>
   </div>
+
   <div class="things-item">
     <div class="things-title">
       B Power
@@ -52,6 +55,7 @@
       </div>
     </div>
   </div>
+
   <div class="things-item">
     <div class="things-title">
       简体中文聊天bot
@@ -67,6 +71,41 @@
     <div class="things-list">
       <div>
         基于Python实现的聊天.
+      </div>
+    </div>
+  </div>
+
+  <div class="things-item">
+    <div class="things-title">
+      Never gonna give VB up
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="https://github.com/xiaochopin/Never-gonna-give-VB-up">GitHub</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        24kb纯骗.
+      </div>
+    </div>
+  </div>
+
+  <div class="things-item">
+    <div class="things-title">
+      Inhere
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="https://xiaochopin.github.io/Inhere/">Page</a>
+      </div>
+      <div>
+        <a href="https://github.com/xiaochopin/Inhere">Github</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        旧的起始页.
       </div>
     </div>
   </div>
