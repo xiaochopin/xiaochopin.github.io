@@ -1,4 +1,4 @@
-I"�<div class="page-title">实验室</div>
+I"<div class="page-title">实验室</div>
 
 <div id="project" class="things">
   <div class="things-item">
@@ -34,6 +34,39 @@
     <div class="things-list">
       <div>
         一个将任意数字分解成 114514 构成的公式的工具.
+      </div>
+    </div>
+  </div>
+  <div class="things-item">
+    <div class="things-title">
+      B Power
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="https://github.com/xiaochopin/B-Power">GitHub</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        The future of the Internet.
+      </div>
+    </div>
+  </div>
+  <div class="things-item">
+    <div class="things-title">
+      SimplifiedChinese-chatbot
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="/2022/08/13/chatbot.html">基于Python的中文聊天bot</a>
+      </div>
+      <div>
+        <a href="https://github.com/xiaochopin/SimplifiedChinese-chatbot">GitHub</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        基于Python实现的聊天.
       </div>
     </div>
   </div>
