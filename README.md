@@ -1,4 +1,4 @@
-## [blog.home-chopin.xyz](https://blog.home-chopin.xyz)
+## [重生云](https://home-chopin.xyz)
 
 本博客基于主题[crispgm/minimal](https://github.com/crispgm/minimal).
 
@@ -28,7 +28,7 @@ gem install jekyll-crisp-theme --pre
 
 #### Gitalk
 
-修改`\_layouts\post.html`，参数注释详情请见→[为Jekyll添加Gitalk评论插件](https://blog.home-chopin.xyz/2022/09/22/gitalk.html)
+修改`\_layouts\post.html`，参数注释详情请见→[为Jekyll添加Gitalk评论插件](https://home-chopin.xyz/2022/09/22/gitalk.html)
 
 ## License
 
