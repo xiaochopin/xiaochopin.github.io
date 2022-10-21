@@ -42,4 +42,37 @@ permalink: /labs.html
       </div>
     </div>
   </div>
+  <div class="things-item">
+    <div class="things-title">
+      B Power
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="https://github.com/xiaochopin/B-Power">GitHub</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        The future of the Internet.
+      </div>
+    </div>
+  </div>
+  <div class="things-item">
+    <div class="things-title">
+      简体中文聊天bot
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="/2022/08/13/chatbot.html">详情</a>
+      </div>
+      <div>
+        <a href="https://github.com/xiaochopin/SimplifiedChinese-chatbot">GitHub</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        基于Python实现的聊天.
+      </div>
+    </div>
+  </div>
 </div>
