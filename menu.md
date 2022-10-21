@@ -8,7 +8,7 @@ permalink: /menu.html
 [Archive 存档](/archive.html)
 
 
-[Labs 实验室](/lab.html)
+[Lab 实验室](/lab.html)
 
 
 [Friends 友情链接](/friends.html)
