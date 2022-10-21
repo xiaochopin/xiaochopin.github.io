@@ -96,4 +96,23 @@ permalink: /lab.html
     </div>
   </div>
 
+  <div class="things-item">
+    <div class="things-title">
+      Inhere
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="https://xiaochopin.github.io/Inhere/">Page</a>
+      </div>
+      <div>
+        <a href="https://github.com/xiaochopin/Inhere">Github</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        旧的起始页.
+      </div>
+    </div>
+  </div>
+  
 </div>
