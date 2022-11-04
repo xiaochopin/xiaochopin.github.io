@@ -20,8 +20,6 @@ contact:
 # GitHub Repo for your site
 issue_report:
   github: xiaochopin/xiaochopin.github.io
-# Google Analytics
-#google_analytics: 
 # Exclusion
 exclude:
   - Rakefile
