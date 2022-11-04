@@ -35,7 +35,7 @@ permalink: /lab.html
         <a href="https://xiaochopin.github.io/homo/">Homo</a>
       </div>
       <div>
-        <a href="https://github.com/xiaochopin/homo">GitHub</a>
+        <a href="https://github.com/xiaochopin/Homo">GitHub</a>
       </div>
     </div>
     <div class="things-list">
