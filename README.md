@@ -24,11 +24,11 @@ gem install jekyll-crisp-theme --pre
 
 #### 配色
 
-修改`\assets\css\style.scss`,具体注释已写入.
+修改`/assets/css/style.scss`,具体注释已写入.
 
 #### Gitalk
 
-修改`\_layouts\post.html`，参数注释详情请见→[为Jekyll添加Gitalk评论插件](https://home-chopin.xyz/2022/09/22/gitalk.html)
+修改`/_layouts/post.html`，参数注释详情请见→[为Jekyll添加Gitalk评论插件](https://home-chopin.xyz/2022/09/22/gitalk.html)
 
 ## License
 
