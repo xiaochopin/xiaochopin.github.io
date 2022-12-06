@@ -1,5 +1,10 @@
-I"j<div class="page-title" id="latest-posts">Latest Posts</div>
+I"<div class="page-title" id="archive">存档</div>
 <div class="archive-main">
+  
+    <div class="archive-item">
+      <div class="archive-date">December 06, 2022</div>
+      <div class="archive-title"><a href="/2022/12/06/letthebulletsfly.html">张麻子向汤师爷请教治理鹅城的办法</a></div>
+    </div>
   
     <div class="archive-item">
       <div class="archive-date">September 22, 2022</div>
@@ -32,7 +37,4 @@
     </div>
   
 </div>
-<p class="archive-more">
-  <a href="/archive.html">More...</a>
-</p>
 :ET
