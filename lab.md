@@ -32,7 +32,7 @@ permalink: /lab.html
     </div>
     <div class="things-link">
       <div>
-        <a href="https://xiaochopin.github.io/homo/">Homo</a>
+        <a href="https://xiaochopin.github.io/Homo/">Homo</a>
       </div>
       <div>
         <a href="https://github.com/xiaochopin/Homo">GitHub</a>
