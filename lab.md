@@ -51,6 +51,9 @@ permalink: /lab.html
     </div>
     <div class="things-link">
       <div>
+        <a href="/2022/12/09/bpower.html">详情</a>
+      </div>
+      <div>
         <a href="https://github.com/xiaochopin/B-Power">GitHub</a>
       </div>
     </div>
