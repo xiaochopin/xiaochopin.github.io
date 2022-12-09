@@ -1,5 +1,10 @@
-I"�<div class="page-title" id="latest-posts">Latest Posts</div>
+I"�<div class="page-title" id="latest-posts">Latest Posts</div>
 <div class="archive-main">
+  
+    <div class="archive-item">
+      <div class="archive-date">December 09, 2022</div>
+      <div class="archive-title"><a href="/2022/12/09/bpower.html">B Power</a></div>
+    </div>
   
     <div class="archive-item">
       <div class="archive-date">December 06, 2022</div>
@@ -24,11 +29,6 @@
     <div class="archive-item">
       <div class="archive-date">August 11, 2022</div>
       <div class="archive-title"><a href="/2022/08/11/thunder7mb.html">只有7mb的精简版迅雷</a></div>
-    </div>
-  
-    <div class="archive-item">
-      <div class="archive-date">August 08, 2022</div>
-      <div class="archive-title"><a href="/2022/08/08/hello.html">新的开始</a></div>
     </div>
   
 </div>
