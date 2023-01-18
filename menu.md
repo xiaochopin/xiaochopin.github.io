@@ -3,7 +3,7 @@ title: Menu
 layout: page
 permalink: /menu.html
 ---
-<div class="page-title">目录</div>
+<div class="article-title">目录</div>
 
 [Archive 存档](/archive.html)
 

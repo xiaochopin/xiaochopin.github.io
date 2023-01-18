@@ -3,7 +3,7 @@ title: Archive
 layout: page
 ---
 
-<div class="page-title" id="archive">存档</div>
+<div class="article-title" id="archive">存档</div>
 <div class="archive-main">
   {% for post in site.posts %}
     <div class="archive-item">
