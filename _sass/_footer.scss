@@ -1,5 +1,5 @@
-// Theme of Crisp Blog
-// Copyright(c) David Zhang, 2017
+// Theme of 重生云
+// Copyright(c) chopin, 2023
 
 footer {
   font-size: 1rem;
@@ -27,15 +27,22 @@ footer {
 
   a {
     color: $main-color;
-    padding-left: .8rem;
+    padding-left: .5rem;
   }
 
   &:hover {
     a {
-      color: $light-color;
-
+      color: $main-color;
+      position:relative;
+      //覆盖link的动态underline样式
+      &::after{
+      content:'';
+      transform: scale3d(0,1,1);
+         }
+      &:hover::after {
+      }
       &:hover {
-        color: $main-color;
+        color: $light-color;
       }
     }
   }

@@ -1,5 +1,5 @@
-// Theme of Crisp Blog
-// Copyright(c) David Zhang, 2017
+// Theme of 重生云
+// Copyright(c) chopin, 2023
 
 .archive-main {
   margin: 1rem 0;
@@ -13,14 +13,14 @@
 		/*开始时候下划线的宽度为100%*/
 		width:100%;
 		height:1px;
+    left:0;
 		position:absolute;
 		bottom:2px;
 		background:#5e81ac;
 		transition:all 0.1s ease-in-out;
 		/*通过transform的缩放scale来让初始时x轴为0*/
 		transform: scale3d(0,1,1);
-		/*将坐标原点移到元素的中间，以原点为中心进行缩放*/
-		transform-origin:50% 0;
+
        }
     &:hover::after {
       transform:scale3d(1,1,1);
@@ -51,6 +51,7 @@
 		display:block;
 		/*开始时候下划线的宽度为100%*/
 		width:100%;
+    left:0;
 		height:1px;
 		position:absolute;
 		bottom:1px;
@@ -58,8 +59,6 @@
 		transition:all 0.15s ease-in-out;
 		/*通过transform的缩放scale来让初始时x轴为0*/
 		transform: scale3d(0,1,1);
-		/*将坐标原点移到元素的中间，以原点为中心进行缩放*/
-		transform-origin:50% 0;
        }
     &:hover::after {
       transform:scale3d(1,1,1);
