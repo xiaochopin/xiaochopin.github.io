@@ -2,7 +2,7 @@
 title: Home
 layout: page
 ---
-<div class="article-title" id="latest-posts">Latest Posts</div>
+<div class="page-title" id="latest-posts">Latest Posts</div>
 <div class="archive-main">
   {% for post in site.posts limit:6 %}
     <div class="archive-item">

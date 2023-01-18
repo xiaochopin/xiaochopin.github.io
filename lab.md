@@ -3,7 +3,7 @@ title: Lab
 layout: page
 permalink: /lab.html
 ---
-<div class="article-title">实验室</div>
+<div class="page-title">实验室</div>
 
 <div id="project" class="things">
 

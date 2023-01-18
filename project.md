@@ -3,7 +3,7 @@ title: Project
 layout: page
 ---
 
-<div class="article-title">Project</div>
+<div class="page-title">Project</div>
 
 <div id="project" class="things">
   <div class="things-item">
