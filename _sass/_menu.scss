@@ -56,7 +56,7 @@
 			height:2px;
 			position:absolute;
 			bottom:1px;
-			background:#adb5bd;
+			background: $light-color;
 			transition:all 0.1s ease-in-out;
 			/*通过transform的缩放scale来让初始时x轴为0*/
 			transform: scale3d(0,1,1);
