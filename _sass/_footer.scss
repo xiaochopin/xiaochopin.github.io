@@ -40,6 +40,7 @@ footer {
       transform: scale3d(0,1,1);
          }
       &:hover::after {
+        //就用空规则集
       }
       &:hover {
         color: $light-color;
