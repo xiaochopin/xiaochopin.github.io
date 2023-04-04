@@ -1,22 +1,12 @@
-## [重生云](https://home-chopin.xyz)
+## [重生云](https://xiaochopin.github.io/)
 
 本博客基于主题[crispgm/minimal](https://github.com/crispgm/minimal).
 
-### 准备工作 
+### 准备工作
 
-1.在`Gemfile`中加入(已加入)
+删掉`Gemfile`(仅限本地)
 
-```
-gem 'jekyll-crisp-theme', '~> 1.0.0.beta1'
-```
-
-2.终端中执行
-
-```
-gem install jekyll-crisp-theme --pre
-```
-
-### 主题使用文档
+### 自定义
 
 #### 图标
 
