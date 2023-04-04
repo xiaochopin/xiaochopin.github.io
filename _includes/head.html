@@ -11,7 +11,9 @@
   {% if page.syntax_highlight != false %}
   <link rel="stylesheet" href="{{ "/assets/css/tomorrow-night-eighties.css" | relative_url }}">
   {% endif %}
+  {% if page.font_awesome != false %}
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  {% endif %}
   {% if page.jquery == true %}
   <script src="{{ "/assets/scripts/jquery-3.1.0.min.js" | relative_url }}"></script>
   {% endif %}
