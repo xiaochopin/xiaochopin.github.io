@@ -9,6 +9,25 @@ permalink: /lab.html
 
   <div class="things-item">
     <div class="things-title">
+      吃掉小教父
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="https://xiaochopin.github.io/eatgodfather/">吃掉小教父</a>
+      </div>
+      <div>
+        <a href="https://github.com/xiaochopin/eatgodfather">GitHub</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        教父可爱,超超.
+      </div>
+    </div>
+  </div>
+
+  <div class="things-item">
+    <div class="things-title">
       赛博虫洞
     </div>
     <div class="things-link">

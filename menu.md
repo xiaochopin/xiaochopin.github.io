@@ -11,6 +11,6 @@ permalink: /menu.html
 
 [Story 故事](https://www.nmbxd1.com/t/52875143?r=52875143)
 
-[Friends 友情链接](/friends.html)
+[Friends 小伙伴们](/friends.html)
 
 [About 关于](/about.html)
