@@ -4,17 +4,14 @@
   <title>{{ page.title }} - {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv='content-language' content='zh-cn'>
-  <link href="//cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css" rel="stylesheet">
-  <link href="//cdn.jsdelivr.net/npm/hack-font/" rel="stylesheet">
+  <link href="//cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/style.min.css" rel="stylesheet">
+  <link href="//cdn.staticfile.org/hack-font/3.3.0/web/hack.min.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/image/logo.png">
   {% if page.syntax_highlight != false %}
   <link rel="stylesheet" href="{{ "/assets/css/tomorrow-night-eighties.css" | relative_url }}">
   {% endif %}
   {% if page.font_awesome != false %}
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  {% endif %}
-  {% if page.jquery == true %}
-  <script src="{{ "/assets/scripts/jquery-3.1.0.min.js" | relative_url }}"></script>
   {% endif %}
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">  
 </head>
