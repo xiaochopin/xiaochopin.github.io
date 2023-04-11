@@ -13,7 +13,7 @@ permalink: /lab.html
     </div>
     <div class="things-link">
       <div>
-        <a href="https://xiaochopin.github.io/eatgodfather/">吃掉小教父</a>
+        <a href="https://xiaochopin.github.io/eatgodfather/">马上开玩</a>
       </div>
       <div>
         <a href="https://github.com/xiaochopin/eatgodfather">GitHub</a>
