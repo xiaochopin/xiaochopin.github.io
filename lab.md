@@ -104,7 +104,7 @@ permalink: /lab.html
 
   <div class="things-item">
     <div class="things-title">
-      Never gonna give VB up
+      Rick Roll
     </div>
     <div class="things-link">
       <div>
@@ -113,7 +113,7 @@ permalink: /lab.html
     </div>
     <div class="things-list">
       <div>
-        24kb纯骗.
+        Never gonna give VB up,24kb纯骗.
       </div>
     </div>
   </div>
