@@ -56,8 +56,9 @@ footer {
 @media (max-width: $breakpoint) {
   .contact {
     .contact-copyright {
-      margin-left: .6rem;
+      margin-left: 0rem;
       padding-top: 1rem;
+      padding-left: .3rem;
       width: 100%;
     }
 
