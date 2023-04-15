@@ -6,14 +6,18 @@ layout: default
     <div class="article-title">{{page.title}}</div>
     <div class="article-date">{{page.date | date:"%B %d, %Y"}}</div>
   </div>
+
+  <div class="toc">
+    {% include toc.html html=content %}
+  </div>
+
   <div class="article-main">
     {{ content }}
   </div>
-</section>
 <!-- Gitalk评论框 start -->
 <!-- Link Gitalk 的支持文件  -->
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+  <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
   <div id="gitalk-container"></div>
   <script type="text/javascript">
   var gitalk = new Gitalk({
@@ -26,5 +30,5 @@ layout: default
   id:window.location.pathname,
   });
   gitalk.render('gitalk-container');
-  </script> 
+  </script>
 <!-- Gitalk end -->
