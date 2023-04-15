@@ -5,7 +5,7 @@ permalink: /lab.html
 ---
 <div class="page-title">实验室</div>
 
-<div id="project" class="things">
+<div class="things">
 
   <div class="things-item">
     <div class="things-title">
@@ -136,5 +136,5 @@ permalink: /lab.html
       </div>
     </div>
   </div>
-  
+
 </div>
