@@ -25,8 +25,6 @@ title: 轻小说短评(更新中)
 
 [在文库访问](https://www.wenku8.net/book/1685.htm)
 
-![](https://img.wenku8.com/image/1/1685/1685s.jpg)
-
 Tags：青春 恋爱  
 内容简介：
 本小说作者 线路A: 七月隆文 线路B：日日日
@@ -41,8 +39,6 @@ Tags：青春 恋爱
 #### 审稿男孩和投稿女孩
 
 [在文库访问](https://www.wenku8.net/book/2092.htm)
-
-![](https://img.wenku8.com/image/2/2092/2092s.jpg)
 
 Tags：青春 恋爱  
 内容简介：
