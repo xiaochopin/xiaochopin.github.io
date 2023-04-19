@@ -21,11 +21,11 @@ title: 轻小说短评(更新中)
 
 ### 已完结
 
-#### 审稿男孩和投稿女孩
+#### 樱花contact
 
-[在文库访问]((https://www.wenku8.net/book/2092.htm))
+[在文库访问](https://www.wenku8.net/book/1685.htm)
 
-![](https://img.wenku8.com/image/2/2092/2092s.jpg)
+![](https://img.wenku8.com/image/1/1685/1685s.jpg)
 
 Tags：青春 恋爱  
 内容简介：
@@ -35,3 +35,4 @@ Tags：青春 恋爱
 好看好看,一点肉痛但是不多.第一卷比第二卷好看.
 
 评分(7.5/10)
+
