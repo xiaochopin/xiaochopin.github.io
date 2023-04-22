@@ -12,7 +12,7 @@ menu:
 # Contact Icons
 contact:
   - link: /feed.xml
-    icon: fa-file-code-o  
+    icon: fa-rss
   - link: mailto:xiaochopin@foxmail.com
     icon: fa-envelope-o
   - link: https://github.com/xiaochopin
