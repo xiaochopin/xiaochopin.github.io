@@ -44,6 +44,7 @@
       color: $light-color;
       text-decoration: none;
       transition: background-color 0.5s;
+      transition: color 0.5s;
     }
     a:hover {
       background-color: $light-color;
