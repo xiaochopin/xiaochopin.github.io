@@ -53,6 +53,7 @@
   }
 
   .menu-active {
+    text-decoration: underline;
   }
 
   @media (max-width: $breakpoint) {
