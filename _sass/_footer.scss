@@ -30,24 +30,6 @@ footer {
     padding-left: .5rem;
   }
 
-  &:hover {
-    a {
-      color: $main-color;
-      position:relative;
-      //覆盖link的动态underline样式
-      &::after{
-      content:'';
-      transform: scale3d(0,1,1);
-         }
-      &:hover::after {
-        //就用空规则集
-      }
-      &:hover {
-        color: $light-color;
-      }
-    }
-  }
-
   .contact-links {
     float: right;
   }
