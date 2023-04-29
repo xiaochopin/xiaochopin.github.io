@@ -30,9 +30,8 @@ footer {
     padding-left: .5rem;
   }
   a:hover {
-    color: $main-color;
-    background-color: $bg-color;
-}
+    text-decoration: none;
+  }
 
   .contact-links {
     float: right;

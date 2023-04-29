@@ -6,12 +6,9 @@
 
   a {
     text-decoration: none;
-    transition: background-color 0.5s;
-    transition: color 0.5s;
   }
   a:hover {
-    background-color: $link-color;
-    color: $bg-color;
+    text-decoration: underline;
   }
 
   .archive-item {
@@ -32,12 +29,9 @@
 
   a {
     color: $light-color;
-    transition: background-color 0.5s;
-    transition: color 0.5s;
   }
   a:hover {
-      background-color: $light-color;
-      color: $bg-color;
+    text-decoration: underline;
   }
 
 }

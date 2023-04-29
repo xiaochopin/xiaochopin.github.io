@@ -38,12 +38,9 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
-  transition: background-color 0.5s;
-  transition: color 0.5s;
 }
 a:hover {
-  color: $bg-color;
-  background-color:$link-color;
+  text-decoration: underline;
 }
 
 .content {
