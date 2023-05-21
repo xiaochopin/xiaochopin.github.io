@@ -11,5 +11,9 @@
     left: calc(50% + 360px);//50% + $breakpoint / 2 * 16 px/rem
     max-height: calc(100% - 8rem);
     overflow: auto;
+    border: 2px;
+    border-style: solid;
+    border-color: $border-color;
+    border-radius: 5px;
 }
 }
