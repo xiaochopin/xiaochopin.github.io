@@ -34,6 +34,22 @@ permalink: /friends.html
     </div>
   </div>
 
+
+  <div class="things-item">
+    <div class="things-title">
+      大海Dahi
+    </div>
+    <div class="things-link">
+      <div>
+        <a href="https://www.dahi.icu">dahi.icu</a>
+      </div>
+    </div>
+    <div class="things-list">
+      <div>
+        分享一点点内容
+      </div>
+    </div>
+  </div>
 </div>
 
 
