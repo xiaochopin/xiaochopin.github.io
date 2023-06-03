@@ -47,25 +47,6 @@ permalink: /lab.html
 
   <div class="things-item">
     <div class="things-title">
-      恶臭数字便证器
-    </div>
-    <div class="things-link">
-      <div>
-        <a href="https://xiaochopin.github.io/Homo/">Homo</a>
-      </div>
-      <div>
-        <a href="https://github.com/xiaochopin/Homo">GitHub</a>
-      </div>
-    </div>
-    <div class="things-list">
-      <div>
-        一个将任意数字分解成 114514 构成的公式的工具.
-      </div>
-    </div>
-  </div>
-
-  <div class="things-item">
-    <div class="things-title">
       B Power
     </div>
     <div class="things-link">
