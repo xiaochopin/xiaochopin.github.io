@@ -53,11 +53,12 @@ body {
 }
 
 a {
-  color: $link-color;
+  color: $link-post;
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  color: $link-color;
+  text-decoration: none;
 }
 
 .content {

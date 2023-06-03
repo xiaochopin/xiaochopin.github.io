@@ -1,6 +1,17 @@
 // Theme of 重生云
 // Copyright(c) chopin, 2023
 
+.toc {
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+a:hover {
+    color: $link-toc;
+    text-decoration: none;
+}
+}
+
 
 @media screen and (min-width:78rem){
 .toc {
