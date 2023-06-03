@@ -6,9 +6,11 @@
 
   a {
     text-decoration: none;
+    color: $main-color;
   }
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: $link-color;
   }
 
   .archive-item {
@@ -31,7 +33,8 @@
     color: $light-color;
   }
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: $link-color;
   }
 
 }
