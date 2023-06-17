@@ -1,33 +1,22 @@
-﻿# Site settings
 title: 重生云
-author: Chopin
-description: "在天空上,自由飞翔,朵朵白云都为你护航.在碧蓝中肆意遨游,缕缕阳光也为你闪耀."
+email: xiaochopin@foxmail.com
+description: 在天空上,自由飞翔,朵朵白云都为你护航.在碧蓝中肆意遨游,缕缕阳光也为你闪耀.
 encoding: utf-8
-markdown: kramdown
-url: https://xiaochopin.github.io/
+author: Chopin
 baseurl: /
-# Menu
-menu:
-  - menu.md
-  - about.md
-# Contact Icons
-contact:
-  - link: /feed.xml
-    icon: fa-rss
-  - link: mailto:xiaochopin@foxmail.com
-    icon: fa-envelope-o
-  - link: https://github.com/xiaochopin
-    icon: fa-github
-# GitHub Repo for your site
-issue_report:
-  github: xiaochopin/xiaochopin.github.io
-# Exclusion
-exclude:
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
+url: https://xiaochopin.github.io/
 
+# Social Profiles
+github_username: xiaochopin
+
+google_analytics:   G-8Y2J3P1E7L
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
 plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
   - jekyll-seo-tag

@@ -1,5 +1,6 @@
 # [重生云](https://xiaochopin.github.io/)
 
+Theme from[startbootstrap-clean-blog-jekyll](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll)
 
 ## License
 

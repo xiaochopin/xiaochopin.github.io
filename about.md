@@ -1,10 +1,8 @@
 ---
-title: About
 layout: page
-permalink: /about.html
+title: 关于
+background: '/img/bg-about.png'
 ---
-
-<div class="page-title">关于重生云</div>
 
 重生云是我的个人Blog,基于Jekyll和Github Page.
 
