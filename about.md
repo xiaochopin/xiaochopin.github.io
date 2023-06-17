@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 关于
-background: '/img/bg-about.png'
+webbackground: https://s1.ax1x.com/2023/06/17/pClnJNn.png
 ---
 
 重生云是我的个人Blog,基于Jekyll和Github Page.
