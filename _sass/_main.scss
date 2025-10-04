@@ -173,3 +173,22 @@ input[type="text"], input[type="email"], textarea {
     border-color: #1976d2;
   }
 }
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+}
+
+.page-transition {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-transition.loading {
+  opacity: 0.5;
+}
+
+// 确保代码块正常显示
+pre {
+  tab-size: 4;
+}

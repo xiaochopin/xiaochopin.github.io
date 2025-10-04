@@ -1,14 +1,14 @@
-<header class="content-wrapper menu">
+<header class="content-wrapper menu" id="main-menu">
   <div class="menu-home">
-    <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
+    <a href="{{ "/" | relative_url }}" onclick="navigateTo(event, '/')">{{ site.title }}</a>
   </div>
   <div class="menu-links">
   {% assign default_paths = site.pages | map: "path" %}
   {% assign page_paths = site.menu | default: default_paths %}
   {% for path in page_paths %}
     {% assign item = site.pages | where: "path", path | first %}
-    <div class="menu-item{% if page.title == item.title %}{{ " menu-active" }}{% endif %}">
-      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    <div class="menu-item{% if page.title == item.title %}{{ " menu-active" }}{% endif %}" data-page="{{ item.title | slugify }}">
+      <a href="{{ item.url | relative_url }}" onclick="navigateTo(event, '{{ item.url | relative_url }}', '{{ item.title | slugify }}')">{{ item.title }}</a>
     </div>
   {% endfor %}
   </div>

@@ -7,10 +7,99 @@
     </div>
     <div class="content" id="main-content">
       <div class="content-wrapper">
-        {{ content }}
+        <div id="react-app">
+          {{ content }}
+        </div>
       </div>
     </div>
     {% include footer.html %}
     {% include syntax_highlight.html %}
+    
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+      
+      // 页面内容映射
+      const pageContent = {
+        // 这里可以预加载关键页面的内容
+      };
+      
+      function App() {
+        const [currentPage, setCurrentPage] = useState(window.location.pathname);
+        const [content, setContent] = useState(document.getElementById('react-app').innerHTML);
+        const [loading, setLoading] = useState(false);
+        
+        // 更新活动菜单项
+        const updateActiveMenu = (pageSlug) => {
+          // 移除所有活动类
+          const menuItems = document.querySelectorAll('.menu-item');
+          menuItems.forEach(item => {
+            item.classList.remove('menu-active');
+          });
+          
+          // 添加活动类到当前页面
+          const activeItem = document.querySelector(`.menu-item[data-page="${pageSlug}"]`);
+          if (activeItem) {
+            activeItem.classList.add('menu-active');
+          }
+        };
+        
+        // 导航函数
+        window.navigateTo = async function(event, url, pageSlug) {
+          event.preventDefault();
+          setLoading(true);
+          
+          // 更新URL但不刷新页面
+          window.history.pushState({}, '', url);
+          
+          // 更新当前页面状态
+          setCurrentPage(url);
+          updateActiveMenu(pageSlug);
+          
+          // 获取新页面内容
+          try {
+            const response = await fetch(url);
+            const html = await response.text();
+            
+            // 解析返回的HTML并提取主要内容
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const mainContent = doc.querySelector('#react-app') || doc.querySelector('.content-wrapper');
+            
+            if (mainContent) {
+              setContent(mainContent.innerHTML);
+            }
+          } catch (error) {
+            console.error('Error loading page:', error);
+            setContent('<p>页面加载失败，请稍后重试。</p>');
+          } finally {
+            setLoading(false);
+          }
+        };
+        
+        // 处理浏览器前进后退按钮
+        useEffect(() => {
+          const handlePopState = () => {
+            setCurrentPage(window.location.pathname);
+            // 可以在这里重新加载内容
+          };
+          
+          window.addEventListener('popstate', handlePopState);
+          
+          return () => {
+            window.removeEventListener('popstate', handlePopState);
+          };
+        }, []);
+        
+        return (
+          <div>
+            {loading ? <div>加载中...</div> : <div dangerouslySetInnerHTML={{__html: content}} />}
+          </div>
+        );
+      }
+      
+      // 渲染React应用
+      const root = ReactDOM.createRoot(document.getElementById('react-app'));
+      root.render(<App />);
+    </script>
   </body>
 </html>
