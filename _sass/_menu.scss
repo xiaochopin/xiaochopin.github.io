@@ -11,6 +11,7 @@
   margin: 2.5rem auto 0.25rem auto;
   background-color: $bg-color;
   max-width: $breakpoint; // 改为与content-wrapper相同的宽度
+  width: min(100%, $breakpoint);
   margin-left: auto;
   margin-right: auto;
   /* 保证 menu 居中且横向排列 */
@@ -18,6 +19,7 @@
   .menu-home {
     font-size: 1.5rem;
     font-weight: 500;
+    flex: 0 0 auto; // 不允许收缩，保持左侧项固定
     a {
       color: $sub-color;
       text-decoration: none;
@@ -36,6 +38,8 @@
   .menu-links {
     display: flex;
     margin-top: 0;
+    flex: 1 1 auto; // 占据剩余空间，方便右对齐
+    justify-content: flex-end;
     gap: 0.5rem;
   }
 

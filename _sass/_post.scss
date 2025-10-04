@@ -134,3 +134,39 @@ table {
     }
   }
 }
+
+// 解决移动端正文横向溢出的问题
+.article-main {
+  // 图片自适应，避免超出容器
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+  }
+
+  // 表格在小屏幕上允许横向滚动，但不撑破页面布局
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  // 代码块和预格式化内容处理
+  pre, code {
+    max-width: 100%;
+    overflow-x: auto;
+    word-break: break-word;
+    white-space: pre-wrap; // 对于长行允许换行
+  }
+
+  // 对于极长的单词或链接强制换行
+  a, p, li {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+}

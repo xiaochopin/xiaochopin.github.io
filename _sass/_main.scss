@@ -23,6 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   height: 100%;
   margin: 0;
+  overflow-y: scroll; // 保留竖向滚动条位置，避免因滚动条出现/消失导致居中偏移
   text-align: left;
   word-wrap: break-word;
   
@@ -65,12 +66,12 @@ a {
 .content {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .content-wrapper {
   margin: 0 auto;
-  width: $breakpoint;
+  width: min(100%, $breakpoint);
 }
 
 // 为非菜单的 content-wrapper 添加样式
@@ -103,9 +104,10 @@ a {
 
 // 统一文章和页面容器的最大宽度
 .article, .page {
+  width: 100%;
   max-width: $breakpoint;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 // React 页面切换样式
@@ -126,6 +128,11 @@ a {
 // 确保代码块正常显示
 pre {
   tab-size: 4;
+}
+
+// 保证在支持的浏览器中预留滚动条空隙，避免因滚动条宽度导致居中偏移
+html {
+  scrollbar-gutter: stable;
 }
 
 // MD3 按钮样式
