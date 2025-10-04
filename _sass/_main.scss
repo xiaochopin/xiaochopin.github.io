@@ -14,7 +14,6 @@ html {
   width: 100%;
 }
 
-
 // MD3 Body 样式
 body {
   background-color: $bg-color;
@@ -49,33 +48,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  border-radius: 4px;
 }
 
 // MD3 链接样式
 a {
-  color: #1976d2;
+  color: $link-color;
   text-decoration: none;
-  position: relative;
   
   &:hover {
-    color: #1565c0;
-  }
-  
-  // 添加 MD3 下划线效果
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #1976d2;
-    transition: width 0.3s ease;
-  }
-  
-  &:hover::after {
-    width: 100%;
+    text-decoration: underline;
   }
 }
 
@@ -119,39 +101,44 @@ a {
   margin-bottom: 0; // 移除下边距
 }
 
-@media (max-width: $breakpoint) {
-  .content-wrapper:not(.menu) {
-    padding: 0.75rem;
-    width: 100%;
-    margin-top: 0;
-  }
-  
-  .menu {
-    padding: 0.3rem; // 缩小内边距
-    width: 100%;
-    margin: 0.1rem auto; // 进一步减小上边距
-    max-height: none;
-    transition: none; // 移除过渡动画
-  }
+// 统一文章和页面容器的最大宽度
+.article, .page {
+  max-width: $breakpoint;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-// MD3 图片样式
-img {
-  border: 0;
-  max-width: 100%;
+// React 页面切换样式
+.loading {
+  text-align: center;
+  padding: 2rem;
 }
 
-// MD3 按钮样式（如果需要）
-.btn, button, input[type="button"], input[type="submit"] {
-  display: inline-block;
-  padding: 0.5rem 1rem;
+.page-transition {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-transition.loading {
+  opacity: 0.5;
+}
+
+// 确保代码块正常显示
+pre {
+  tab-size: 4;
+}
+
+// MD3 按钮样式
+button {
   background-color: #1976d2;
-  color: white;
   border: none;
   border-radius: 4px;
-  font-weight: 500;
+  color: white;
   cursor: pointer;
-  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s;
   
   &:hover {
     background-color: #1565c0;
@@ -172,23 +159,4 @@ input[type="text"], input[type="email"], textarea {
     outline: none;
     border-color: #1976d2;
   }
-}
-
-.loading {
-  text-align: center;
-  padding: 2rem;
-}
-
-.page-transition {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.page-transition.loading {
-  opacity: 0.5;
-}
-
-// 确保代码块正常显示
-pre {
-  tab-size: 4;
 }

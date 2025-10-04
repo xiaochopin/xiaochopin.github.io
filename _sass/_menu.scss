@@ -10,7 +10,10 @@
   border-radius: 16px;
   margin: 2.5rem auto 0.25rem auto;
   background-color: $bg-color;
-  max-width: $breakpoint + 5rem;
+  max-width: $breakpoint; // 改为与content-wrapper相同的宽度
+  margin-left: auto;
+  margin-right: auto;
+  /* 保证 menu 居中且横向排列 */
 
   .menu-home {
     font-size: 1.5rem;
