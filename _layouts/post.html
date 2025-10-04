@@ -7,9 +7,10 @@ layout: default
     <div class="article-date">{{page.date | date:"%B %d, %Y"}}</div>
   </div>
 
-  <div class="toc">
-    {% include toc.html html=content %}
-  </div>
+  {% capture toc_output %}{% include toc.html html=content %}{% endcapture %}
+  {% unless toc_output contains '<!-- no toc -->' %}
+    {{ toc_output }}
+  {% endunless %}
 
   <div class="article-main">
     {{ content }}

@@ -9,12 +9,24 @@
     padding: 0.5rem 1rem;
     border-radius: 0.5rem; // MD3 圆角
     transition: all 0.2s ease;
-  }
-  
-  a:hover {
-    color: $link-toc;
-    background-color: rgba($link-color, 0.1); // MD3 悬停效果
-    text-decoration: none;
+    position: static; // 覆盖主CSS中的relative定位
+    
+    // 移除主CSS中定义的下划线动画效果
+    &::after {
+      content: none; // 移除下划线伪元素
+    }
+    
+    // 保持hover效果，但使用自己的样式
+    &:hover {
+      color: $link-toc;
+      background-color: rgba($link-color, 0.1); // MD3 悬停效果
+      text-decoration: none;
+      
+      // 确保没有下划线动画
+      &::after {
+        content: none;
+      }
+    }
   }
   
   // 添加 MD3 卡片式设计
@@ -99,6 +111,11 @@
     .toc-content {
       display: block !important;
     }
+    
+    // 当没有目录内容时隐藏整个目录
+    &.toc-empty {
+      display: none;
+    }
   }
 }
 
@@ -125,6 +142,11 @@
       .toc-content {
         overflow-y: auto; // 允许内容区域垂直滚动
       }
+    }
+    
+    // 当没有目录内容时隐藏整个目录
+    &.toc-empty {
+      display: none;
     }
   }
   

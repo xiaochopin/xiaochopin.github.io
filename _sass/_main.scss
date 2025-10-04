@@ -1,9 +1,10 @@
 // Theme of 重生云
 // Copyright(c) chopin, 2023
 
+// MD3 样式重置和基础设置
 * {
   box-sizing: border-box;
-  transition: color 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s; // 移除box-shadow过渡
 }
 
 html {
@@ -19,51 +20,75 @@ html {
   }
 }
 
+// MD3 Body 样式
 body {
   background-color: $bg-color;
   color: $main-color;
-  font-family: "LXGW WenKai Screen", sans-serif;
-  font-size: 1.3rem;
+  font-family: "Roboto", "Noto Sans SC", "LXGW WenKai Screen", sans-serif;
+  font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   height: 100%;
-  margin: 1.5rem;
-  text-align: center;
+  margin: 0;
+  text-align: left;
   word-wrap: break-word;
-
+  
   ::selection {
     background-color: $link-color;
-    color: $bg-color;
+    color: white;
   }
 }
 
-
+// MD3 滚动条样式
 ::-webkit-scrollbar {
-  /*高宽分别对应横竖滚动条的尺寸*/
-  width: 5px;
-  height: 1px;
+  width: 8px;
+  height: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: $light-color;
+  border-radius: 4px;
+  background: #c7c7c7;
+  
+  &:hover {
+    background: #a8a8a8;
+  }
 }
+
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-  border-radius: 10px;
-  background: #EDEDED;
+  background: transparent;
 }
 
+// MD3 链接样式
 a {
-  color: $link-post;
+  color: #1976d2;
   text-decoration: none;
-}
-a:hover {
-  color: $link-color;
-  text-decoration: none;
+  position: relative;
+  
+  &:hover {
+    color: #1565c0;
+  }
+  
+  // 添加 MD3 下划线效果
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1976d2;
+    transition: width 0.3s ease;
+  }
+  
+  &:hover::after {
+    width: 100%;
+  }
 }
 
+// MD3 内容容器
 .content {
-  text-align: center;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .content-wrapper {
@@ -71,21 +96,85 @@ a:hover {
   width: $breakpoint;
 }
 
+// 为非菜单的 content-wrapper 添加样式
+.content-wrapper:not(.menu) {
+  padding: 1rem;
+  margin-top: 0; // 移除上边距
+  margin-bottom: 0; // 移除下边距
+}
+
+// 特别处理菜单元素
+.menu {
+  padding: 0.3rem; // 缩小内边距
+  margin: 0.25rem auto; // 进一步减小上边距
+  flex: none;
+  max-height: 100%;
+  transition: none; // 移除过渡动画
+}
+
+// 确保内容区域在菜单下方正确显示
+.content-wrapper {
+  margin-top: 0; // 移除上边距
+  margin-bottom: 0; // 移除下边距
+}
+
+// 修复内容区域的布局问题
+.content-wrapper:not(.menu) {
+  margin-top: 0; // 移除上边距
+  margin-bottom: 0; // 移除下边距
+}
+
 @media (max-width: $breakpoint) {
-  .content-wrapper {
-    padding-left: .5rem;
-    padding-right: .5rem;
+  .content-wrapper:not(.menu) {
+    padding: 0.75rem;
     width: 100%;
+    margin-top: 0;
+  }
+  
+  .menu {
+    padding: 0.3rem; // 缩小内边距
+    width: 100%;
+    margin: 0.1rem auto; // 进一步减小上边距
+    max-height: none;
+    transition: none; // 移除过渡动画
   }
 }
 
+// MD3 图片样式
 img {
   border: 0;
-  max-width: $breakpoint;
+  max-width: 100%;
 }
 
-@media (max-width: $breakpoint) {
-  img {
-    max-width: 100%;
+// MD3 按钮样式（如果需要）
+.btn, button, input[type="button"], input[type="submit"] {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: #1565c0;
+  }
+}
+
+// MD3 输入框样式
+input[type="text"], input[type="email"], textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  
+  &:focus {
+    outline: none;
+    border-color: #1976d2;
   }
 }

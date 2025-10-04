@@ -4,16 +4,26 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  padding-bottom: .4rem;
-  padding-top: 1.2rem;
+  padding: 1rem 1rem; // 保持当前值
   text-align: left;
+  align-items: center;
+  border-radius: 16px;
+  margin: 2.5rem auto 0.25rem auto;
+  background-color: $bg-color;
+  max-width: $breakpoint + 5rem;
 
   .menu-home {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
     a {
       color: $sub-color;
       text-decoration: none;
+      
+      // 移除链接的下划线动画样式
+      &::after {
+        content: '';
+        display: none;
+      }
     }
     a:hover {
       text-decoration: none;
@@ -22,67 +32,97 @@
 
   .menu-links {
     display: flex;
-    float: right;
     margin-top: 0;
+    gap: 0.5rem;
   }
 
   .menu-item {
-    font-size: 1.2rem;
-    padding: .1rem .4rem;
-    text-align: left;
+    font-size: 1rem;
+    padding: 0.2rem 0.8rem;
+    text-align: center;
+    border-radius: 12px;
+    transition: none;
 
     &:first-of-type {
-      padding-left: 0;
+      padding-left: 0.8rem;
     }
 
     &:last-of-type {
-      padding-right: 0;
+      padding-right: 0.8rem;
     }
 
     a {
       color: $light-color;
       text-decoration: none;
-      position:relative;
-      &::after{
-      content:'';
-			display:block;
-			/*开始时候下划线的宽度为100%*/
-			width:100%;
-			height:2px;
-			position:absolute;
-			bottom:1px;
-			background: $light-color;
-			transition:all 0.1s ease-in-out;
-			/*通过transform的缩放scale来让初始时x轴为0*/
-			transform: scale3d(0,1,1);
-			/*将坐标原点移到元素的中间，以原点为中心进行缩放*/
-			transform-origin:50% 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 0.2rem 0.8rem;
+      border-radius: 12px;
+      
+      &::after {
+        content: '';
+        display: none;
       }
-      &:hover::after {
-        transform:scale3d(1,1,1);
-      }
+    }
+
+    a:hover {
+      color: $sub-color;
     }
   }
 
   .menu-active {
-    text-decoration: none;
+    background-color: rgba($sub-color, 0.1);
+    border-radius: 12px;
+    
+    a {
+      color: $sub-color;
+      font-weight: 500;
+    }
   }
 
   @media (max-width: $breakpoint) {
-    display: block;
-    padding-top: .4rem;
-
+    display: flex;
+    justify-content: space-between; // 左右分布
+    padding: 0.5rem 0.75rem;
+    margin: 2.5rem auto 0.25rem auto;
+    border-radius: 16px;
+    max-width: 100%;
+    
     .menu-home {
-      font-size: 1.8rem;
-      padding: .4rem 0;
+      font-size: 1.5rem;
+      padding: 0.3rem 0;
+      margin-bottom: 0;
+      white-space: nowrap;
+      flex-shrink: 0; // 不允许收缩
+      a {
+        // 确保移动端也移除下划线动画样式
+        &::after {
+          content: '';
+          display: none;
+        }
+      }
     }
 
     .menu-links {
       display: flex;
-      float: right;
-      margin-top: 0.4rem;
-      margin-bottom: 1.8rem;
-      width: 100%;
+      justify-content: flex-end; // 链接靠右对齐
+      gap: 0.1rem; // 减小链接之间的距离
+      margin-top: 0;
+      margin-bottom: 0;
+      flex-shrink: 0; // 不允许收缩
+    }
+    
+    .menu-item {
+      padding: 0.3rem 0.2rem; // 减小左右内边距
+      
+      &:first-of-type {
+        padding-left: 0.2rem;
+      }
+
+      &:last-of-type {
+        padding-right: 0.2rem;
+      }
     }
   }
 }
