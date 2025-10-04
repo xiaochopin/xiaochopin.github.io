@@ -60,6 +60,7 @@
     .toc-toggle::after {
       content: "▲";
       margin-left: 0.5rem;
+
     }
   }
   
@@ -72,7 +73,7 @@
       background: $link-color;
       color: white;
       border: none;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 0.5rem;
       border-radius: 0.5rem;
       cursor: pointer;
       text-align: center;
@@ -80,6 +81,7 @@
       margin: 0.5rem;
       width: calc(100% - 1rem); // 调整宽度以补偿左右margin
       box-sizing: border-box;
+      
       
       &:hover {
         background-color: $link-toc;
@@ -124,7 +126,7 @@
   .toc {
     position: fixed; // 改为fixed定位
     bottom: 1rem; // 悬浮在页面底部
-    left: 1rem;
+    width: 7rem;
     right: 1rem;
     top: auto; // 取消top属性
     z-index: 100;
@@ -134,9 +136,12 @@
     // 使用更高质量的高斯模糊效果
     backdrop-filter: blur(3px) saturate(1.2);
     -webkit-backdrop-filter: blur(3px) saturate(1.2);
+    padding: 0.3rem; 
     
     &.toc-expanded {
       overflow: visible; // 当展开时允许溢出可见
+      right: 1rem!important;
+      width: calc(100vw - 2rem) !important;
       max-height: 80vh;
       
       .toc-content {
