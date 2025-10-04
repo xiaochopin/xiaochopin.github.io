@@ -2,25 +2,134 @@
 // Copyright(c) chopin, 2023
 
 .toc {
-a {
+  a {
     color: $link-color;
     text-decoration: none;
-}
-a:hover {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem; // MD3 圆角
+    transition: all 0.2s ease;
+  }
+  
+  a:hover {
     color: $link-toc;
+    background-color: rgba($link-color, 0.1); // MD3 悬停效果
     text-decoration: none;
-}
+  }
+  
+  // 添加 MD3 卡片式设计
+  padding: 1rem;
+  background-color: rgba($bg-color, 0.8);
+  border-radius: 1rem; // MD3 大圆角
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); // MD3 阴影
+  
+  // 在小屏幕上默认隐藏目录内容
+  @media screen and (max-width: 77.99rem) {
+    .toc-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    &.toc-expanded {
+      .toc-content {
+        max-height: 60vh;
+        opacity: 1;
+        overflow-y: auto; // 允许垂直滚动
+      }
+      
+      .toc-toggle::after {
+        content: "▼";
+        margin-left: 0.5rem;
+      }
+    }
+    
+    .toc-toggle::after {
+      content: "▲";
+      margin-left: 0.5rem;
+    }
+  }
+  
+  // 在小屏幕上显示的按钮
+  .toc-toggle {
+    display: none;
+    
+    @media screen and (max-width: 77.99rem) {
+      display: block;
+      background: $link-color;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      text-align: center;
+      font-weight: bold;
+      margin: 0.5rem;
+      width: calc(100% - 1rem); // 调整宽度以补偿左右margin
+      box-sizing: border-box;
+      
+      &:hover {
+        background-color: $link-toc;
+      }
+    }
+  }
 }
 
-
-@media screen and (min-width:78rem){
-.toc {
-    position: fixed;
+@media screen and (min-width:78rem) {
+  .toc {
+    position: fixed; // 恢复fixed定位
     font-size: 1.1rem;
-    width: 15rem;
+    // 计算可用宽度：100% - (50% + 400px) - 2rem，确保右侧有余量
+    width: min(max(15rem, calc((100% - (50% + 400px) - 2rem))), 30rem);
     top: 8rem;
-    left: calc(50% + 360px);//50% + $breakpoint / 2 * 16 px/rem
+    // 保持原有的位置计算方式，贴近文章部分
+    left: calc(50% + 400px);
+    right: auto;
     max-height: calc(100% - 8rem);
     overflow: auto;
+    // 使用更高质量的高斯模糊效果
+    backdrop-filter: blur(3px) saturate(1.2);
+    -webkit-backdrop-filter: blur(3px) saturate(1.2);
+    
+    .toc-toggle {
+      display: none;
+    }
+    
+    .toc-content {
+      display: block !important;
+    }
+  }
 }
+
+// 小屏幕下的悬浮状态
+@media screen and (max-width: 77.99rem) {
+  .toc {
+    position: fixed; // 改为fixed定位
+    bottom: 1rem; // 悬浮在页面底部
+    left: 1rem;
+    right: 1rem;
+    top: auto; // 取消top属性
+    z-index: 100;
+    max-height: 80vh; // 限制最大高度为视口高度的80%
+    overflow: hidden; // 隐藏溢出内容
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); // 使用非线性动画
+    // 使用更高质量的高斯模糊效果
+    backdrop-filter: blur(3px) saturate(1.2);
+    -webkit-backdrop-filter: blur(3px) saturate(1.2);
+    
+    &.toc-expanded {
+      overflow: visible; // 当展开时允许溢出可见
+      max-height: 80vh;
+      
+      .toc-content {
+        overflow-y: auto; // 允许内容区域垂直滚动
+      }
+    }
+  }
+  
+  // 展开状态下的特殊处理
+  .toc.toc-expanded {
+    max-height: 80vh; // 确保展开后也不会超过视口高度的80%
+  }
 }

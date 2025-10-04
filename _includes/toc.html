@@ -179,4 +179,9 @@
             {% capture jekyll_toc %}<{{ listModifier }}{{ rootAttributes }}>{{ nodes | shift | join: '>' }}>{% endcapture %}
         {% endif %}
     {% endif %}
-{% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}{{ jekyll_toc -}}
+{% endcapture %}{% assign tocWorkspace = '' %}
+<!-- 添加响应式按钮和内容容器 -->
+<button class="toc-toggle">目录</button>
+<div class="toc-content">
+{{ jekyll_toc }}
+</div>
