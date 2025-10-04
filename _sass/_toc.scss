@@ -6,7 +6,7 @@
     color: $link-color;
     text-decoration: none;
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     border-radius: 0.5rem; // MD3 圆角
     transition: all 0.2s ease;
     position: static; // 覆盖主CSS中的relative定位
@@ -18,7 +18,7 @@
     
     // 保持hover效果，但使用自己的样式
     &:hover {
-      color: $link-toc;
+      color: $link-color;
       background-color: rgba($link-color, 0.1); // MD3 悬停效果
       text-decoration: none;
       
@@ -84,7 +84,7 @@
       
       
       &:hover {
-        background-color: $link-toc;
+        background-color: $link-color;
       }
     }
   }
@@ -126,7 +126,7 @@
   .toc {
     position: fixed; // 改为fixed定位
     bottom: 1rem; // 悬浮在页面底部
-    width: 7rem;
+    width: 6.5rem;
     right: 1rem;
     top: auto; // 取消top属性
     z-index: 100;
