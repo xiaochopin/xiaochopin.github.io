@@ -1,0 +1,40 @@
+// Theme of 重生云
+// Copyright(c) chopin, 2023
+
+.archive-main {
+  margin: 1rem 0;
+
+  a {
+    text-decoration: none;
+    color: $main-color;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $link-color;
+  }
+
+  .archive-item {
+    line-height: 1.8rem;
+    margin-top: .6rem;
+    overflow: auto;
+
+    .archive-date {
+      color: $light-color;
+      font-size: .8rem;
+      margin: 0;
+    }
+  }
+}
+
+.archive-more {
+  color: $light-color;
+
+  a {
+    color: $light-color;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $link-color;
+  }
+
+}

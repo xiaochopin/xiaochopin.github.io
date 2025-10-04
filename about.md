@@ -1,8 +1,10 @@
 ---
+title: About
 layout: page
-title: 关于
-webbackground: https://s1.ax1x.com/2023/06/17/pClnJNn.png
+permalink: /about.html
 ---
+
+<div class="page-title">关于重生云</div>
 
 重生云是我的个人Blog,基于Jekyll和Github Page.
 
