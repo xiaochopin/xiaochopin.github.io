@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 轻小说短评(更新中)
+tags: [读书笔记]
 ---
 
 ### 前言

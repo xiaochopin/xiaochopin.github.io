@@ -105,6 +105,7 @@
     // 使用更高质量的高斯模糊效果
     backdrop-filter: blur(3px) saturate(1.2);
     -webkit-backdrop-filter: blur(3px) saturate(1.2);
+    bottom: 1rem; // 添加与屏幕底部的距离
     
     .toc-toggle {
       display: none;

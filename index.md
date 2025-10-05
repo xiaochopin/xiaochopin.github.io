@@ -6,7 +6,14 @@ layout: page
 <div class="archive-main">
   {% for post in site.posts limit:5 %}
     <div class="archive-item">
-      <div class="archive-date">{{ post.date | date:"%B %d, %Y" }}</div>
+      <div class="archive-date">
+        {{ post.date | date:"%B %d, %Y" }}
+        {% if post.tags %}
+          {% for tag in post.tags %}
+            <span class="archive-tag">#{{ tag }}</span>
+          {% endfor %}
+        {% endif %}
+      </div>
       <div class="archive-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></div>
     </div>
   {% endfor %}

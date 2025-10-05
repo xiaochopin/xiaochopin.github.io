@@ -1,0 +1,49 @@
+// Theme of 重生云
+// Copyright(c) chopin, 2023
+
+.tag-container {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+// 文章页面的 tag（可点击）
+.tag {
+  color: $link-color !important; // 强制应用 link-color
+  text-decoration: none;
+  position: relative;
+  border-radius: 4px; // 圆角
+  background-color: #f0f0f0; // 背景色
+  transition: all 0.3s ease; // 添加过渡效果
+
+  &:hover {
+    color: $link-color !important; // 悬停文字色
+    background-color: rgba($link-color, 0.1) !important; // MD3 悬停效果
+    text-decoration: none;
+  }
+
+  // 移除之前的特殊样式，使用普通链接样式
+  &:before {
+    content: "#"; // 保留 # 号前缀
+    margin-right: 0.2rem; // #号与文字间距
+  }
+}
+
+// 文章页面的 tag 容器
+.article .tag-container {
+  margin-top: 0.5rem;
+  margin-left: 1rem; // 增加与左侧时间的距离
+}
+
+// 归档页面的 tag（不可点击），样式照搬文章时间
+.archive-tag {
+  display: inline-block;
+  color: $light-color;
+  font-size: 0.8rem; // 照搬时间的字体大小
+  margin-right: 0.2rem; // tag 之间的间距
+  cursor: default;
+}
+
+/* 为第一个 tag 添加左边距，增加与时间的距离 */
+.archive-date .archive-tag:first-child {
+  margin-left: 1rem;
+}

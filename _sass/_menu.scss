@@ -4,10 +4,10 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1rem; // 保持当前值
+  padding: 1rem; // 改为与page一致的padding
   text-align: left;
   align-items: center;
-  border-radius: 16px;
+  border-radius: 8px; // 减小圆角
   margin: 2.5rem auto 0.25rem auto;
   background-color: $bg-color;
   max-width: $breakpoint; // 改为与content-wrapper相同的宽度
@@ -45,17 +45,17 @@
 
   .menu-item {
     font-size: 1rem;
-    padding: 0.2rem 0.8rem;
+    padding: 0.1rem 0.4rem; // 统一内边距
     text-align: center;
-    border-radius: 12px;
+    border-radius: 6px; // 减小圆角
     transition: none;
 
     &:first-of-type {
-      padding-left: 0.8rem;
+      padding-left: 0.4rem;
     }
 
     &:last-of-type {
-      padding-right: 0.8rem;
+      padding-right: 0.4rem;
     }
 
     a {
@@ -64,8 +64,8 @@
       position: relative;
       display: flex;
       align-items: center;
-      padding: 0.2rem 0.8rem;
-      border-radius: 12px;
+      padding: 0.1rem 0.4rem; // 统一内边距
+      border-radius: 6px; // 减小圆角
       
       &::after {
         content: '';
@@ -80,7 +80,7 @@
 
   .menu-active {
     background-color: rgba($sub-color, 0.1);
-    border-radius: 12px;
+    border-radius: 6px; // 减小圆角
     
     a {
       color: $sub-color;
@@ -91,9 +91,9 @@
   @media (max-width: $breakpoint) {
     display: flex;
     justify-content: space-between; // 左右分布
-    padding: 0.5rem 0.75rem;
+    padding: 1rem; // 改为与page一致的padding
     margin: 2.5rem auto 0.25rem auto;
-    border-radius: 16px;
+    border-radius: 8px; // 减小圆角并保持一致
     max-width: 100%;
     
     .menu-home {
@@ -121,14 +121,18 @@
     }
     
     .menu-item {
-      padding: 0.3rem 0.2rem; // 减小左右内边距
+      padding: 0.1rem 0.4rem; // 统一内边距，与桌面端保持一致
       
       &:first-of-type {
-        padding-left: 0.2rem;
+        padding-left: 0.4rem;
       }
 
       &:last-of-type {
-        padding-right: 0.2rem;
+        padding-right: 0.4rem;
+      }
+      
+      a {
+        padding: 0.1rem 0.4rem; // 统一内边距，与桌面端保持一致
       }
     }
   }

@@ -57,8 +57,28 @@ a {
   color: $link-color;
   text-decoration: none;
   
+  // 添加下划线动画效果
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    // 修改下划线高度，使其更粗
+    height: 2px;
+    background-color: $link-color;
+    // 使用非线性动画 (ease-out)
+    transition: width 0.3s ease-out;
+  }
+  
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    
+    &::after {
+      width: 100%;
+    }
   }
 }
 
@@ -166,4 +186,9 @@ input[type="text"], input[type="email"], textarea {
     outline: none;
     border-color: #1976d2;
   }
+}
+
+// 确保 React 渲染的内容正确显示
+#react-app {
+  min-height: calc(100vh - 300px);
 }

@@ -7,6 +7,8 @@ permalink: /menu.html
 
 [Archive 存档](/archive.html)
 
+[Tags 标签](/tag.html)
+
 [Lab 实验室](/lab.html)
 
 [Story 故事](https://www.nmbxd1.com/t/52875143?r=52875143)

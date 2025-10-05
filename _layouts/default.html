@@ -91,8 +91,8 @@
         }, []);
         
         return (
-          <div>
-            {loading ? <div>加载中...</div> : <div dangerouslySetInnerHTML={{__html: content}} />}
+          <div className="page-transition" className={loading ? "loading" : ""}>
+            <div dangerouslySetInnerHTML={{__html: content}} />
           </div>
         );
       }
