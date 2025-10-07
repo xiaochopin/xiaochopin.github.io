@@ -28,7 +28,18 @@ footer {
   a {
     color: $main-color;
     padding-left: .5rem;
+    position: relative;
+    
+    &::after {
+      display: none;
+    }
+    
+    &:hover {
+      color: $link-color;
+      text-decoration: none;
+    }
   }
+  
   a:hover {
     text-decoration: none;
   }
