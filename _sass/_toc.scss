@@ -39,6 +39,7 @@
   @media screen and (max-width: 77.99rem) {
     .toc-content {
       max-height: 0;
+      max-height: 0;
       opacity: 0;
       overflow: hidden;
       transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -142,7 +143,7 @@
     &.toc-expanded {
       overflow: visible; // 当展开时允许溢出可见
       right: 1rem!important;
-      width: calc(100vw - 2rem) !important;
+      width: min(100vw - 2rem, $breakpoint) !important; // 修改为与页面宽度一致
       max-height: 80vh;
       
       .toc-content {
