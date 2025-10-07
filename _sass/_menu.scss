@@ -4,11 +4,11 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  padding: 1rem; // 改为与page一致的padding
+  padding: 3rem 1rem 1rem 1rem; // 改为与page一致的padding
   text-align: left;
   align-items: center;
   border-radius: 8px; // 减小圆角
-  margin: 2.5rem auto 0.25rem auto;
+  margin: 0rem auto 0rem auto;
   background-color: $bg-color;
   max-width: $breakpoint; // 改为与content-wrapper相同的宽度
   width: min(100%, $breakpoint);
