@@ -4,7 +4,7 @@ author: Chopin
 description: "在天空上,自由飞翔,朵朵白云都为你护航.在碧蓝中肆意遨游,缕缕阳光也为你闪耀."
 encoding: utf-8
 markdown: kramdown
-url: https://xiaochopin.github.io/
+url: https://xiaochopin.github.io
 baseurl: /
 # Menu
 menu:
