@@ -1,4 +1,4 @@
-﻿# Site settings
+# Site settings
 title: 重生云
 author: Chopin
 description: "在天空上,自由飞翔,朵朵白云都为你护航.在碧蓝中肆意遨游,缕缕阳光也为你闪耀."
@@ -31,3 +31,9 @@ exclude:
 
 plugins:
   - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /favicon.ico
