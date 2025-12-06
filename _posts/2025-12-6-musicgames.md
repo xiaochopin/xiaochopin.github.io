@@ -92,7 +92,7 @@ washedlz是我非常要好的朋友，也是个音游痴，去广西南宁展还
 
 ![](https://origin.picgo.net/2025/12/06/LieAll_20240323_1145359753dc2e1ef6760885f.jpg)
 
-五月份的`BAMANI ONLY`没去成确实小有遗憾。washedlz依旧发力。帮我代购和领取无料。
+五月份的`BAMANI ONLY`没去成确实小有遗憾。washedlz依旧发力，帮我代购和领取无料。
 
 与此同时我也尝试在做点周边，比如卡贴和吧唧。
 
