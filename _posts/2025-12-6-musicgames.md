@@ -90,13 +90,15 @@ IIDX明显更符合我的胃口，不论是选曲还是玩法。我打游戏就�
 
 washedlz是我非常要好的朋友，也是个音游痴，去广西南宁展还给我带了无料。
 
-![](https://origin.picgo.net/2025/12/06/LieAll_20240323_1145359753dc2e1ef6760885f.jpg)
+![](https://origin.picgo.net/2025/12/07/LieAll_20240323_11453597512cc063220cd6289.jpg)
+
 
 五月份的`BAMANI ONLY`没去成确实小有遗憾。washedlz依旧发力，帮我代购和领取无料。
 
 与此同时我也尝试在做点周边，比如卡贴和吧唧。
 
-![](https://origin.picgo.net/2025/12/06/IMG_20240314_19435139b5cd84e1cc3261.jpg)
+![](https://origin.picgo.net/2025/12/07/IMG_20240314_1943510de77746a51501aa.jpg)
+
 
 高考前那段时间听歌最爽的就是听`EDP×beatnation summit 2017-beatnation 10th Anniversary`了。
 
