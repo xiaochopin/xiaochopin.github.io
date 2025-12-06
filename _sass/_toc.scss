@@ -101,12 +101,13 @@
     // 保持原有的位置计算方式，贴近文章部分
     left: calc(50% + 400px);
     right: auto;
-    max-height: calc(100% - 8rem);
+    max-height: calc(100% - 11rem); // 调整为top(8rem) + bottom(3rem) = 11rem
+    height: fit-content; // 添加这一行使高度自适应内容
     overflow: auto;
     // 使用更高质量的高斯模糊效果
     backdrop-filter: blur(3px) saturate(1.2);
     -webkit-backdrop-filter: blur(3px) saturate(1.2);
-    bottom: 1rem; // 添加与屏幕底部的距离
+    bottom: 3rem; // 与页面底部保持3rem距离
     
     .toc-toggle {
       display: none;
