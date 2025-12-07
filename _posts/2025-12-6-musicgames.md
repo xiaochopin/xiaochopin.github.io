@@ -6,7 +6,7 @@ tags: [怀古伤尽]
 
 >很久很久以前，一个简单的周末，我来到了华润三楼的游戏厅。那个时候我什么都不懂，自然不知道放在门口的那两台方框框是日后我心心念念的音游。
 
-![打音游的傻逼](https://origin.picgo.net/2025/12/06/29a0cf18189b1b72deb75195e7a02ce2.jpg)
+![打音游的傻逼](https://origin.picgo.net/2025/12/06/29a0cf18189b1b72deb75195e7a02ce2.md.jpg)
 
 ## 很久很久以前
 
@@ -65,36 +65,36 @@ tags: [怀古伤尽]
 
 23年3月，高二，我把树莓派卖了600块，用于购置了一个SDVX小台（还有一只FUFU）。
 
-![sdvx手台](https://origin.picgo.net/2025/12/06/IMG_20240126_212233a12a48e1dc1b78d5.png)
+![sdvx手台](https://origin.picgo.net/2025/12/06/IMG_20240126_212233a12a48e1dc1b78d5.md.png)
 
-![ohno妈沫何意味！](https://origin.picgo.net/2025/12/06/LieAll_20240126_193545377518bf3380f1db134.jpg)
+![ohno妈沫何意味！](https://origin.picgo.net/2025/12/06/LieAll_20240126_193545377518bf3380f1db134.md.jpg)
 
 我也终于能在家里打到`SDVX`了。`BIMANI`系的音游非常好，吸引着我进一步了解更多。
 
-![对不起我是音游吃](https://origin.picgo.net/2025/12/06/b8484699d7b7af1f4aa5b5654f387dc091b9aad0af0f01ad.png)
+![对不起我是音游吃](https://origin.picgo.net/2025/12/06/b8484699d7b7af1f4aa5b5654f387dc091b9aad0af0f01ad.md.png)
 
 前面有说过，我打游戏并不是很厉害，差不多半年时间就到了瓶颈期。刚好那阵子又经常在班上打BMS，于是在高二寒假我斥巨资购买了IIDX手台（盖中盖版本），24年2月1日到货，入坑了`IIDX`。
 
-![iidx手台](https://origin.picgo.net/2025/12/06/LieAll_20240202_12475061488d318c2f11b6a19.jpg)
+![iidx手台](https://origin.picgo.net/2025/12/06/LieAll_20240202_12475061488d318c2f11b6a19.md.jpg)
 
 IIDX明显更符合我的胃口，不论是选曲还是玩法。我打游戏就是奔着不带脑子去得，SDVX的旋钮还是太费脑子了。
 
 24年2月7日，四段达成。3月15日，特么顶着38度多考完了化学和生物的第二天，五段达成。5月19日，六段达成。
 
-![六段](https://origin.picgo.net/2025/12/06/image26945c6c02aab03c.png)
+![六段](https://origin.picgo.net/2025/12/06/image26945c6c02aab03c.md.png)
 
 其实寒假的时候还发生了一件大事，dhc开了一家新的机厅，并且引进了舞萌和中二节奏（对这俩兴趣不大，这里不展开讲）。于是我的高三周末就在出门机厅，回家IIDX中缓缓度过了。
 
 washedlz是我非常要好的朋友，也是个音游痴，去广西南宁展还给我带了无料。
 
-![](https://origin.picgo.net/2025/12/07/LieAll_20240323_11453597512cc063220cd6289.jpg)
+![](https://origin.picgo.net/2025/12/07/LieAll_20240323_11453597512cc063220cd6289.md.jpg)
 
 
 五月份的`BAMANI ONLY`没去成确实小有遗憾。washedlz依旧发力，帮我代购和领取无料。
 
 与此同时我也尝试在做点周边，比如卡贴和吧唧。
 
-![](https://origin.picgo.net/2025/12/07/IMG_20240314_1943510de77746a51501aa.jpg)
+![](https://origin.picgo.net/2025/12/07/IMG_20240314_1943510de77746a51501aa.md.jpg)
 
 
 高考前那段时间听歌最爽的就是听`EDP×beatnation summit 2017-beatnation 10th Anniversary`了。
@@ -115,19 +115,19 @@ washedlz是我非常要好的朋友，也是个音游痴，去广西南宁展还
 
 ##  圆梦
 
-![tama猫](https://origin.picgo.net/2025/12/06/9b0c793555f92126221f680da581accef773962317b539c8.jpg)
+![tama猫](https://origin.picgo.net/2025/12/06/9b0c793555f92126221f680da581accef773962317b539c8.md.jpg)
 <center>那天我拉着你的手，以为是永远。。</center>
 
 2025年5月2日，我六点就坐大巴出发前往广州，只为了参加`BEMANI ONLY Season 2`。
 
 ![朋友圈截图](https://origin.picgo.net/2025/12/06/image49e4fdabf9804a2b.png)
 
-![2x的to签](https://origin.picgo.net/2025/12/06/25a113c61745c88a34b4be20cb75a13da4ffb6ec5a7f180e.jpg)
+![2x的to签](https://origin.picgo.net/2025/12/06/25a113c61745c88a34b4be20cb75a13da4ffb6ec5a7f180e.md.jpg)
 <center>2x的to签！</center>
 
 好久没有那么开心了，听着后面的DJ演出，感觉又找到了玩音游最初的感动。
 
-![daisuke](https://origin.picgo.net/2025/12/06/Screenshot_2025-05-02-21-07-47-327_com.miui.mediaviewer-editcc3600a600eb7d97.jpg)
+![daisuke](https://origin.picgo.net/2025/12/06/Screenshot_2025-05-02-21-07-47-327_com.miui.mediaviewer-editcc3600a600eb7d97.md.jpg)
 <center>快把浴霸关上！</center>
 
 就这样吧，我很满足了。
