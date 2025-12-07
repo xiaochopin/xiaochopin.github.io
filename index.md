@@ -19,5 +19,5 @@ layout: page
   {% endfor %}
 </div>
 <p class="archive-more">
-  <a href="{{ "/archive.html" | relative_url }}">查看存档</a>
+  <a href="{{ "/archive" | relative_url }}">查看存档</a>
 </p>

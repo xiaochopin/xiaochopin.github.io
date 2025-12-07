@@ -1,7 +1,7 @@
 ---
 title: Project
 layout: page
-permalink: /project.html
+permalink: /project
 ---
 
 <div class="page-title">Project</div>

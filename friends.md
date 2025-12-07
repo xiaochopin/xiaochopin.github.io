@@ -1,7 +1,7 @@
 ---
 title: Friends
 layout: page
-permalink: /friends.html
+permalink: /friends
 ---
 <div class="page-title">小伙伴们</div>
 

@@ -6,7 +6,7 @@ encoding: utf-8
 markdown: kramdown
 url: https://xiaochopin.github.io
 baseurl: /
-permalink: pretty
+permalink: /:categories/:year/:month/:day/:title
 
 # Menu
 menu:

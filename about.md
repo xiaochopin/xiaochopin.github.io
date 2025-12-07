@@ -1,7 +1,7 @@
 ---
 title: About
 layout: page
-permalink: /about.html
+permalink: /about
 ---
 
 <div class="page-title">关于重生云</div>
