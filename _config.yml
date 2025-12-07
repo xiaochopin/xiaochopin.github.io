@@ -6,6 +6,8 @@ encoding: utf-8
 markdown: kramdown
 url: https://xiaochopin.github.io
 baseurl: /
+permalink: pretty
+
 # Menu
 menu:
   - menu.md
@@ -37,3 +39,11 @@ defaults:
       path: ""
     values:
       image: /favicon.ico
+
+# 启用Jekyll内置的HTML压缩功能
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  ignore:
+    envs: [development]

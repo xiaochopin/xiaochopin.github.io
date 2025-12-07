@@ -29,77 +29,56 @@
         const [loading, setLoading] = useState(false);
         
         // 更新活动菜单项
-        const updateActiveMenu = (pageSlug) => {
-          // 移除所有活动类
-          const menuItems = document.querySelectorAll('.menu-item');
-          menuItems.forEach(item => {
-            item.classList.remove('menu-active');
+        useEffect(() => {
+          const menuLinks = document.querySelectorAll('.menu a');
+          menuLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === currentPage) {
+              link.classList.add('active');
+            }
           });
-          
-          // 添加活动类到当前页面
-          const activeItem = document.querySelector(`.menu-item[data-page="${pageSlug}"]`);
-          if (activeItem) {
-            activeItem.classList.add('menu-active');
-          }
-        };
+        }, [currentPage]);
         
-        // 导航函数
-        window.navigateTo = async function(event, url, pageSlug) {
-          event.preventDefault();
+        // 处理导航
+        const handleNavigation = (path) => {
+          setCurrentPage(path);
           setLoading(true);
           
-          // 更新URL但不刷新页面
-          window.history.pushState({}, '', url);
-          
-          // 更新当前页面状态
-          setCurrentPage(url);
-          updateActiveMenu(pageSlug);
-          
-          // 获取新页面内容
-          try {
-            const response = await fetch(url);
-            const html = await response.text();
-            
-            // 解析返回的HTML并提取主要内容
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const mainContent = doc.querySelector('#react-app') || doc.querySelector('.content-wrapper');
-            
-            if (mainContent) {
-              setContent(mainContent.innerHTML);
-            }
-          } catch (error) {
-            console.error('Error loading page:', error);
-            setContent('<p>页面加载失败，请稍后重试。</p>');
-          } finally {
+          // 模拟页面加载
+          setTimeout(() => {
             setLoading(false);
-          }
+            window.history.pushState({}, '', path);
+          }, 300);
         };
         
-        // 处理浏览器前进后退按钮
+        // 监听浏览器前进后退按钮
         useEffect(() => {
           const handlePopState = () => {
             setCurrentPage(window.location.pathname);
-            // 可以在这里重新加载内容
           };
           
           window.addEventListener('popstate', handlePopState);
           
+          // 清理事件监听器
           return () => {
             window.removeEventListener('popstate', handlePopState);
           };
         }, []);
         
         return (
-          <div className="page-transition" className={loading ? "loading" : ""}>
-            <div dangerouslySetInnerHTML={{__html: content}} />
+          <div className={`page-transition ${loading ? 'loading' : ''}`}>
+            <div dangerouslySetInnerHTML={{ __html: content }} />
           </div>
         );
       }
       
       // 渲染React应用
-      const root = ReactDOM.createRoot(document.getElementById('react-app'));
-      root.render(<App />);
+      ReactDOM.render(<App />, document.getElementById('react-app'));
     </script>
+    
+    <!-- 性能优化脚本 -->
+    <script src="{{ "/assets/scripts/performance.js" | relative_url }}"></script>
+    <script src="{{ "/assets/scripts/lcp-optimizer.js" | relative_url }}"></script>
+    <script src="{{ "/assets/scripts/responsive-images.js" | relative_url }}"></script>
   </body>
 </html>

@@ -1,47 +1,59 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // 为所有代码块添加复制按钮
-  const codeBlocks = document.querySelectorAll('pre.highlight');
+// 代码复制功能脚本
+
+function initCodeCopy() {
+  // 获取所有代码块
+  const codeBlocks = document.querySelectorAll('pre.highlight > code');
   
-  codeBlocks.forEach(function(codeBlock) {
-    // 创建工具栏
+  // 为每个代码块添加复制按钮
+  codeBlocks.forEach(codeBlock => {
+    // 检查是否已经添加了复制按钮
+    if (codeBlock.parentElement.querySelector('.code-toolbar')) {
+      return;
+    }
+    
+    // 创建工具栏容器
     const toolbar = document.createElement('div');
     toolbar.className = 'code-toolbar';
     
     // 创建复制按钮
-    const button = document.createElement('button');
-    button.className = 'copy-button';
-    button.textContent = '点击复制';
-    button.title = '我去，点一下就能复制！';
+    const copyButton = document.createElement('button');
+    copyButton.className = 'copy-button';
+    copyButton.textContent = 'Copy';
+    copyButton.title = 'Click to copy';
     
-    // 添加工具栏到代码块
-    codeBlock.insertBefore(toolbar, codeBlock.firstChild);
-    
-    // 添加按钮到工具栏
-    toolbar.appendChild(button);
-    
-    // 添加点击事件
-    button.addEventListener('click', function() {
-      // 获取代码内容（排除按钮本身）
-      let codeElement = codeBlock.querySelector('code');
-      if (!codeElement) {
-        codeElement = codeBlock.firstChild;
-      }
-      
-      const text = codeElement.textContent || codeElement.innerText;
-      
-      // 复制到剪贴板
-      navigator.clipboard.writeText(text).then(function() {
-        // 复制成功反馈
-        const originalText = button.textContent;
-        button.textContent = '已复制！';
+    // 添加复制功能
+    copyButton.addEventListener('click', function() {
+      const code = codeBlock.textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        // 复制成功
+        copyButton.textContent = 'Copied!';
+        copyButton.style.backgroundColor = '#4CAF50'; // 更改背景色为绿色
         
-        // 几秒后恢复原文本
-        setTimeout(function() {
-          button.textContent = originalText;
-        }, 2000);
-      }).catch(function(err) {
-        console.error('复制失败！: ', err);
+        // 3秒后恢复原始状态
+        setTimeout(() => {
+          copyButton.textContent = 'Copy';
+          copyButton.style.backgroundColor = ''; // 恢复原始背景色
+        }, 3000);
+      }).catch(err => {
+        console.error('Failed to copy code: ', err);
       });
     });
+    
+    // 将按钮添加到工具栏
+    toolbar.appendChild(copyButton);
+    
+    // 将工具栏插入到代码块前面
+    codeBlock.parentElement.insertBefore(toolbar, codeBlock);
   });
-});
+}
+
+// 使用 requestIdleCallback 初始化代码复制功能
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(initCodeCopy, { timeout: 3000 });
+} else {
+  // 降级方案
+  setTimeout(initCodeCopy, 100);
+}
+
+// 导出函数以便其他脚本可以调用
+window.initCodeCopy = initCodeCopy;
