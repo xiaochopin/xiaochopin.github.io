@@ -140,9 +140,22 @@ table {
   // 图片自适应，避免超出容器
   img {
     max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
-    margin: 1rem 0;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    
+    // 不论图片原始宽度如何都放大适配
+    min-width: 100%;
+    
+    // 窄屏幕下仍然保持居中
+    @media (max-width: $breakpoint) {
+      margin: 1rem auto; // 窄屏幕上继续保持居中对齐
+      border-radius: 4px; // 更小的圆角适配移动端
+      min-width: 100%; // 移动端上确保完全适配容器宽度
+    }
   }
 
   // 表格在小屏幕上允许横向滚动，但不撑破页面布局
@@ -170,3 +183,11 @@ table {
     hyphens: auto;
   }
 }
+
+.article-date {
+  color: $light-color;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+// 标签样式
