@@ -1,6 +1,7 @@
 ---
 title: Archive
 layout: page
+permalink: /archive.html
 ---
 
 <div class="page-title" id="archive">存档</div>
