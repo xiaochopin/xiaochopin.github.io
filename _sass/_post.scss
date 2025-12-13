@@ -189,24 +189,3 @@ table {
   font-size: 1rem;
   margin-top: 1rem;
 }
-
-// 标签样式
-.tag-container {
-  margin-top: 1rem;
-  
-  .tag {
-    background-color: $light-color;
-    border-radius: 1rem;
-    color: $main-color;
-    display: inline-block;
-    font-size: 0.9rem;
-    margin: 0.2rem;
-    padding: 0.2rem 0.8rem;
-    text-decoration: none;
-    
-    &:hover {
-      background-color: $sub-color;
-      color: $bg-color;
-    }
-  }
-}
