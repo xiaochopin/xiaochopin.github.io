@@ -15,65 +15,53 @@
     {% include footer.html %}
     {% include syntax_highlight.html %}
     
-    <script type="text/babel">
-      const { useState, useEffect } = React;
-      
-      // 页面内容映射
-      const pageContent = {
-        // 这里可以预加载关键页面的内容
-      };
-      
-      function App() {
-        const [currentPage, setCurrentPage] = useState(window.location.pathname);
-        const [content, setContent] = useState(document.getElementById('react-app').innerHTML);
-        const [loading, setLoading] = useState(false);
-        
-        // 更新活动菜单项
-        useEffect(() => {
-          const menuLinks = document.querySelectorAll('.menu a');
-          menuLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === currentPage) {
-              link.classList.add('active');
-            }
-          });
-        }, [currentPage]);
-        
-        // 处理导航
-        const handleNavigation = (path) => {
-          setCurrentPage(path);
-          setLoading(true);
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // 使用 React.createElement 重写原来的 React 组件
+        function App() {
+          const [currentPage, setCurrentPage] = React.useState(window.location.pathname);
+          const [content, setContent] = React.useState(document.getElementById('react-app').innerHTML);
+          const [loading, setLoading] = React.useState(false);
           
-          // 模拟页面加载
-          setTimeout(() => {
-            setLoading(false);
-            window.history.pushState({}, '', path);
-          }, 300);
-        };
-        
-        // 监听浏览器前进后退按钮
-        useEffect(() => {
-          const handlePopState = () => {
-            setCurrentPage(window.location.pathname);
-          };
+          // 更新活动菜单项
+          React.useEffect(() => {
+            const menuLinks = document.querySelectorAll('.menu a');
+            menuLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+              }
+            });
+          }, [currentPage]);
           
-          window.addEventListener('popstate', handlePopState);
+          // 监听浏览器前进后退按钮
+          React.useEffect(() => {
+            const handlePopState = () => {
+              setCurrentPage(window.location.pathname);
+            };
+            
+            window.addEventListener('popstate', handlePopState);
+            
+            // 清理事件监听器
+            return () => {
+              window.removeEventListener('popstate', handlePopState);
+            };
+          }, []);
           
-          // 清理事件监听器
-          return () => {
-            window.removeEventListener('popstate', handlePopState);
-          };
-        }, []);
+          // 创建 React 元素而不是使用 JSX
+          return React.createElement(
+            'div',
+            { className: `page-transition ${loading ? 'loading' : ''}` },
+            React.createElement('div', {
+              dangerouslySetInnerHTML: { __html: content }
+            })
+          );
+        }
         
-        return (
-          <div className={`page-transition ${loading ? 'loading' : ''}`}>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
-          </div>
-        );
-      }
-      
-      // 渲染React应用
-      ReactDOM.render(<App />, document.getElementById('react-app'));
+        // 渲染 React 应用
+        const root = ReactDOM.createRoot(document.getElementById('react-app'));
+        root.render(React.createElement(App));
+      });
     </script>
   </body>
 </html>

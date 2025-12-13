@@ -2,8 +2,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv='content-language' content='zh-cn'>
-  <link rel="preconnect" href="https://npm.elemecdn.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -13,8 +11,8 @@
   {% endif %}
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   <link href="https://npm.elemecdn.com/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js" async></script>
-  <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js" async></script>
+  <script src="https://gw.alipayobjects.com/os/lib/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://gw.alipayobjects.com/os/lib/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const tocElements = document.querySelectorAll('.toc');
@@ -29,34 +27,7 @@
           });
         }
       });
-      
-      // 推迟加载Babel
-      setTimeout(loadNonCriticalResources, 1000);
     });
-    
-    function loadNonCriticalResources() {
-      // Babel（仅在需要时加载）
-      const scripts = [
-        'https://cdn.jsdelivr.net/npm/@babel/standalone@7/babel.min.js'
-      ];
-      
-      // 延迟加载Babel
-      scripts.forEach(function(src) {
-        const script = document.createElement('script');
-        script.src = src;
-        script.async = true;
-        script.onload = function() {
-          // Babel加载完成后触发React应用
-          initializeReactApp();
-        };
-        document.body.appendChild(script);
-      });
-    }
-    
-    function initializeReactApp() {
-      // 如果需要，可以在Babel加载完成后初始化React应用
-      console.log('Babel loaded, React app initialized');
-    }
   </script>
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y2J3P1E7L"></script>
