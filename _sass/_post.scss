@@ -144,7 +144,7 @@ table {
     height: auto;
     display: block;
     margin: 1rem auto;
-    border-radius: 8px;
+    border-radius: 1rem; // 统一圆角大小与代码块一致
     box-shadow: 0 1px 3px rgba(0,0,0,0.12);
     
     // 不论图片原始宽度如何都放大适配
@@ -153,7 +153,7 @@ table {
     // 窄屏幕下仍然保持居中
     @media (max-width: $breakpoint) {
       margin: 1rem auto; // 窄屏幕上继续保持居中对齐
-      border-radius: 4px; // 更小的圆角适配移动端
+      border-radius: 1rem; // 统一圆角大小与代码块一致
       min-width: 100%; // 移动端上确保完全适配容器宽度
     }
   }
@@ -191,3 +191,22 @@ table {
 }
 
 // 标签样式
+.tag-container {
+  margin-top: 1rem;
+  
+  .tag {
+    background-color: $light-color;
+    border-radius: 1rem;
+    color: $main-color;
+    display: inline-block;
+    font-size: 0.9rem;
+    margin: 0.2rem;
+    padding: 0.2rem 0.8rem;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: $sub-color;
+      color: $bg-color;
+    }
+  }
+}
