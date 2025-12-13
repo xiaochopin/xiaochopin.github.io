@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Test for Styles
+tags: [站点维护]
 ---
 
 This is not an actual post. It is a test post for styles, which contains all available markdown syntax to prove the effect of UI styles.
