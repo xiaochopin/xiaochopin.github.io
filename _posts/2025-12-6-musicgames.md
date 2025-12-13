@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 打音游的这五年
-tags: [怀古伤尽]
+tags: [怀古伤尽, 游戏]
 ---
 
 >很久很久以前，一个简单的周末，我来到了华润三楼的游戏厅。那个时候我什么都不懂，自然不知道放在门口的那两台方框框是日后我心心念念的音游。
@@ -87,15 +87,14 @@ IIDX明显更符合我的胃口，不论是选曲还是玩法。我打游戏就�
 
 washedlz是我非常要好的朋友，也是个音游痴，去广西南宁展还给我带了无料。
 
-![](https://origin.picgo.net/2025/12/07/LieAll_20240323_11453597512cc063220cd6289.md.jpg)
-
+![DSC08092](https://origin.picgo.net/2025/12/13/DSC08092a016b2bd5a93a59b.md.png)
+<center>图文有关（大概（其实是我好像没有当时的图片所以放一张课桌的意思一下）</center>
 
 五月份的`BAMANI ONLY`没去成确实小有遗憾。washedlz依旧发力，帮我代购和领取无料。
 
 与此同时我也尝试在做点周边，比如卡贴和吧唧。
 
 ![](https://origin.picgo.net/2025/12/07/IMG_20240314_1943510de77746a51501aa.md.jpg)
-
 
 高考前那段时间听歌最爽的就是听`EDP×beatnation summit 2017-beatnation 10th Anniversary`了。
 
