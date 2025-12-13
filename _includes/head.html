@@ -14,19 +14,16 @@
   <script src="https://gw.alipayobjects.com/os/lib/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://gw.alipayobjects.com/os/lib/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const tocElements = document.querySelectorAll('.toc');
-      
-      tocElements.forEach(function(toc) {
-        const tocToggle = toc.querySelector('.toc-toggle');
-        const tocContent = toc.querySelector('.toc-content');
-        
-        if (tocToggle && tocContent) {
-          tocToggle.addEventListener('click', function() {
-            toc.classList.toggle('toc-expanded');
-          });
+    // 使用事件委托来处理TOC切换，避免React重新渲染时丢失事件监听器
+    document.addEventListener('click', function(e) {
+      // 检查点击的元素是否是TOC切换按钮
+      if (e.target.matches('.toc-toggle')) {
+        // 找到对应的TOC容器
+        const toc = e.target.closest('.toc');
+        if (toc) {
+          toc.classList.toggle('toc-expanded');
         }
-      });
+      }
     });
   </script>
 </head>
