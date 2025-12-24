@@ -1,56 +1,82 @@
-// Theme of 重生云
-// Copyright(c) chopin, 2023
-
 .things {
-  margin-top: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
 
-  .things-item {
-    border-bottom: 1px solid $border-color;
-    display: flex;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    width: 100%;
-
-    .things-title {
-      color: $sub-color;
-      font-size: 1.3rem;
-      width: 8rem;
-      margin-right: 2rem;
-    }
-
-    .things-link {
-      font-size: 1.1rem;
-      line-height: 1.2rem;
-      width: 12rem;
-      padding-top: .2rem;
-      margin-right: 2rem;
-    }
-
-    .things-list {
-      font-size: 1.1rem;
-      line-height: 1.3rem;
-      padding-top: .2rem;
-    }
-  }
-
-  ul {
-    margin: 0;
+// 响应式设计：窄屏幕下调整项目宽度
+@media screen and (max-width: $breakpoint) {
+  .things {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
 
-@media (max-width: $breakpoint) {
+@media screen and (max-width: $breakpoint) {
   .things {
-    .things-item {
-      display: block;
-
-      .things-link {
-        display: flex;
-        padding: .2rem 0;
-
-        a {
-          padding-right: .2rem;
-        }
-      }
-    }
+    grid-template-columns: 1fr;  // 窄屏幕下只显示一列
   }
+}
+
+.things-item {
+  background: #f8f9fa;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.things-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.things-title {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.3rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.things-title a {
+  color: $link-color;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.things-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+  font-weight: normal;
+  flex-shrink: 0;
+}
+
+.things-list {
+  color: $main-color;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.things-avatar {
+  margin-bottom: 1rem;
+  text-align: left;  // 左对齐
+}
+
+.things-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eaeaea;
 }
