@@ -19,14 +19,14 @@ function initCodeCopy() {
     const copyButton = document.createElement('button');
     copyButton.className = 'copy-button';
     copyButton.textContent = 'Copy';
-    copyButton.title = 'Click to copy';
+    copyButton.title = '我去，点一下就能复制！';
     
     // 添加复制功能
     copyButton.addEventListener('click', function() {
       const code = codeBlock.textContent;
       navigator.clipboard.writeText(code).then(() => {
         // 复制成功
-        copyButton.textContent = 'Copied!';
+        copyButton.textContent = '已复制';
         copyButton.style.backgroundColor = '#4CAF50'; // 更改背景色为绿色
         
         // 3秒后恢复原始状态
