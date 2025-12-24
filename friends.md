@@ -25,6 +25,20 @@ permalink: /friends
     </div>
   </div>
 
+  <div class="things-item">
+    <div class="things-avatar">
+      <img src="https://cn.cravatar.com/avatar/302380667bdaf4e1390800e62494d4af?s=500&r=X"/>
+    </div>
+    <div class="things-info">
+      <div class="things-title">
+        <a href="https://luming.cool">路明笔记</a>
+        <span class="things-subtitle">——Riseforever</span>
+      </div>
+      <div class="things-list">
+        <div>不慌张，不绝望，不狂妄，不投降。</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 #### 如何添加友链
