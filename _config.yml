@@ -14,6 +14,8 @@ menu:
   - about.md
 # Contact Icons
 contact:
+  - link: https://blogscn.fun/
+    icon: fa-bold
   - link: /feed.xml
     icon: fa-rss
   - link: mailto:xiaochopin@foxmail.com
