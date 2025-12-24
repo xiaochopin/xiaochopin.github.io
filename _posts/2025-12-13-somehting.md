@@ -20,7 +20,7 @@ tags: [日常, 站点维护]
 
 大概就这样。
 
-![超级跑腿](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/20251223003706_1.webp)
+![超级跑腿](https://xiaochopin.dpdns.org/20251223003706_1.webp)
 
 今天也在超级跑腿。
 

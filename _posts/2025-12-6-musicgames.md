@@ -6,7 +6,7 @@ tags: [怀古伤尽, 游戏]
 
 >很久很久以前，一个简单的周末，我来到了华润三楼的游戏厅。那个时候我什么都不懂，自然不知道放在门口的那两台方框框是日后我心心念念的音游。
 
-![打音游的傻逼](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/29a0cf18189b1b72.jpg)
+![打音游的傻逼](https://xiaochopin.dpdns.org/29a0cf18189b1b72.jpg)
 
 ## 很久很久以前
 
@@ -65,36 +65,36 @@ tags: [怀古伤尽, 游戏]
 
 23年3月，高二，我把树莓派卖了600块，用于购置了一个SDVX小台（还有一只FUFU）。
 
-![sdvx手台](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/IMG_20240126_212233.webp)
+![sdvx手台](https://xiaochopin.dpdns.org/IMG_20240126_212233.webp)
 
-![ohno妈沫何意味！](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/LieAll_20240126_193545377.webp)
+![ohno妈沫何意味！](https://xiaochopin.dpdns.org/LieAll_20240126_193545377.webp)
 
 我也终于能在家里打到`SDVX`了。`BIMANI`系的音游非常好，吸引着我进一步了解更多。
 
-![对不起我是音游吃](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/b8484699d7b7af1f4aa5b5654f387dc0.webp)
+![对不起我是音游吃](https://xiaochopin.dpdns.org/b8484699d7b7af1f4aa5b5654f387dc0.webp)
 
 前面有说过，我打游戏并不是很厉害，差不多半年时间就到了瓶颈期。刚好那阵子又经常在班上打BMS，于是在高二寒假我斥巨资购买了IIDX手台（盖中盖版本），24年2月1日到货，入坑了`IIDX`。
 
-![iidx手台](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/LieAll_20240202_124750614.webp)
+![iidx手台](https://xiaochopin.dpdns.org/LieAll_20240202_124750614.webp)
 
 IIDX明显更符合我的胃口，不论是选曲还是玩法。我打游戏就是奔着不带脑子去得，SDVX的旋钮还是太费脑子了。
 
 24年2月7日，四段达成。3月15日，特么顶着38度多考完了化学和生物的第二天，五段达成。5月19日，六段达成。
 
-![六段](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/20251223184513533.webp)
+![六段](https://xiaochopin.dpdns.org/20251223184513533.webp)
 
 其实寒假的时候还发生了一件大事，dhc开了一家新的机厅，并且引进了舞萌和中二节奏（对这俩兴趣不大，这里不展开讲）。于是我的高三周末就在出门机厅，回家IIDX中缓缓度过了。
 
 washedlz是我非常要好的朋友，也是个音游痴，去广西南宁展还给我带了无料。
 
-![DSC08092](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/DSC08092.webp)
+![DSC08092](https://xiaochopin.dpdns.org/DSC08092.webp)
 <center>图文有关（大概（其实是我好像没有当时的图片所以放一张课桌的意思一下）</center>
 
 五月份的`BAMANI ONLY`没去成确实小有遗憾。washedlz依旧发力，帮我代购和领取无料。
 
 与此同时我也尝试在做点周边，比如卡贴和吧唧。
 
-![](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/IMG_20240314_194351.webp)
+![](https://xiaochopin.dpdns.org/IMG_20240314_194351.webp)
 
 高考前那段时间听歌最爽的就是听`EDP×beatnation summit 2017-beatnation 10th Anniversary`了。
 
@@ -114,19 +114,19 @@ washedlz是我非常要好的朋友，也是个音游痴，去广西南宁展还
 
 ##  圆梦
 
-![tama猫](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/IMG_20250502_112601.webp)
+![tama猫](https://xiaochopin.dpdns.org/IMG_20250502_112601.webp)
 <center>那天我拉着你的手，以为是永远。。</center>
 
 2025年5月2日，我六点就坐大巴出发前往广州，只为了参加`BEMANI ONLY Season 2`。
 
-![朋友圈截图](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/Screenshot_2025-12-23-18-56-16-190_com.tencent.mm-edit.webp)
+![朋友圈截图](https://xiaochopin.dpdns.org/Screenshot_2025-12-23-18-56-16-190_com.tencent.mm-edit.webp)
 
-![2x的to签](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/IMG_20250502_221452.webp)
+![2x的to签](https://xiaochopin.dpdns.org/IMG_20250502_221452.webp)
 <center>2x的to签！</center>
 
 好久没有那么开心了，听着后面的DJ演出，感觉又找到了玩音游最初的感动。
 
-![daisuke](https://pub-6c670b07e7c04b9baa19c8d231639ae3.r2.dev/Screenshot_2025-05-02-21-07-47-327_com.miui.mediaviewer-edit%281%29.webp)
+![daisuke](https://xiaochopin.dpdns.org/Screenshot_2025-05-02-21-07-47-327_com.miui.mediaviewer-edit%281%29.webp)
 <center>快把浴霸关上！</center>
 
 就这样吧，我很满足了。
