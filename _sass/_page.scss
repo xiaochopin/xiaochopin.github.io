@@ -13,5 +13,62 @@
       padding: .8rem 0;
       text-align: left;
     }
+
+    // 页面正文图片自适应，与文章样式保持一致
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 1rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      min-width: 100%;
+
+      @media (max-width: $breakpoint) {
+        margin: 1rem auto;
+        border-radius: 1rem;
+        min-width: 100%;
+      }
+    }
+
+    // 表格与代码块的适配，保持与文章一致
+    table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-collapse: collapse;
+
+      tr {
+        &:hover {
+          background-color: $light-color;
+        }
+
+        th {
+          background-color: $light-color;
+          padding: .2rem .4rem;
+        }
+
+        td {
+          padding: .2rem .4rem;
+        }
+      }
+    }
+
+    pre, code {
+      max-width: 100%;
+      overflow-x: auto;
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+
+    a, p, li {
+      word-break: break-word;
+      overflow-wrap: break-word;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+    }
   }
 }
