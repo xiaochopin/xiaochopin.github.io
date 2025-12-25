@@ -15,13 +15,13 @@ pre.highlight {
   position: relative; // 为复制按钮定位做准备
   overflow: hidden; // 确保内部元素不影响圆角
   padding: 0; // 重置padding
-  background-color: #1e1e1e; // 代码块背景色
+  background-color: $code-block-bg; // 代码块背景色
 }
 
 // 顶部工具栏样式
 .code-toolbar {
   height: 1.5rem;
-  background-color: #666666;
+  background-color: $code-toolbar-bg;
   border-radius: 1rem 1rem 0 0;
   width: 100%;
 }
@@ -33,7 +33,7 @@ code.hljs {
 }
 
 code.highlighter-rouge {
-  border: 1px solid #cccccc;
+  border: 1px solid $inline-code-border;
   border-radius: 0.5rem;
   font-size: 1.3rem;
   font-weight: normal;
@@ -60,6 +60,6 @@ code.highlighter-rouge {
   border-radius: 0.5rem; // 修改为四个角都有圆角
   
   &:hover {
-    background-color: #4CAF50;
+    background-color: $copy-button-hover;
   }
 }

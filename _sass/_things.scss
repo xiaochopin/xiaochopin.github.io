@@ -21,12 +21,12 @@
 }
 
 .things-item {
-  background: #f8f9fa;
+  background: $card-bg-color;
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease;
-  border: 1px solid #eaeaea;
+  border: 1px solid $card-border-color;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -54,7 +54,7 @@
 .things-subtitle {
   margin: 0;
   font-size: 1rem;
-  color: #666;
+  color: $muted-text-color;
   font-weight: normal;
   flex-shrink: 0;
 }
@@ -78,5 +78,5 @@
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #eaeaea;
+  border: 2px solid $card-border-color;
 }

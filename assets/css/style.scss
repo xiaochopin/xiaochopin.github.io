@@ -8,15 +8,29 @@
 
 $breakpoint: 45rem;
 
-$main-color:    #474747; // 底部图标和文本
-$sub-color:     #0099CC; // 大标题
-$code-bg-color: #848482; // 代码背景(大概
-$light-color:   #adb5bd; // 日期和菜单
-$border-color:  #0099CC; //
-$bg-color:      #eeeeee; // 背景
+// Shared palette（跨多个部分复用）
+$main-color:        #474747; // 底部图标和文本
+$sub-color:         #0099CC; // 大标题
+$link-color:        #6699CC; // 链接
+$light-color:       #adb5bd; // 日期和菜单
+$bg-color:          #eeeeee; // 背景
 
-$link-color:    #6699CC; // 链接
-$link-post:     #99CC33; //post链接选中前的样式
+// Component-specific palette（只在单个 SCSS 中出现）
+$border-color:          #0099CC; // _post：引用侧边框
+$card-bg-color:         #f8f9fa; // _things：卡片背景
+$card-border-color:     #eaeaea; // _things：卡片边框
+$muted-text-color:      #666666; // _things：次级文本
+$tag-bg-color:          #f0f0f0; // _tag：Tag 背景
+$code-block-bg:         #1e1e1e; // _code-highlight：代码块背景
+$code-toolbar-bg:       #666666; // _code-highlight：工具栏背景
+$inline-code-border:    #cccccc; // _code-highlight：行内代码边框
+$code-bg-color:         #848482; // _code-highlight：代码块边框
+$copy-button-hover:     #4CAF50; // _code-highlight：复制按钮悬停
+$input-border-color:    #dddddd; // _main：表单输入边框
+$button-primary-bg:     #1976d2; // _main：主按钮
+$button-primary-hover:  #1565c0; // _main：主按钮悬停
+$scrollbar-thumb:       #c7c7c7; // _main：滚动条
+$scrollbar-thumb-hover: #a8a8a8; // _main：滚动条悬停
 
 
 @import "main";
