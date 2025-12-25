@@ -26,11 +26,34 @@
       min-width: 100%;
 
       @media (max-width: $breakpoint) {
+
+    // 覆盖头像样式，避免被通用 img 规则拉伸
+    .things-avatar img {
+      width: 80px;
+      height: 80px;
+      min-width: auto;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: none;
+      margin: 0;
+    }
         margin: 1rem auto;
         border-radius: 1rem;
         min-width: 100%;
       }
     }
+
+      // 覆盖头像样式，避免被通用 img 规则拉伸
+      .things-avatar img {
+        width: 80px !important;
+        height: 80px !important;
+        min-width: 0 !important;
+        max-width: 80px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+      }
 
     // 表格与代码块的适配，保持与文章一致
     table {
