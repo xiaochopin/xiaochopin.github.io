@@ -42,10 +42,8 @@ defaults:
     values:
       image: /favicon.ico
 
-# 启用Jekyll内置的HTML压缩功能
 compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  ignore:
-    envs: [development]
+  clippings:      all
+  comments:       ["<!--", "-->"]
+  endings:        all
+  startings:      [html, head, body]
