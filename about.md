@@ -5,7 +5,7 @@ permalink: /about
 compress_html: false
 ---
 
-<div class="page-title">关于重生云2.0</div>
+<div class="page-title">关于重生云</div>
 
 <!--about1.0
 
@@ -37,12 +37,12 @@ If you are shining like the star in my eyes
 Lead me by your brilliant light  
 The shining starlight  
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=86 src="//music.163.com/outchain/player?type=2&id=22662067&auto=1&height=66"></iframe>
+<iframe src="https://enamscard.pages.dev/?id=22662067&theme=light&themeColor=%23008eff" width="260" height="110" style="border: none; border-radius: 8px;" frameborder="0"></iframe>
 
 #### 我是谁
 
 <div class="things about-things" style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;">
-  <div class="things-item" style="flex:0 1 360px;min-width:280px;max-width:100%;">
+  <div class="things-item" style="flex:0 1 360px;max-width:100%;">
     <div class="things-avatar">
       <img src="https://cn.cravatar.com/avatar/a10109bb266cc4eebc8d7992a4977a0c?s=200" alt="萧邦" />
     </div>
