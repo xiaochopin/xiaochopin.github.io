@@ -41,8 +41,8 @@ The shining starlight
 
 #### 我是谁
 
-<div class="things about-things">
-  <div class="things-item">
+<div class="things about-things" style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;">
+  <div class="things-item" style="flex:0 1 360px;min-width:280px;max-width:100%;">
     <div class="things-avatar">
       <img src="https://cn.cravatar.com/avatar/a10109bb266cc4eebc8d7992a4977a0c?s=200" alt="萧邦" />
     </div>
@@ -51,7 +51,7 @@ The shining starlight
         <a href="https://github.com/xiaochopin" target="_blank" rel="noopener noreferrer">萧邦</a>
         <span class="things-subtitle">@xiaochopin</span>
       </div>
-      <div class="things-list">
+      <div class="things-list" style="flex-wrap:wrap;word-break:break-word;">
         <div>明月装饰了你的窗，你装饰了别人的梦。</div>
       </div>
     </div>
