@@ -18,14 +18,14 @@ permalink: /friends
     "title": "望月阁",
     "name": "等风",
     "img": "https://233.194901.xyz/avatar/avatar02.png",
-    "desc": "给岁月以文明，给文明以岁月",
+    "desc": "给岁月以文明，给文明以岁月。",
     "link": "https://233.194901.xyz/"
   },
   {
     "title": "路明笔记",
     "name": "Riseforever",
     "img": "https://cn.cravatar.com/avatar/302380667bdaf4e1390800e62494d4af?s=500&r=X",
-    "desc": "不慌张，不绝望，不狂妄，不投降",
+    "desc": "不慌张，不绝望，不狂妄，不投降。",
     "link": "https://luming.cool"
   }
 ]
