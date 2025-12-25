@@ -48,7 +48,7 @@ The shining starlight
     </div>
     <div class="things-info">
       <div class="things-title">
-        <a href="https://xiaochopin.github.io" target="_blank" rel="noopener noreferrer">萧邦</a>
+        <a href="https://github.com/xiaochopin" target="_blank" rel="noopener noreferrer">萧邦</a>
         <span class="things-subtitle">@xiaochopin</span>
       </div>
       <div class="things-list">
