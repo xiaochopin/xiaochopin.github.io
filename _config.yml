@@ -16,12 +16,16 @@ menu:
 contact:
   - link: https://blogscn.fun/
     icon: fa-bold
+    title: 笔墨迹
   - link: /feed.xml
     icon: fa-rss
+    title: RSS订阅
   - link: mailto:xiaochopin@foxmail.com
     icon: fa-envelope-o
+    title: 给我发邮件
   - link: https://github.com/xiaochopin
     icon: fa-github
+    title: GitHub主页
 # GitHub Repo for your site
 issue_report:
   github: xiaochopin/xiaochopin.github.io
