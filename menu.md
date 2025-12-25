@@ -9,10 +9,10 @@ permalink: /menu
 
 [Tags 标签](/tag)
 
-[Lab 实验室](/lab)
-
-[Story 故事](https://www.nmbxd1.com/t/52875143?r=52875143)
-
 [Friends 小伙伴们](/friends)
+
+<!--[Lab 实验室](/lab)-->
+
+[OtherStory 其他故事](https://www.nmbxd1.com/t/52875143?r=52875143)
 
 [About 关于](/about)
