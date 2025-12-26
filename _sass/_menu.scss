@@ -47,7 +47,7 @@
     font-size: 1rem;
     padding: 0.1rem 0.4rem; // 统一内边距
     text-align: center;
-    border-radius: 6px; // 减小圆角
+    border-radius: 1rem; // 减小圆角
     transition: none;
 
     &:first-of-type {
@@ -65,7 +65,7 @@
       display: flex;
       align-items: center;
       padding: 0.1rem 0.4rem; // 统一内边距
-      border-radius: 6px; // 减小圆角
+      border-radius: 1rem; // 减小圆角
       
       &::after {
         content: '';
@@ -80,7 +80,7 @@
 
   .menu-active {
     background-color: rgba($sub-color, 0.1);
-    border-radius: 6px; // 减小圆角
+    border-radius: 1rem; // 减小圆角
     
     a {
       color: $sub-color;
@@ -93,7 +93,7 @@
     justify-content: space-between; // 左右分布
     padding: 1rem; // 改为与page一致的padding
     margin: 2.5rem auto 0.25rem auto;
-    border-radius: 8px; // 减小圆角并保持一致
+    border-radius: 1rem; // 减小圆角并保持一致
     max-width: 100%;
     
     .menu-home {
