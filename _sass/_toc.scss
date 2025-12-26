@@ -132,7 +132,7 @@
     width: 6.5rem;
     right: 1rem;
     top: auto; // 取消top属性
-    z-index: 100;
+    z-index: 1000; // 提高层级避免被其它元素遮挡
     max-height: 80vh; // 限制最大高度为视口高度的80%
     overflow: hidden; // 隐藏溢出内容
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); // 使用非线性动画
