@@ -1,92 +1,152 @@
-// Valine comment area styles moved from inline CSS
-
 #vcomments {
-  /* Match site input tone for Valine fields */
+  .vimg {
+    padding: 0;
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+  }
+  .vcontent {
+    padding: 0;
+  }
+  .vcard {
+    padding-top: .5rem;
+  }
+  .vlist,
+  .vcard,
+  .vcontent,
+  .vmeta {
+    font-size: 1.3rem !important;
+    line-height: 1.8rem !important;
+    color: $main-color !important;
+  }
+  @at-root {
+    .article-main #vcomments .vcontent p,
+    .article-main #vcomments .vcontent.p,
+    .article-main #vcomments .vcontent.p p,
+    .article-main #vcomments .vcontent > p {
+      font-size: 1.3rem !important;
+      line-height: 1.8rem !important;
+      color: $main-color !important;
+      margin: 0 !important;
+    }
+    #vcomments p {
+      margin: 0 !important;
+      padding: 0;
+    }
+  }
   .vinput,
   .vnick {
     border: 1px solid $input-border-color;
     border-radius: 1rem;
-    padding: 0.65rem 0.75rem;
+    padding: .8rem;
     font-size: 1rem;
-    background: #ffffff;
+    background: #fff;
     color: $main-color;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color .2s ease, box-shadow .2s ease;
   }
-
-  .vinput:focus,
-  .vnick:focus {
-    outline: none;
-    border-color: #d6dce3;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  }
-
   .vnick::placeholder,
   .vinput::placeholder {
     color: $light-color;
   }
-
-  /* Keep header inputs on one row and flex to available space */
+  .vquote,
+  .vh {
+    padding: 0;
+  }
+  .vhead,
   .vheader {
     display: flex;
     flex-wrap: nowrap;
     gap: 0.75rem;
   }
-
+  .vhead .vnick,
+  .vhead .vmail,
+  .vhead .vlink,
   .vheader .vnick,
   .vheader .vmail,
   .vheader .vlink {
     flex: 1 1 0;
     min-width: 10rem;
+    margin: 0;
   }
-
-  /* Hide emoji button */
-  .vemoji-btn {
+  .vhead .vsys {
     display: none !important;
   }
-
-  /* Valine submit button styling */
+  .vhead .vnick {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0;
+    font-size: 1.3rem;
+  }
+  .vmeta .vsys,
+  .vemoji-btn,
+  .vpower {
+    display: none !important;
+  }
   .vsubmit.vbtn {
-    border-radius: 1rem;
+    font-size: 1.3rem !important;
+    font-family: inherit !important;
+    line-height: 1.8rem !important;
     border: none;
-    padding: 0.45rem 0.7rem;
-    transition: all 0.2s ease;
-
+    color: $link-color;
+    background: transparent;
+    padding: 0;
+    background-image: linear-gradient($link-color, $link-color);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    border-radius: 0;
+    transition: background-size .3s ease-out, color .2s ease;
     &:hover {
       color: $link-color;
-      background-color: rgba($link-color, 0.1);
       border: none;
+      background-size: 100% 2px;
     }
   }
-
-  /* Remove wrapper padding so fields align edge-to-edge */
+  .vat {
+    font-size: 1rem !important;
+    font-family: inherit !important;
+    line-height: 1.3rem !important;
+    border: none;
+    color: $link-color !important;
+    background: transparent;
+    padding: 0;
+    background-image: linear-gradient($link-color, $link-color);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    border-radius: 0;
+    transition: background-size .3s ease-out, color .2s ease;
+    &:hover {
+      color: $link-color;
+      border: none;
+      background-size: 100% 2px;
+    }
+  }
   .vwrap {
     padding: 0;
   }
-
-  /* Remove extra gap below editor textarea */
   .veditor {
     margin-bottom: 0;
   }
-
-  /* Keep layout tight on mobile */
   @media (max-width: $breakpoint) {
+    .vhead,
     .vheader {
       flex-wrap: wrap;
-      gap: 0.5rem 0.75rem;
+      gap: .5rem .75rem;
     }
-
+    .vhead .vnick,
+    .vhead .vmail,
+    .vhead .vlink,
     .vheader .vnick,
     .vheader .vmail,
     .vheader .vlink {
       flex: 1 1 100%;
       min-width: 100%;
       margin-bottom: 0;
-    }
-
-    .vinput,
-    .vnick {
-      font-size: 0.95rem;
-      padding: 0.55rem 0.65rem;
     }
   }
 }
