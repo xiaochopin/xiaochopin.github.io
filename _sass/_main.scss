@@ -56,29 +56,17 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
-  
-  // 添加下划线动画效果
-  position: relative;
-  
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    // 修改下划线高度，使其更粗
-    height: 2px;
-    background-color: $link-color;
-    // 使用非线性动画 (ease-out)
-    transition: width 0.3s ease-out;
-  }
+  background-image: linear-gradient($link-color, $link-color);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px; // 仅绘制底部 2px，下划线颜色保持不变
+  -webkit-box-decoration-break: clone; // 确保多行也能分行绘制
+  box-decoration-break: clone;
+  transition: background-size 0.3s ease-out;
   
   &:hover {
     text-decoration: none;
-    
-    &::after {
-      width: 100%;
-    }
+    background-size: 100% 2px;
   }
 }
 
