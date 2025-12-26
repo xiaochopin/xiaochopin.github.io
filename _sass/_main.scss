@@ -52,10 +52,19 @@ body {
   border-radius: 4px;
 }
 
-// MD3 链接样式
+// 基础链接样式（默认无下划线动画，避免菜单/页脚等受影响）
 a {
   color: $link-color;
   text-decoration: none;
+}
+
+// 内容区域链接下划线动画（文章/页面/归档）
+.article-main a,
+.article-title a,
+.archive-main a,
+.page-main a,
+.archive-title a {
+  color: $link-color;
   background-image: linear-gradient($link-color, $link-color);
   background-position: 0 100%;
   background-repeat: no-repeat;
