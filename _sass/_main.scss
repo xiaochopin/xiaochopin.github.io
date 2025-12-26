@@ -63,7 +63,8 @@ a {
 .article-title a,
 .archive-main a,
 .page-main a,
-.archive-title a {
+.archive-title a,
+.tag {
   color: $link-color;
   background-image: linear-gradient($link-color, $link-color);
   background-position: 0 100%;
