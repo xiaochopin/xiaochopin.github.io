@@ -1,0 +1,92 @@
+// Valine comment area styles moved from inline CSS
+
+#vcomments {
+  /* Match site input tone for Valine fields */
+  .vinput,
+  .vnick {
+    border: 1px solid $input-border-color;
+    border-radius: 1rem;
+    padding: 0.65rem 0.75rem;
+    font-size: 1rem;
+    background: #ffffff;
+    color: $main-color;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .vinput:focus,
+  .vnick:focus {
+    outline: none;
+    border-color: #d6dce3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .vnick::placeholder,
+  .vinput::placeholder {
+    color: $light-color;
+  }
+
+  /* Keep header inputs on one row and flex to available space */
+  .vheader {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+  }
+
+  .vheader .vnick,
+  .vheader .vmail,
+  .vheader .vlink {
+    flex: 1 1 0;
+    min-width: 10rem;
+  }
+
+  /* Hide emoji button */
+  .vemoji-btn {
+    display: none !important;
+  }
+
+  /* Valine submit button styling */
+  .vsubmit.vbtn {
+    border-radius: 1rem;
+    border: none;
+    padding: 0.45rem 0.7rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $link-color;
+      background-color: rgba($link-color, 0.1);
+      border: none;
+    }
+  }
+
+  /* Remove wrapper padding so fields align edge-to-edge */
+  .vwrap {
+    padding: 0;
+  }
+
+  /* Remove extra gap below editor textarea */
+  .veditor {
+    margin-bottom: 0;
+  }
+
+  /* Keep layout tight on mobile */
+  @media (max-width: $breakpoint) {
+    .vheader {
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+    }
+
+    .vheader .vnick,
+    .vheader .vmail,
+    .vheader .vlink {
+      flex: 1 1 100%;
+      min-width: 100%;
+      margin-bottom: 0;
+    }
+
+    .vinput,
+    .vnick {
+      font-size: 0.95rem;
+      padding: 0.55rem 0.65rem;
+    }
+  }
+}

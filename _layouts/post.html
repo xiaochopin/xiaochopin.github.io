@@ -44,3 +44,18 @@ layout: default
   </script>
 
 -->
+
+<h3>评论</h3>
+
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'TwVkxFwODUqLlyubOA3e9gqt-MdYXbMMI',
+            appKey: 'pZCUhU7OmyZdto8Tz70OmCQK',
+            path: '{{ site.url }}/{{page.url}}',
+            avatar:'mp',
+            avatar_cdn: 'https://cravatar.cn/avatar/'
+        })
+    </script>
