@@ -2,6 +2,7 @@
 layout: post
 title: 使用GithubActions自动推送文章到“笔墨迹”
 tags: [技术]
+date: 2025-12-26 18:40:00 +0800
 ---
 
 >[“笔墨迹”](https://blogscn.fun)是一个位于中国境内的平台，致力于发掘和分享“优秀个人独立博客”。
