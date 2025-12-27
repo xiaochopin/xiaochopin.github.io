@@ -7,6 +7,17 @@ code {
   hyphens: none;
 }
 
+pre {
+  white-space: pre;
+}
+
+pre code {
+  white-space: pre;
+  word-break: normal;
+  display: block;
+  overflow-x: auto;
+}
+
 pre.highlight {
   border: 1px solid $code-bg-color;
   border-radius: 1rem; // MD3大圆角
@@ -30,6 +41,7 @@ code.hljs {
   padding: .8rem;
   border-radius: 0 0 1rem 1rem;
   display: block;
+  overflow-x: auto;
 }
 
 code.highlighter-rouge {

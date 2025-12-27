@@ -82,8 +82,21 @@
     pre, code {
       max-width: 100%;
       overflow-x: auto;
+    }
+
+    pre {
+      word-break: normal;
+      white-space: pre; // 大代码块不允许换行
+    }
+
+    pre code {
+      word-break: normal;
+      white-space: pre; // 大代码块不允许换行
+    }
+
+    :not(pre) > code {
       word-break: break-word;
-      white-space: pre-wrap;
+      white-space: pre-wrap; // 行内代码允许换行
     }
 
     a, p, li {
