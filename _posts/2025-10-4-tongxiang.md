@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 铜像（完结）
+title: 铜像
 tags: [故事]
 ---
 
