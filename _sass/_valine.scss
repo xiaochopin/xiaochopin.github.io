@@ -1,5 +1,9 @@
-#vcomments {
-  .vimg {
+#waline {
+  --waline-theme-color: #{$link-color};
+  --waline-active-color: #{$link-color};
+  --waline-bg-color: #{$bg-color};
+  --waline-bg-color-hover: #{$link-color};
+  .wl-avatar {
     padding: 0;
     img {
       width: 48px;
@@ -7,146 +11,180 @@
       border-radius: 50%;
     }
   }
-  .vcontent {
+  .wl-content {
     padding: 0;
   }
-  .vcard {
+  .wl-card {
     padding-top: .5rem;
   }
-  .vlist,
-  .vcard,
-  .vcontent,
-  .vmeta {
+  .wl-cards,
+  .wl-card,
+  .wl-content,
+  .wl-meta {
     font-size: 1rem !important;
     line-height: 1.8rem !important;
     color: $main-color !important;
   }
   @at-root {
-    .article-main #vcomments .vcontent p,
-    .article-main #vcomments .vcontent.p,
-    .article-main #vcomments .vcontent.p p,
-    .article-main #vcomments .vcontent > p {
+    .article-main #waline .wl-content p,
+    .article-main #waline .wl-content.p,
+    .article-main #waline .wl-content.p p,
+    .article-main #waline .wl-content > p {
       font-size: 1.3rem !important;
       line-height: 1.3rem !important;
       color: $main-color !important;
       margin: 0 !important;
     }
-    #vcomments p {
+    #waline p {
       margin: 0 !important;
       padding: 0;
     }
   }
-  .vinput,
-  .vnick {
+  .wl-input,
+  .wl-nick {
     border: 1px solid $input-border-color;
-    border-radius: 1rem;
     padding: .8rem;
     font-size: 1rem;
     background: #fff;
     color: $main-color;
     transition: border-color .2s ease, box-shadow .2s ease;
+    margin: 0 !important;
   }
-  .vnick::placeholder,
-  .vinput::placeholder {
+  .wl-nick::placeholder,
+  .wl-input::placeholder {
     color: $light-color;
   }
-  .vquote,
-  .vh {
+  .wl-quote,
+  .wl-header {
     padding: 0;
   }
-  .vhead,
-  .vheader {
+  .wl-header {
     display: flex;
     flex-wrap: nowrap;
-    gap: 0.75rem;
   }
-  .vhead .vnick,
-  .vhead .vmail,
-  .vhead .vlink,
-  .vheader .vnick,
-  .vheader .vmail,
-  .vheader .vlink {
-    flex: 1 1 0;
-    min-width: 10rem;
+  .wl-header-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
     margin: 0;
   }
-  .vhead .vsys {
+  .wl-addr,
+  .wl-browser,
+  .wl-os,
+  .wl-header .wl-badge {
     display: none !important;
   }
-  .vhead .vnick {
+  .wl-header input {
+    width: 100%;
     border: none !important;
+    border-radius: .5rem;
+    border-bottom: 1px solid transparent !important;
     background: transparent !important;
     box-shadow: none !important;
     outline: none !important;
-    padding: 0;
-    font-size: 1.3rem;
+    padding: 0 0.5rem!important;
+    margin: .5rem .5rem .5rem 0 !important;
+    font-size: 1rem;
+    color: $main-color;
+    transition: border-color .2s ease;
+    &:focus {
+      background-color: #fff !important;
+    }
   }
-  .vmeta .vsys,
-  .vemoji-btn,
-  .vpower {
+  .wl-logout-btn,
+  .wl-btn{
+    &:hover {
+      background: transparent !important;
+    }
+  }
+  .wl-action,
+  .wl-like,
+  .wl-reply {
+    padding: 0 .5rem !important;
+    background: transparent !important;
+    &:hover {
+      background: transparent !important;
+      color: $light-color !important;
+    }
+  }
+  .wl-delete,
+  .wl-close {
+    border: none !important;
+    background: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent !important;
+      border: none !important;
+      outline: none !important;
+    }
+  }
+  .wl-meta .wl-badge,
+  .wl-emoji-trigger,
+  .wl-power,
+  .wl-ua,
+  .wl-action[title="表情"],
+  .wl-action[title="表情包"] {
     display: none !important;
   }
-  .vsubmit.vbtn {
-    font-size: 1.3rem !important;
-    font-family: inherit !important;
-    line-height: 1.8rem !important;
-    border: none;
-    color: $link-color;
-    background: transparent;
-    padding: 0;
-    background-image: linear-gradient($link-color, $link-color);
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    border-radius: 0;
-    transition: background-size .3s ease-out, color .2s ease;
-    &:hover {
-      color: $link-color;
-      border: none;
-      background-size: 100% 2px;
-    }
-  }
-  .vat {
-    font-size: 1rem !important;
-    font-family: inherit !important;
+  
+  .wl-btn,
+  .wl-btn.primary,
+  button {
+    border: none !important;
+    padding: 0.25rem .5rem !important;
     line-height: 1.3rem !important;
-    border: none;
+    border-radius: .5rem;
     color: $link-color !important;
-    background: transparent;
-    padding: 0;
-    background-image: linear-gradient($link-color, $link-color);
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    border-radius: 0;
     transition: background-size .3s ease-out, color .2s ease;
+    background-color: transparent !important;
     &:hover {
-      color: $link-color;
-      border: none;
-      background-size: 100% 2px;
+      color: #fff !important;
+      background-color: $link-color !important;
     }
   }
-  .vwrap {
+
+
+  .wl-login-nick {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      border-radius: 50% !important;
+    }
+  }
+  .wl-head .wl-nick {
+    background: transparent !important;
+    border: none !important;
+    margin-right: .5rem !important;
+    padding: 0!important;
+    font-size: 1.3rem !important;
+    font-weight: 500 !important;
+  }
+  .wl-header-item label {
+    font-size: 1rem !important;
+  }
+  .wl-panel {
+    border-radius: 1rem;
     padding: 0;
   }
-  .veditor {
+  .wl-editor {
     margin-bottom: 0;
   }
   @media (max-width: $breakpoint) {
-    .vhead,
-    .vheader {
+    .wl-header {
       flex-wrap: wrap;
-      gap: .5rem .75rem;
+      flex-direction: column;
     }
-    .vhead .vnick,
-    .vhead .vmail,
-    .vhead .vlink,
-    .vheader .vnick,
-    .vheader .vmail,
-    .vheader .vlink {
-      flex: 1 1 100%;
-      min-width: 100%;
-      margin-bottom: 0;
+    .wl-header-item {
+      width: 100%;
+      flex: 0 0 100%;
     }
   }
 }

@@ -45,7 +45,6 @@ layout: default
 
 -->
 
-<h3>评论区检修中</h3>
 <!-- valine 
 
 
@@ -66,8 +65,7 @@ layout: default
     </script>
 
     -->
-
-<link
+  <link
     rel="stylesheet"
     href="https://unpkg.com/@waline/client@v3/dist/waline.css"
   />
@@ -77,7 +75,10 @@ layout: default
 
     init({
       el: '#waline',
-      serverURL: 'https://rebroncloud.netlify.app/',
-      path: '{{ page.url }}'
+      serverURL: 'https://rebroncloud.netlify.app/.netlify/functions/comment/',
+      path: '{{ page.url }}',
+      avatar:'mp',
+      avatar_cdn: 'https://weavatar.com/avatar/',
+      placeholder: "说点什么吧？",
     });
   </script>
