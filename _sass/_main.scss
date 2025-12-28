@@ -10,8 +10,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  height: 100%;
   width: 100%;
+  overflow-y: scroll; // 保留竖向滚动条位置
 }
 
 // MD3 Body 样式
@@ -21,9 +21,8 @@ body {
   font-family: "LXGW WenKai Screen", sans-serif;
   font-size: 1.3rem;
   -webkit-font-smoothing: antialiased;
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
-  overflow-y: scroll; // 保留竖向滚动条位置，避免因滚动条出现/消失导致居中偏移
   text-align: left;
   word-wrap: break-word;
   
@@ -130,8 +129,7 @@ a {
 
 // React 页面切换样式
 .loading {
-  text-align: center;
-  padding: 2rem;
+  cursor: wait;
 }
 
 .page-transition {
@@ -141,6 +139,12 @@ a {
 
 .page-transition.loading {
   opacity: 0.5;
+  pointer-events: none;
+}
+
+// 确保 React 渲染的内容正确显示
+#react-app {
+  min-height: calc(100vh - 300px);
 }
 
 // 确保代码块正常显示
@@ -184,9 +188,4 @@ input[type="text"], input[type="email"], textarea {
     outline: none;
     border-color: $button-primary-bg;
   }
-}
-
-// 确保 React 渲染的内容正确显示
-#react-app {
-  min-height: calc(100vh - 300px);
 }
