@@ -27,6 +27,20 @@ permalink: /friends
     "img": "https://cn.cravatar.com/avatar/302380667bdaf4e1390800e62494d4af?s=500&r=X",
     "desc": "不慌张，不绝望，不狂妄，不投降。",
     "link": "https://luming.cool"
+  },
+  {
+    "title": "壹人小站",
+    "name": "Mete0r",
+    "img": "https://img.xscnet.cn//i/2025/07/04/6867b067eaf3c.webp",
+    "desc": "Trust the process.",
+    "link": "https://www.xscnet.cn/"
+  },
+  {
+    "title": "空鸣深语",
+    "name": "深鸣",
+    "img": "https://blog.deepchirp.com/img/avatar.webp",
+    "desc": "深鸣的博客，主要记录技术与生活相关的内容。",
+    "link": "https://blog.deepchirp.com/"
   }
 ]
 </script>
