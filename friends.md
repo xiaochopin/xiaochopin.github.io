@@ -31,7 +31,7 @@ permalink: /friends
   {
     "title": "壹人小站",
     "name": "Mete0r",
-    "img": "https://img.xscnet.cn//i/2025/07/04/6867b067eaf3c.webp",
+    "img": "https://www.xscnet.cn/avatar1.jpg",
     "desc": "Trust the process.",
     "link": "https://www.xscnet.cn/"
   },
