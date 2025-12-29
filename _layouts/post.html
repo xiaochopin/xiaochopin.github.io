@@ -65,18 +65,14 @@ layout: default
     </script>
 
     -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
-  />
+
   <div id="waline"></div>
   <script type="module">
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-
     init({
       el: '#waline',
       serverURL: 'https://rebroncloud.netlify.app/.netlify/functions/comment/',
       path: '{{ page.url }}',
-      placeholder: "说点什么吧？",
+      placeholder: '说点什么吧？',
     });
   </script>

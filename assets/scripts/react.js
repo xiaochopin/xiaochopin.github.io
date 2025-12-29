@@ -5,10 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const executeScripts = (container) => {
     container.querySelectorAll('script').forEach(old => {
-      const script = document.createElement('script');
-      Array.from(old.attributes).forEach(attr => script.setAttribute(attr.name, attr.value));
-      script.textContent = old.textContent;
-      old.replaceWith(script);
+      if (old.type === 'module') {
+        // ES Module 需要用 Blob URL 重新执行
+        const blob = new Blob([old.textContent], { type: 'text/javascript' });
+        const url = URL.createObjectURL(blob);
+        import(url).finally(() => URL.revokeObjectURL(url));
+      } else {
+        const script = document.createElement('script');
+        Array.from(old.attributes).forEach(attr => script.setAttribute(attr.name, attr.value));
+        script.textContent = old.textContent;
+        old.replaceWith(script);
+      }
     });
   };
 
@@ -83,6 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     useEffect(() => {
       if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      
+      // 首次渲染后执行页面内脚本（因为 React 接管后 DOM 被重建）
+      const container = document.getElementById('react-app');
+      if (container) {
+        executeScripts(container);
+        if (window.hljs) { window.hljs.initHighlighting.called = false; window.hljs.initHighlighting(); }
+      }
       
       const handleClick = (e) => {
         const link = e.target.closest('a');
