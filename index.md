@@ -4,7 +4,7 @@ layout: page
 ---
 <div class="page-title" id="latest-posts">最新最热</div>
 <div class="archive-main">
-  {% for post in site.posts limit:6 %}
+  {% for post in site.posts limit:10 %}
     <div class="archive-item">
       <div class="archive-date">
         {{ post.date | date:"%B %d, %Y" }}
