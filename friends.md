@@ -17,7 +17,9 @@ permalink: /friends
     <div class="things-info">
       <div class="things-title">
         <a href="{{ friend.link }}" target="_blank" rel="noopener noreferrer">{{ friend.title }}</a>
-        <span class="things-subtitle">——{{ friend.name }}</span>
+          {% if friend.name %}
+          <span class="things-subtitle">——{{ friend.name }}</span>
+          {% endif %}
       </div>
       <div class="things-list">
         <div>{{ friend.desc }}</div>
@@ -34,13 +36,11 @@ permalink: /friends
 提交申请前，请确认贵站已添加本站友链。
 
 ```
-{
-  "title": "站点名称",
-  "name": "博主名称",
-  "img": "头像URL",
-  "desc": "一句话简介",
-  "link": "站点链接"
-}
+- title: 站点名称
+  name: 博主名称
+  img: 头像或logo链接
+  desc: 简介
+  link: 站点链接
 ```
 
 #### 本站信息
