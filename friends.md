@@ -29,6 +29,9 @@ permalink: /friends
 {% endfor %}
 </div>
 
+
+<script src="/assets/scripts/things-shuffle.js"></script>
+
 #### 如何添加友链
 
 你需要提供以下信息发送到我的邮箱进行申请（邮箱地址请见页脚或下方本站信息）。
