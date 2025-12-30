@@ -47,13 +47,21 @@ function initCodeCopy() {
   });
 }
 
-// 使用 requestIdleCallback 初始化代码复制功能
-if ('requestIdleCallback' in window) {
-  requestIdleCallback(initCodeCopy, { timeout: 3000 });
-} else {
-  // 降级方案
-  setTimeout(initCodeCopy, 100);
+// highlight.js 初始化后再初始化 code-copy
+function initHighlightAndCopy() {
+  if (window.hljs && typeof hljs.initHighlightingOnLoad === 'function') {
+    hljs.initHighlightingOnLoad();
+  }
+  setTimeout(function() {
+    initCodeCopy();
+  }, 0);
 }
 
-// 导出函数以便其他脚本可以调用
-window.initCodeCopy = initCodeCopy;
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initHighlightAndCopy);
+} else {
+  initHighlightAndCopy();
+}
+
+// 直接全局执行
+initCodeCopy();

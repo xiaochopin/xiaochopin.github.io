@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  if (typeof React === 'undefined' || typeof ReactDOM === 'undefined') return console.error('React/ReactDOM missing');
+
 
   const { createElement: e, useState, useEffect, useRef } = React;
 
@@ -77,8 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           if (curId !== navId.current) return;
           const container = document.getElementById('react-app');
-          if (container) executeScripts(container);
-          if (window.hljs) { window.hljs.initHighlighting.called = false; window.hljs.initHighlighting(); }
+          executeScripts(container);
+          hljs.initHighlighting.called = false; hljs.initHighlighting();
+          initCodeCopy();
+          shuffleThings();
           if (!isPop) scrollToHash(hash);
         }, 50);
       } catch (err) {
@@ -94,8 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // 首次渲染后执行页面内脚本（因为 React 接管后 DOM 被重建）
       const container = document.getElementById('react-app');
       if (container) {
+        shuffleThings();
         executeScripts(container);
-        if (window.hljs) { window.hljs.initHighlighting.called = false; window.hljs.initHighlighting(); }
+        hljs.initHighlighting.called = false; hljs.initHighlighting();
+        initCodeCopy();
       }
       
       const handleClick = (e) => {
@@ -121,4 +124,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   ReactDOM.createRoot(document.getElementById('react-app')).render(e(App));
-});
