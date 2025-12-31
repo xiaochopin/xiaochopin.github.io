@@ -1,0 +1,18 @@
+---
+layout: post
+title: 冰雪不語寒夜的你那難隱藏的光彩
+tags: [日常]
+date: 2026-1-1 00:00:00 +0800
+---
+
+>新年快乐！
+
+我每一次閉上了眼就想到了你  
+你像一句美麗的口號揮不去
+
+![](https://xiaochopin.dpdns.org/IMG_20251023_004117.webp)
+<center>可爱UUZ</center>
+
+推荐一下这两天才发现的好歌。
+
+[【Tayu Lo 羅大佑】2004年《愛人同志》【搞搞真意思】香港演唱會](https://www.bilibili.com/video/BV15g4y187Kc/)
