@@ -78,13 +78,6 @@
     }
   }
 
-  .menu-active {
-    a {
-      color: $sub-color;
-      font-weight: 500;
-    }
-  }
-
   @media (max-width: $breakpoint) {
     display: flex;
     justify-content: space-between; // 左右分布
