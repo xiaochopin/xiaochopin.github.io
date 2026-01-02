@@ -79,9 +79,6 @@
   }
 
   .menu-active {
-    background-color: rgba($sub-color, 0.1);
-    border-radius: 1rem; // 减小圆角
-    
     a {
       color: $sub-color;
       font-weight: 500;
