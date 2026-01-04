@@ -29,12 +29,17 @@
 .archive-more {
   color: $light-color;
 
+  // 针对“查看存档”等页脚/更多链接，禁用全局的动态下划线效果
   a {
     color: $light-color;
+    background-image: none !important;
+    background-size: 0 !important;
+    transition: none !important;
+    text-decoration: none !important;
   }
+
   a:hover {
     text-decoration: none;
     color: $link-color;
   }
-
 }
