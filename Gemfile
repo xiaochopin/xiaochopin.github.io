@@ -10,6 +10,7 @@ source "https://rubygems.org"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
+  gem "jekyll-minifier"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
