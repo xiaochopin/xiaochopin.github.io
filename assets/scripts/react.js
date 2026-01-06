@@ -178,9 +178,6 @@
         const link = e.target.closest('a');
         if (!link) return;
 
-        // 顶栏/菜单等导航区域交给浏览器默认行为
-        if (link.closest('.menu')) return;
-
         const href = link.getAttribute('href');
         if (!href || href.startsWith('mailto:') || link.target === '_blank') return;
 
