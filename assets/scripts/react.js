@@ -139,16 +139,28 @@
           initCodeCopy();
           shuffleThings();
           if (isPop) {
-            // 回退/前进时恢复滚动位置，按时间关闭loading（无需等待滚动停下）
+            // 回退/前进：滚动恢复完成或超时后解除loading
             const positions = getScrollPositions();
             const saved = positions[location.pathname + location.search];
-            const delay = 450; // ms
+            const maxWait = 800; // ms
+            let finished = false;
+            const finish = () => {
+              if (finished) return;
+              finished = true;
+              if (curId === navId.current) setLoading(false);
+            };
+
             if (saved && typeof saved.y === 'number') {
               window.scrollTo({ left: saved.x || 0, top: saved.y, behavior: 'smooth' });
-              setTimeout(() => { if (curId === navId.current) setLoading(false); }, delay);
-            } else {
-              setTimeout(() => { if (curId === navId.current) setLoading(false); }, delay / 3);
+              const checkScroll = () => {
+                if (finished) return;
+                if (Math.abs(window.scrollY - saved.y) < 10) finish();
+                else requestAnimationFrame(checkScroll);
+              };
+              requestAnimationFrame(checkScroll);
             }
+
+            setTimeout(finish, maxWait);
           } else {
             scrollToHash(hash);
           }
