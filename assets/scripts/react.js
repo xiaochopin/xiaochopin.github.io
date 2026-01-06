@@ -2,6 +2,45 @@
 
   const { createElement: e, useState, useEffect, useRef } = React;
 
+  // 滚动位置记忆
+  const SCROLL_STORAGE_KEY = 'scrollPositions';
+  const MAX_SCROLL_ENTRIES = 50;
+
+  const getScrollPositions = () => {
+    try {
+      const data = sessionStorage.getItem(SCROLL_STORAGE_KEY);
+      return data ? JSON.parse(data) : {};
+    } catch (e) {
+      return {};
+    }
+  };
+
+  const saveScrollPositions = (positions) => {
+    try {
+      const keys = Object.keys(positions);
+      if (keys.length > MAX_SCROLL_ENTRIES) {
+        keys.slice(0, keys.length - MAX_SCROLL_ENTRIES).forEach(key => delete positions[key]);
+      }
+      sessionStorage.setItem(SCROLL_STORAGE_KEY, JSON.stringify(positions));
+    } catch (e) {}
+  };
+
+  const saveScrollPosition = (pageKey) => {
+    const key = pageKey || (location.pathname + location.search);
+    const positions = getScrollPositions();
+    positions[key] = { x: window.scrollX, y: window.scrollY, timestamp: Date.now() };
+    saveScrollPositions(positions);
+  };
+
+  const restoreScrollPosition = (pageKey) => {
+    const key = pageKey || (location.pathname + location.search);
+    const positions = getScrollPositions();
+    const saved = positions[key];
+    if (saved && typeof saved.y === 'number') {
+      window.scrollTo({ left: saved.x || 0, top: saved.y, behavior: 'smooth' });
+    }
+  };
+
   const executeScripts = (container) => {
     container.querySelectorAll('script').forEach(old => {
       if (old.type === 'module') {
@@ -27,16 +66,34 @@
     } catch (e) {}
   };
 
+  const normalizePath = (p) => p.replace(/\/$/, '') || '/';
+
   function App() {
     const [content, setContent] = useState(document.getElementById('react-app').innerHTML);
     const [loading, setLoading] = useState(false);
+    const [instantLoading, setInstantLoading] = useState(false);
     const navId = useRef(0);
 
     const navigate = async (url, isPop = false) => {
       const curId = ++navId.current;
       const target = new URL(url, location.origin);
       const current = new URL(location.href);
-      const isSame = target.pathname === current.pathname && target.search === current.search;
+      const isSamePath = normalizePath(target.pathname) === normalizePath(current.pathname);
+      const isSameQuery = target.search === current.search;
+      const isSame = isSamePath && isSameQuery;
+
+      // 仅哈希变化：直接滚动，不做加载与淡入淡出
+      if (isSame && target.hash !== current.hash) {
+        scrollToHash(target.hash);
+        history.pushState({}, '', url);
+        return;
+      }
+
+      // 只在正常跳转时保存当前页面的滚动位置（回退/前进不保存，避免覆盖）
+      if (!isPop) {
+        const currentPageKey = current.pathname + current.search;
+        saveScrollPosition(currentPageKey);
+      }
 
       if (isSame && !isPop) {
         scrollToHash(target.hash);
@@ -44,6 +101,7 @@
         return;
       }
 
+      setInstantLoading(isPop);
       setLoading(true);
       const hash = target.hash;
       const fetchUrl = url.split('#')[0];
@@ -80,12 +138,34 @@
           hljs.initHighlighting.called = false; hljs.initHighlighting();
           initCodeCopy();
           shuffleThings();
-          if (!isPop) scrollToHash(hash);
+          if (isPop) {
+            // 回退/前进时恢复滚动位置，滚动完成后再取消loading
+            const positions = getScrollPositions();
+            const saved = positions[location.pathname + location.search];
+            if (saved && typeof saved.y === 'number') {
+              window.scrollTo({ left: saved.x || 0, top: saved.y, behavior: 'smooth' });
+              // 等待滚动完成后再取消loading
+              const checkScroll = () => {
+                if (Math.abs(window.scrollY - saved.y) < 10) {
+                  if (curId === navId.current) setLoading(false);
+                } else {
+                  requestAnimationFrame(checkScroll);
+                }
+              };
+              requestAnimationFrame(checkScroll);
+            } else {
+              if (curId === navId.current) setLoading(false);
+            }
+          } else {
+            scrollToHash(hash);
+          }
         }, 50);
       } catch (err) {
         if (curId === navId.current && !isPop) location.href = url;
       } finally {
-        if (curId === navId.current) setLoading(false);
+        // 只有非回退时在finally取消loading，回退时等滚动完成
+        if (curId === navId.current && !isPop) setLoading(false);
+        if (curId === navId.current && isPop) setInstantLoading(false);
       }
     };
 
@@ -104,23 +184,50 @@
       const handleClick = (e) => {
         const link = e.target.closest('a');
         if (!link) return;
+
+        // 顶栏/菜单等导航区域交给浏览器默认行为
+        if (link.closest('.menu')) return;
+
         const href = link.getAttribute('href');
-        if (!href || (href.startsWith('http') && !href.startsWith(location.origin)) || 
-            href.startsWith('#') || href.startsWith('mailto:') || link.target === '_blank') return;
+        if (!href || href.startsWith('mailto:') || link.target === '_blank') return;
+
+        // 处理外链：放行
+        const targetUrl = new URL(href, location.href);
+        if (targetUrl.origin !== location.origin) return;
+
+        // 同页锚点（含纯哈希）：平滑滚动，不触发加载
+        if (targetUrl.hash && normalizePath(targetUrl.pathname) === normalizePath(location.pathname)) {
+          e.preventDefault();
+          scrollToHash(targetUrl.hash);
+          history.pushState({}, '', targetUrl.href);
+          return;
+        }
+
+        // 站内普通链接，走 SPA 导航
         e.preventDefault();
-        navigate(href);
+        navigate(targetUrl.href);
+      };
+
+      // 滚动时保存位置（防抖）
+      let scrollTimeout;
+      const handleScroll = () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => saveScrollPosition(), 150);
       };
 
       const handlePop = () => navigate(location.href, true);
       document.addEventListener('click', handleClick);
       window.addEventListener('popstate', handlePop);
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      window.addEventListener('beforeunload', () => saveScrollPosition());
       return () => {
         document.removeEventListener('click', handleClick);
         window.removeEventListener('popstate', handlePop);
+        window.removeEventListener('scroll', handleScroll);
       };
     }, []);
 
-    return e('div', { className: `page-transition ${loading ? 'loading' : ''}`, dangerouslySetInnerHTML: { __html: content } });
+    return e('div', { className: `page-transition ${loading ? 'loading' : ''} ${instantLoading ? 'instant-loading' : ''}`, dangerouslySetInnerHTML: { __html: content } });
   }
 
   ReactDOM.createRoot(document.getElementById('react-app')).render(e(App));
