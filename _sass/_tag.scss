@@ -11,6 +11,7 @@
   color: $link-color !important; // 强制应用 link-color
   text-decoration: none;
   position: relative;
+  margin-right: 0.25rem;
   border-radius: 4px; // 圆角
   background-color: $tag-bg-color; // 背景色
   transition: all 0.3s ease; // 添加过渡效果
@@ -24,7 +25,6 @@
   // 移除之前的特殊样式，使用普通链接样式
   &:before {
     content: "#"; // 保留 # 号前缀
-    margin-right: 0.2rem; // #号与文字间距
   }
 }
 
