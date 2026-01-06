@@ -27,6 +27,7 @@
         const toc = toggle.closest('.toc');
         if (toc) {
           toc.classList.toggle('toc-expanded');
+          toggle.setAttribute('aria-expanded', toc.classList.contains('toc-expanded'));
         }
       }
     });

@@ -118,7 +118,7 @@
 {% endcapture %}{% assign tocWorkspace = '' %}
 {% if jekyll_toc != '' %}
 <div class="toc">
-    <button class="toc-toggle" type="button" aria-expanded="false" onclick="(function(btn){var toc=btn.closest('.toc');if(toc){toc.classList.toggle('toc-expanded');btn.setAttribute('aria-expanded', toc.classList.contains('toc-expanded'));}})(this)">目录</button>
+    <button class="toc-toggle" type="button" aria-expanded="false">目录</button>
     <div class="toc-content" role="region" aria-label="目录内容">
     {{ jekyll_toc }}
   </div>
