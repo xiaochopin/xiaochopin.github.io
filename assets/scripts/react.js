@@ -139,22 +139,15 @@
           initCodeCopy();
           shuffleThings();
           if (isPop) {
-            // 回退/前进时恢复滚动位置，滚动完成后再取消loading
+            // 回退/前进时恢复滚动位置，按时间关闭loading（无需等待滚动停下）
             const positions = getScrollPositions();
             const saved = positions[location.pathname + location.search];
+            const delay = 450; // ms
             if (saved && typeof saved.y === 'number') {
               window.scrollTo({ left: saved.x || 0, top: saved.y, behavior: 'smooth' });
-              // 等待滚动完成后再取消loading
-              const checkScroll = () => {
-                if (Math.abs(window.scrollY - saved.y) < 10) {
-                  if (curId === navId.current) setLoading(false);
-                } else {
-                  requestAnimationFrame(checkScroll);
-                }
-              };
-              requestAnimationFrame(checkScroll);
+              setTimeout(() => { if (curId === navId.current) setLoading(false); }, delay);
             } else {
-              if (curId === navId.current) setLoading(false);
+              setTimeout(() => { if (curId === navId.current) setLoading(false); }, delay / 3);
             }
           } else {
             scrollToHash(hash);
