@@ -50,18 +50,23 @@ footer {
 }
 
 @media (max-width: $breakpoint) {
+
   .contact {
     .contact-copyright {
       margin-left: 0rem;
-      padding-top: 1rem;
-      padding-left: .3rem;
+      padding-top: .5rem;
       width: 100%;
     }
-
+    
     .contact-links {
+      padding-left: .1rem!important;
       float: none;
-      margin-left: -.1rem;
       width: 100%;
+      a {
+      padding-left: 0!important;
+      padding-right: .3rem;
+      }
     }
   }
+
 }
