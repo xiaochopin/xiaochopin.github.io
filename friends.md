@@ -8,7 +8,7 @@ permalink: /friends
 
 这里是我的朋友们的网站，欢迎互换友链~
 
-<div class="things">
+<div class="things things-hidden">
 {% for friend in site.data.friends %}
   <div class="things-item">
     <div class="things-avatar">

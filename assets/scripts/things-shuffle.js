@@ -6,12 +6,17 @@ function shuffleThingsWithRetry(retry = 20) {
     return;
   }
   var items = Array.from(container.querySelectorAll('.things-item'));
-  if (items.length < 2) return;
+  if (items.length < 2) {
+    requestAnimationFrame(() => container.classList.remove('things-hidden'));
+    return;
+  }
   for (let i = items.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [items[i], items[j]] = [items[j], items[i]];
   }
   container.innerHTML = '';
   items.forEach(item => container.appendChild(item));
+  // 显示友链：在打乱结束后再淡入
+  requestAnimationFrame(() => container.classList.remove('things-hidden'));
 }
 window.shuffleThings = shuffleThingsWithRetry;

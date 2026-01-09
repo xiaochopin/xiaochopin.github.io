@@ -25,11 +25,12 @@
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
+  transition: opacity 0.35s ease, box-shadow 0.3s ease;
   border: 1px solid $card-border-color;
   display: flex;
   flex-direction: column;
   height: 100%;
+  opacity: 1;
 }
 
 .things-item:hover {
@@ -79,4 +80,8 @@
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid $card-border-color;
+}
+
+.things-hidden .things-item {
+  opacity: 0;
 }
