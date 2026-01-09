@@ -95,12 +95,15 @@
   .toc {
     position: fixed; // 恢复fixed定位
     font-size: 1.1rem;
-    // 计算可用宽度：100% - (50% + 400px) - 2rem，确保右侧有余量
-    width: min(max(15rem, calc((100% - (50% + 400px) - 2rem))), 30rem);
+    // 宽度自适应：从文章右边缘到视口右边缘，减去间距
+    // 左边距离视口中心 = $breakpoint / 2 + 1rem 间隙
+    // 右边距离视口边缘 = 1rem
+    left: calc(50% + #{$breakpoint / 2} + 1rem);
+    right: 1rem;
+    width: auto; // 自动计算宽度
+    max-width: 25rem; // 限制最大宽度避免过宽
+    min-width: 12rem; // 最小宽度保证可读性
     top: 8rem;
-    // 保持原有的位置计算方式，贴近文章部分
-    left: calc(50% + 400px);
-    right: auto;
     max-height: calc(100% - 11rem); // 调整为top(8rem) + bottom(3rem) = 11rem
     height: fit-content; // 添加这一行使高度自适应内容
     overflow: auto;
