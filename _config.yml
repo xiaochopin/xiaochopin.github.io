@@ -51,10 +51,10 @@ jekyll-minifier:
   exclude: 'about.md'
   exclude: 'feed.xml'
   preserve_php: true
-  remove_spaces_inside_tags: true
-  remove_multi_spaces: true
+  remove_spaces_inside_tags: false
+  remove_multi_spaces: false
   remove_comments: true
-  remove_intertag_spaces: true
+  remove_intertag_spaces: false
   remove_quotes: false
   compress_css: true
   compress_javascript: true
