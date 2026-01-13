@@ -3,7 +3,6 @@ layout: post
 title: Test for Styles
 tags: [站点维护]
 ---
-
 This is not an actual post. It is a test post for styles, which contains all available markdown syntax to prove the effect of UI styles.
 
 # H1 - heading 1
@@ -41,15 +40,17 @@ And, I need some `inline code` here, which should be `long` enough. It is becaus
 > Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 > Nested blockquote:
->  > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+>
+>> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+>>
 
-| Table | Style | Is | Here |
-|----|----|----|----|
-| 1 | gold | David | Tokyo |
-| 2 | platinum | Aaron | Beijing |
-| 3 | silver | Gareth | San Francisco |
-| 4 | diamond | Mitchell | London |
 
+| Table | Style    | Is       | Here          |
+| ----- | -------- | -------- | ------------- |
+| 1     | gold     | David    | Tokyo         |
+| 2     | platinum | Aaron    | Beijing       |
+| 3     | silver   | Gareth   | San Francisco |
+| 4     | diamond  | Mitchell | London        |
 
 * List 1
   * Item 1
@@ -60,9 +61,9 @@ And, I need some `inline code` here, which should be `long` enough. It is becaus
 
 1. Ordered 1
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut `labore` et dolore magna aliqua.
-
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut `labore` et dolore magna aliqua.
 2. Ordered 2
 
+Test for NoteGen.et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Tab
 
 [Go To Home Page](/)
