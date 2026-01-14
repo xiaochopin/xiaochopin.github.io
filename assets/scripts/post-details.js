@@ -1,64 +1,51 @@
 (function() {
-  function setupDetailsAnimation(root) {
-    const details = root.querySelector('.post-details');
-    if (!details) return;
-    const summary = details.querySelector('summary');
+  const animating = new WeakSet();
+
+  function toggle(details) {
     const content = details.querySelector('.details-content');
-    if (!summary || !content) return;
+    if (!content) return;
+    const isOpen = details.hasAttribute('open');
 
-    let animating = false;
+    if (animating.has(details)) return;
+    animating.add(details);
 
-    function openDetails() {
-      if (animating) return;
-      animating = true;
+    if (!isOpen) {
       details.setAttribute('open', '');
       content.style.height = '0px';
       requestAnimationFrame(function() {
         content.style.height = content.scrollHeight + 'px';
         content.style.opacity = '1';
       });
-      function onEnd(e) {
+      content.addEventListener('transitionend', function handler(e) {
         if (e.propertyName !== 'height') return;
-        content.removeEventListener('transitionend', onEnd);
+        content.removeEventListener('transitionend', handler);
         content.style.height = 'auto';
-        animating = false;
-      }
-      content.addEventListener('transitionend', onEnd);
-    }
-
-    function closeDetails() {
-      if (animating) return;
-      animating = true;
+        animating.delete(details);
+      });
+    } else {
       content.style.height = content.scrollHeight + 'px';
       requestAnimationFrame(function() {
         content.style.height = '0px';
         content.style.opacity = '0';
       });
-      function onEnd(e) {
+      content.addEventListener('transitionend', function handler(e) {
         if (e.propertyName !== 'height') return;
-        content.removeEventListener('transitionend', onEnd);
+        content.removeEventListener('transitionend', handler);
         details.removeAttribute('open');
         content.style.opacity = '';
-        animating = false;
-      }
-      content.addEventListener('transitionend', onEnd);
+        animating.delete(details);
+      });
     }
-
-    summary.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (details.hasAttribute('open')) {
-        closeDetails();
-      } else {
-        openDetails();
-      }
-    });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      setupDetailsAnimation(document);
-    });
-  } else {
-    setupDetailsAnimation(document);
+  function delegate(e) {
+    const summary = e.target.closest('summary');
+    if (!summary) return;
+    const details = summary.closest('.post-details');
+    if (!details) return;
+    e.preventDefault();
+    toggle(details);
   }
+
+  document.addEventListener('click', delegate);
 })();
