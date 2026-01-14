@@ -5,6 +5,8 @@
   // 滚动位置记忆
   const SCROLL_STORAGE_KEY = 'scrollPositions';
   const MAX_SCROLL_ENTRIES = 50;
+  const MIN_LOADING_DURATION = 200; // 缩短加载动画停留时间
+  const FADE_OUT_DURATION = 200; // 与 CSS 过渡时间保持一致
 
   const getScrollPositions = () => {
     try {
@@ -68,11 +70,16 @@
 
   const normalizePath = (p) => p.replace(/\/$/, '') || '/';
 
+  const waitForFadeOut = () => new Promise(resolve => {
+    requestAnimationFrame(() => setTimeout(resolve, FADE_OUT_DURATION));
+  });
+
   function App() {
     const [content, setContent] = useState(document.getElementById('react-app').innerHTML);
     const [loading, setLoading] = useState(false);
     const [instantLoading, setInstantLoading] = useState(false);
     const navId = useRef(0);
+    const loadingStartRef = useRef(0);
 
     const navigate = async (url, isPop = false) => {
       const curId = ++navId.current;
@@ -81,6 +88,14 @@
       const isSamePath = normalizePath(target.pathname) === normalizePath(current.pathname);
       const isSameQuery = target.search === current.search;
       const isSame = isSamePath && isSameQuery;
+
+      const ensureMinLoading = (done) => {
+        const elapsed = performance.now() - loadingStartRef.current;
+        const delay = Math.max(MIN_LOADING_DURATION - elapsed, 0);
+        setTimeout(() => {
+          if (curId === navId.current) done();
+        }, delay);
+      };
 
       // 仅哈希变化：直接滚动，不做加载与淡入淡出
       if (isSame && target.hash !== current.hash) {
@@ -102,7 +117,9 @@
       }
 
       setInstantLoading(isPop);
+      loadingStartRef.current = performance.now();
       setLoading(true);
+      await waitForFadeOut();
       const hash = target.hash;
       const fetchUrl = url.split('#')[0];
 
@@ -147,7 +164,10 @@
             const finish = () => {
               if (finished) return;
               finished = true;
-              if (curId === navId.current) setLoading(false);
+              ensureMinLoading(() => {
+                setLoading(false);
+                setInstantLoading(false);
+              });
             };
 
             if (saved && typeof saved.y === 'number') {
@@ -166,11 +186,17 @@
           }
         }, 50);
       } catch (err) {
-        if (curId === navId.current && !isPop) location.href = url;
+        if (isPop) {
+          ensureMinLoading(() => {
+            setLoading(false);
+            setInstantLoading(false);
+          });
+        } else if (curId === navId.current) {
+          location.href = url;
+        }
       } finally {
         // 只有非回退时在finally取消loading，回退时等滚动完成
-        if (curId === navId.current && !isPop) setLoading(false);
-        if (curId === navId.current && isPop) setInstantLoading(false);
+        if (!isPop) ensureMinLoading(() => setLoading(false));
       }
     };
 

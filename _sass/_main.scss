@@ -134,18 +134,18 @@ a {
 
 .page-transition {
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .page-transition.loading {
-  opacity: 0.5;
+  opacity: 0;
   pointer-events: none;
 }
 
 // 回退/前进时立即进入半透明态，避免开始时的渐变
 .page-transition.instant-loading.loading {
   transition: none;
-  opacity: 0.5;
+  opacity: 0;
 }
 
 // 确保 React 渲染的内容正确显示
