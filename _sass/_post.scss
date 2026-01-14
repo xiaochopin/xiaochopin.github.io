@@ -202,3 +202,37 @@ table {
   font-size: 1rem;
   margin-top: 1rem;
 }
+
+.summary-btn {
+  font-size: 1.3rem;
+  color: $link-color;
+  border-radius: 1rem;
+  
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+// details 展开/收缩动画
+.post-details {
+  margin-top: 1rem;
+}
+
+.post-details summary {
+  list-style: none; // 隐藏默认三角图标
+}
+
+.post-details summary::-webkit-details-marker {
+  display: none; // Safari/WebKit 隐藏默认图标
+}
+
+.post-details .details-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms ease, opacity 300ms ease;
+  opacity: 0;
+}
+
+.post-details[open] .details-content {
+  opacity: 1;
+}
+

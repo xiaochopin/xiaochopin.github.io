@@ -65,8 +65,14 @@ layout: default
     </script>
 
     -->
+<details class="post-details">
+  <summary class="fa fa-comments-o summary-btn"> 笔底闲谈</summary>
+  <div class="details-content">
+    <div class="details-inner">
+      <div id="waline"></div>
+    </div>
+  </div>
 
-  <div id="waline"></div>
   <script type="module">
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
     init({
@@ -76,3 +82,5 @@ layout: default
       placeholder: '说点什么吧？',
     });
   </script>
+
+</details>

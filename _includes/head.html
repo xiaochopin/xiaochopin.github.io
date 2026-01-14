@@ -39,4 +39,7 @@
     gtag('js', new Date());
     gtag('config', 'G-8Y2J3P1E7L');
   </script>
+  {% if page.layout == 'post' %}
+  <script src="{{ "/assets/scripts/post-details.js" | relative_url }}" defer></script>
+  {% endif %}
 </head>
