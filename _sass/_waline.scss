@@ -12,7 +12,7 @@
     }
   }
   .wl-comment{
-    padding-top: 1.3rem;
+    padding-top: 2.6rem;
   }
   .wl-content {
     padding: 0;
@@ -98,6 +98,7 @@
   .wl-btn{
     &:hover {
       background: transparent !important;
+      transition: all 0.3s ease;
     }
   }
   .wl-action,
@@ -106,6 +107,7 @@
     padding: 0 .5rem !important;
     background: transparent !important;
     &:hover {
+      transition: all 0.3s ease;
       background: transparent !important;
       color: $light-color !important;
     }
@@ -120,6 +122,7 @@
     &:active,
     &:focus {
       background: transparent !important;
+      transition: all 0.3s ease;
       border: none !important;
       outline: none !important;
     }
@@ -144,6 +147,7 @@
     transition: background-size .3s ease-out, color .2s ease;
     background-color: transparent !important;
     &:hover {
+      transition: all 0.3s ease;
       color: #fff !important;
       background-color: $link-color !important;
     }

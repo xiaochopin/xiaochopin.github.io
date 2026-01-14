@@ -204,12 +204,18 @@ table {
 }
 
 .summary-btn {
+  font-family: "LXGW WenKai Screen",FontAwesome!important;
   font-size: 1.3rem;
   color: $link-color;
-  border-radius: 1rem;
-  
+  background-color: rgba($link-color, 0.1);
+  padding: .5rem;
+  border-radius: .5rem;
+  &:hover {
+    color: $link-color; // 与 tag 一致的文字颜色
+    text-decoration: none;
+  }
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s ease; // 与 tag 的过渡保持一致
 }
 
 // details 展开/收缩动画
@@ -219,10 +225,25 @@ table {
 
 .post-details summary {
   list-style: none; // 隐藏默认三角图标
+  display: inline-flex; // 仅占内容宽度
+  align-items: center;
+  cursor: pointer;
 }
 
 .post-details summary::-webkit-details-marker {
   display: none; // Safari/WebKit 隐藏默认图标
+}
+
+// 末尾展开/收起小箭头
+.post-details summary::after {
+  content: '▸';
+  margin-left: .4rem; // 紧贴文字右侧
+  color: $link-color;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.post-details[open] summary::after {
+  transform: rotate(90deg); // 打开时箭头旋转
 }
 
 .post-details .details-content {
