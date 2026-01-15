@@ -44,16 +44,26 @@
   };
 
   const executeScripts = (container) => {
+    if (!container) return;
     container.querySelectorAll('script').forEach(old => {
-      if (old.type === 'module') {
-        // ES Module 需要用 Blob URL 重新执行
-        const blob = new Blob([old.textContent], { type: 'text/javascript' });
-        const url = URL.createObjectURL(blob);
-        import(url).finally(() => URL.revokeObjectURL(url));
+      const isModule = old.type === 'module';
+      const src = old.getAttribute('src');
+      if (isModule) {
+        if (src) {
+          // 直接动态导入外部模块脚本
+          import(src).catch(() => {});
+        } else {
+          // ES Module 内联脚本使用 Blob 重新执行
+          const code = old.textContent || '';
+          const blob = new Blob([code], { type: 'text/javascript' });
+          const url = URL.createObjectURL(blob);
+          import(url).finally(() => URL.revokeObjectURL(url)).catch(() => {});
+        }
       } else {
+        // 普通脚本：重新创建以触发浏览器执行（含 src）
         const script = document.createElement('script');
         Array.from(old.attributes).forEach(attr => script.setAttribute(attr.name, attr.value));
-        script.textContent = old.textContent;
+        script.textContent = old.textContent || '';
         old.replaceWith(script);
       }
     });
@@ -75,7 +85,8 @@
   });
 
   function App() {
-    const [content, setContent] = useState(document.getElementById('react-app').innerHTML);
+    const initialContainer = document.getElementById('react-app');
+    const [content, setContent] = useState(initialContainer ? initialContainer.innerHTML : '');
     const [loading, setLoading] = useState(false);
     const [instantLoading, setInstantLoading] = useState(false);
     const navId = useRef(0);
@@ -152,9 +163,16 @@
           if (curId !== navId.current) return;
           const container = document.getElementById('react-app');
           executeScripts(container);
-          hljs.initHighlighting.called = false; hljs.initHighlighting();
-          initCodeCopy();
-          shuffleThings();
+          if (window.hljs && typeof hljs.initHighlighting === 'function') {
+            try { hljs.initHighlighting.called = false; } catch (e) {}
+            try { hljs.initHighlighting(); } catch (e) {}
+          }
+          if (typeof initCodeCopy === 'function') {
+            try { initCodeCopy(); } catch (e) {}
+          }
+          if (typeof shuffleThings === 'function') {
+            try { shuffleThings(); } catch (e) {}
+          }
           if (isPop) {
             // 回退/前进：滚动恢复完成或超时后解除loading
             const positions = getScrollPositions();
@@ -206,10 +224,17 @@
       // 首次渲染后执行页面内脚本（因为 React 接管后 DOM 被重建）
       const container = document.getElementById('react-app');
       if (container) {
-        shuffleThings();
         executeScripts(container);
-        hljs.initHighlighting.called = false; hljs.initHighlighting();
-        initCodeCopy();
+        if (typeof shuffleThings === 'function') {
+          try { shuffleThings(); } catch (e) {}
+        }
+        if (window.hljs && typeof hljs.initHighlighting === 'function') {
+          try { hljs.initHighlighting.called = false; } catch (e) {}
+          try { hljs.initHighlighting(); } catch (e) {}
+        }
+        if (typeof initCodeCopy === 'function') {
+          try { initCodeCopy(); } catch (e) {}
+        }
       }
       
       const handleClick = (e) => {
