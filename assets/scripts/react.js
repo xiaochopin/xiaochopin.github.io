@@ -91,11 +91,12 @@
     const [instantLoading, setInstantLoading] = useState(false);
     const navId = useRef(0);
     const loadingStartRef = useRef(0);
+    const lastHrefRef = useRef(location.href);
 
-    const navigate = async (url, isPop = false) => {
+    const navigate = async (url, isPop = false, fromUrl) => {
       const curId = ++navId.current;
       const target = new URL(url, location.origin);
-      const current = new URL(location.href);
+      const current = new URL(fromUrl || location.href);
       const isSamePath = normalizePath(target.pathname) === normalizePath(current.pathname);
       const isSameQuery = target.search === current.search;
       const isSame = isSamePath && isSameQuery;
@@ -108,10 +109,18 @@
         }, delay);
       };
 
+      // 回退/前进到同页锚点：只滚动，不触发加载
+      if (isPop && isSame) {
+        scrollToHash(target.hash);
+        lastHrefRef.current = target.href;
+        return;
+      }
+
       // 仅哈希变化：直接滚动，不做加载与淡入淡出
       if (isSame && target.hash !== current.hash) {
         scrollToHash(target.hash);
         history.pushState({}, '', url);
+        lastHrefRef.current = target.href;
         return;
       }
 
@@ -124,6 +133,7 @@
       if (isSame && !isPop) {
         scrollToHash(target.hash);
         history.pushState({}, '', url);
+        lastHrefRef.current = target.href;
         return;
       }
 
@@ -158,6 +168,7 @@
         document.title = doc.title;
         setContent(doc.getElementById('react-app').innerHTML);
         if (!isPop) history.pushState({}, '', url);
+        lastHrefRef.current = target.href;
 
         setTimeout(() => {
           if (curId !== navId.current) return;
@@ -215,6 +226,10 @@
       } finally {
         // 只有非回退时在finally取消loading，回退时等滚动完成
         if (!isPop) ensureMinLoading(() => setLoading(false));
+        if (curId === navId.current && (isPop || !loading)) {
+          // record current URL as the latest known location after navigation attempt
+          lastHrefRef.current = target.href;
+        }
       }
     };
 
@@ -258,7 +273,7 @@
 
         // 站内普通链接，走 SPA 导航
         e.preventDefault();
-        navigate(targetUrl.href);
+        navigate(targetUrl.href, false, lastHrefRef.current);
       };
 
       // 滚动时保存位置（防抖）
@@ -268,7 +283,7 @@
         scrollTimeout = setTimeout(() => saveScrollPosition(), 150);
       };
 
-      const handlePop = () => navigate(location.href, true);
+      const handlePop = () => navigate(location.href, true, lastHrefRef.current);
       document.addEventListener('click', handleClick);
       window.addEventListener('popstate', handlePop);
       window.addEventListener('scroll', handleScroll, { passive: true });
