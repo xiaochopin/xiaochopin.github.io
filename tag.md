@@ -5,7 +5,7 @@ permalink: /tag
 ---
 
 
-<div class="page-title" id="tags">标签</div>
+<h1 class="page-title" id="tags">标签</h1>
 
 <div class="archive-main" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
   {% assign tags_list = site.tags %}

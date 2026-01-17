@@ -4,7 +4,7 @@ layout: page
 permalink: /about
 ---
 
-<div class="page-title">关于重生云</div>
+<h1 class="page-title">关于重生云</h1>
 
 <!--about1.0
 

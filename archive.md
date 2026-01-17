@@ -4,7 +4,7 @@ layout: page
 permalink: /archive
 ---
 
-<div class="page-title" id="archive">存档</div>
+<h1 class="page-title" id="archive">存档</h1>
 <div class="archive-main">
   {% for post in site.posts %}
     <div class="archive-item">

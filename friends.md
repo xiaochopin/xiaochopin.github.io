@@ -4,7 +4,7 @@ layout: page
 permalink: /friends
 ---
 
-<div class="page-title">小伙伴们</div>
+<h1 class="page-title">小伙伴们</h1>
 
 这里是我的朋友们的网站，欢迎互换友链~
 

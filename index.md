@@ -5,7 +5,8 @@ layout: page
 
 <p style="margin-top: 0!important;"><img src="https://xiaochopin.dpdns.org/index3.webp" alt="" style="margin-top: 0!important;"></p>
 
-<div class="page-title" id="latest-posts">最新最热</div>
+<h1 class="page-title" id="latest-posts">最新最热</h1>
+
 <div class="archive-main">
   {% for post in site.posts limit:10 %}
     <div class="archive-item">
