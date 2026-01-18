@@ -3,16 +3,18 @@ title: Menu
 layout: page
 permalink: /menu
 ---
+
 <h1 class="page-title">目录</h1>
 
-[Archive 存档](/archive)
 
-[Tags 标签](/tag)
+[存档](/archive)
 
-[Friends 小伙伴们](/friends)
+[标签](/tag)
+
+[FF14风格化摄影](/ff14SpecPhoto)
+
+[友人帐](/friends)
 
 <!--[Lab 实验室](/lab)-->
 
-[OtherStory 其他故事](https://www.nmbxd1.com/t/52875143?r=52875143)
-
-[About 关于](/about)
+[关于重生云](/about)
