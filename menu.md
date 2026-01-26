@@ -9,9 +9,11 @@ permalink: /menu
 
 [存档](/archive)
 
-[标签](/tag)
+[标签页](/tag)
 
 [FF14风格化摄影](/ff14SpecPhoto)
+
+[拾珍集](/favlist)
 
 [友人帐](/friends)
 
