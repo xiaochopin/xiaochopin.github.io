@@ -1,9 +1,9 @@
 ---
 title: About
+description: "重生云是我的个人博客，基于Jekyll和Github Pages。"
 layout: page
 permalink: /about
 ---
-
 <h1 class="page-title">关于重生云</h1>
 
 <!--about1.0

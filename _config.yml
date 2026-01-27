@@ -1,7 +1,7 @@
 # Site settings
 title: 重生云
 author: Chopin
-description: "明月装饰了你的窗，你装饰了别人的梦。"
+locale: zh-CN
 encoding: utf-8
 markdown: kramdown
 url: https://xiaochopin.github.io

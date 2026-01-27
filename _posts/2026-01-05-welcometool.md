@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 随手写了个小工具
+description: "我所在的FF14部队的QQ群入群都有个欢迎仪式。"
 tags: [日常, 游戏]
 ---
-
 我所在的FF14部队的QQ群入群都有个欢迎仪式。
 
 ![](https://xiaochopin.dpdns.org/20260105185852137.webp)

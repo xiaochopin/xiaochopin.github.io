@@ -1,9 +1,9 @@
 ---
 title: 拾珍集
+description: "一些自己比较喜欢的站点。"
 layout: page
 permalink: /favlist
 ---
-
 <h1 class="page-title">常看常新</h1>
 
 一些自己比较喜欢的站点。

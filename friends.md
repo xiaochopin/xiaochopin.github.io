@@ -1,9 +1,9 @@
 ---
 title: Friends
+description: "这里是我的朋友们的网站，欢迎互换友链~"
 layout: page
 permalink: /friends
 ---
-
 <h1 class="page-title">友人帐</h1>
 
 这里是我的朋友们的网站，欢迎互换友链~

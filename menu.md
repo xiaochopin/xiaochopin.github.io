@@ -1,9 +1,9 @@
 ---
 title: Menu
+description: "重生云站点目录"
 layout: page
 permalink: /menu
 ---
-
 <h1 class="page-title">目录</h1>
 
 

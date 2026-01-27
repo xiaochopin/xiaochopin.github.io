@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 图床修复
+description: "现在本站图床采用了CLoudFlare R2 + PicGo方案，并且Picgo中使用了图片压缩插件，全面拥抱webp。"
 tags: [站点维护]
 ---
-
 现在本站图床采用了CLoudFlare R2 +  PicGo方案，并且Picgo中使用了图片压缩插件，全面拥抱webp。
 
 不过有些图片还是太大，而压缩又是按比例，所以还是有些图片大于1兆的，不过也没多少，不管他了。

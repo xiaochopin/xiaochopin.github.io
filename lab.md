@@ -1,5 +1,6 @@
 ---
 title: Lab
+description: "实验室"
 layout: page
 permalink: /lab
 ---
