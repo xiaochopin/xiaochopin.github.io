@@ -8,6 +8,7 @@ url: https://xiaochopin.github.io
 baseurl: /
 permalink: /:categories/:year/:month/:day/:title
 future: true
+timezone: Asia/Shanghai
 # Menu
 menu:
   - menu.md
