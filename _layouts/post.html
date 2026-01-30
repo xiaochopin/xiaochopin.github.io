@@ -79,8 +79,17 @@ layout: default
       el: '#waline',
       serverURL: 'https://rebroncloud.zeabur.app',
       path: '{{ page.url }}',
-      placeholder: '说点什么吧？',
+      locale: {
+        placeholder: '飘去飘来的笔迹是深藏的激情你的心语',
+        }
     });
+    const timer = setInterval(() => {
+    const emptyEl = document.querySelector('.wl-empty');
+    if (emptyEl) {
+      emptyEl.textContent = '春雨不眠隔夜的你曾空独眠的日子';
+      clearInterval(timer);
+      }
+    }, 100);
   </script>
 
 </details>
