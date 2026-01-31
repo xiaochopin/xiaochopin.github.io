@@ -46,12 +46,12 @@ And, I need some `inline code` here, which should be `long` enough. It is becaus
 >>
 
 
-| Table | Style    | Is       | Here          |
-| ----- | -------- | -------- | ------------- |
-| 1     | gold     | David    | Tokyo         |
-| 2     | platinum | Aaron    | Beijing       |
-| 3     | silver   | Gareth   | San Francisco |
-| 4     | diamond  | Mitchell | London        |
+| Table | Style    | Is       | Here          | Table | Style    | Is       | Here          | Table | Style    | Is       | Here          |
+| ----- | -------- | -------- | ------------- | ----- | -------- | -------- | ------------- | ----- | -------- | -------- | ------------- |
+| 1     | gold     | David    | Tokyo         | 1     | gold     | David    | Tokyo         | 1     | gold     | David    | Tokyo         |
+| 2     | platinum | Aaron    | Beijing       | 2     | platinum | Aaron    | Beijing       | 2     | platinum | Aaron    | Beijing       |
+| 3     | silver   | Gareth   | San Francisco | 3     | silver   | Gareth   | San Francisco | 3     | silver   | Gareth   | San Francisco |
+| 4     | diamond  | Mitchell | London        | 4     | diamond  | Mitchell | London        | 4     | diamond  | Mitchell | London        |
 
 * List 1
   * Item 1

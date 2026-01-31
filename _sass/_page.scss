@@ -58,24 +58,56 @@
     // 表格与代码块的适配，保持与文章一致
     table {
       display: block;
-      width: 100%;
+      width: max-content;
+      min-width: 100%;
+      max-width: 100%;
+      table-layout: auto;
       overflow-x: auto;
+      overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
+      background-color: rgba($bg-color, 0.6);
+      border: 1px solid rgba($main-color, 0.08);
+      border-radius: .6rem;
 
-      tr {
-        &:hover {
-          background-color: $light-color;
-        }
+      caption {
+        caption-side: bottom;
+        color: $sub-color;
+        font-size: 1rem;
+        padding: .4rem 0 0;
+        text-align: left;
+      }
 
-        th {
-          background-color: $light-color;
-          padding: .2rem .4rem;
-        }
+      thead th {
+        background-color: rgba($link-color, 0.25);
+        color: $sub-color;
+        font-weight: 600;
+      }
 
-        td {
-          padding: .2rem .4rem;
-        }
+      tbody tr:nth-child(even) {
+        background-color: rgba($bg-color, 0.85);
+      }
+
+      tbody tr:hover {
+        background-color: rgba($link-color, 0.2);
+      }
+
+      th,
+      td {
+        padding: .45rem .6rem;
+        border-bottom: 1px solid rgba($main-color, 0.08);
+        border-right: 1px solid rgba($main-color, 0.06);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      tr > *:last-child {
+        border-right: 0;
+      }
+
+      tbody tr:last-child td {
+        border-bottom: 0;
       }
     }
 
