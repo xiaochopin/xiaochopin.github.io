@@ -2,7 +2,7 @@
 layout: post
 title: 轻小说短评（更新中）
 description: "我将会把我看过的轻小说的简介和我的评价放在这里，以供参考。"
-tags: [读书笔记]
+tags: [动漫]
 ---
 ### 前言
 
