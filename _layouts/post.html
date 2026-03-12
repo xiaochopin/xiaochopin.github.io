@@ -66,10 +66,11 @@ layout: default
 
     -->
 
-  <h5>评论区检修中</h5>
-    <!-- 
 <details class="post-details">
   <summary class="fa fa-comments-o summary-btn"> 笔底闲谈</summary>
+  <blockquote>
+  <p>评论区更换服务商导致加载较慢请见谅<br>（可使用某些神秘上网手段优化体验）</p>
+</blockquote>
   <div class="details-content">
     <div class="details-inner">
       <div id="waline"></div>
@@ -80,7 +81,7 @@ layout: default
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
     init({
       el: '#waline',
-      serverURL: 'https://rebroncloud.zeabur.app',
+      serverURL: 'https://waline.xiaochopin.dpdns.org',
       path: '{{ page.url }}',
       locale: {
         placeholder: '飘去飘来的笔迹是深藏的激情你的心语',

@@ -112,6 +112,30 @@
       color: $light-color !important;
     }
   }
+  .wl-content:has(> .wl-reply-to) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .25rem;
+  }
+  .wl-reply-to {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    flex: 0 0 auto;
+    margin: 0 !important;
+  }
+  .wl-content > .wl-reply-to + div {
+    display: inline;
+  }
+  .wl-reply-to a,
+  .wl-reply-to,
+  .wl-reply-to p,
+  .wl-content > .wl-reply-to + div p {
+    display: inline;
+    line-height: 1.3rem !important;
+    margin: 0 !important;
+  }
   .wl-delete,
   .wl-close {
     border: none !important;
