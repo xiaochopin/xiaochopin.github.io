@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 掌机音游黄金时期的一角
-description: 
+description: 前阵子购买了一台PSP专门用于打音游，不得不说那个时代的掌机音游真的是百花齐放。
 tags: [游戏]
 ---
 
