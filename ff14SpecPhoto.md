@@ -54,3 +54,17 @@ permalink: /ff14SpecPhoto
 无奈你我各有角色范围</center>
 
 + 26.2.6
+
+#### 周杰伦《不能说的秘密》
+
+![](https://xiaochopin.dpdns.org/zjl.webp)
+<center>妳說把愛漸漸放下會走更遠</center>
+
++ 26.3.14 出镜：茶伊@水晶塔、艾默里克
+
+### 蔡依林《城堡》
+
+![](https://xiaochopin.dpdns.org/lin.webp)
+<center>恋爱百分百 其实知道你的心</center>
+
++ 26.5.1 出镜：红老二@水晶塔
