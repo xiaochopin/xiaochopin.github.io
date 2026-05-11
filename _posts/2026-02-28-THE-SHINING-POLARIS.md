@@ -11,4 +11,4 @@ tags: [日常, 音乐]
 
 ![](https://xiaochopin.dpdns.org/1a553b1233d012b48afc2f144ddc15b1.webp)
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=86 src="//music.163.com/outchain/player?type=2&id=3327539325&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=86 src="//music.163.com/outchain/player?type=2&id=3327539325&auto=0&height=66"></iframe>

@@ -106,7 +106,7 @@ tags: [怀古伤今]
 该怎么办才好呀？  
 もうどうだっていいや  
 已经怎么样都无所谓啊！  
-><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=86 src="//music.163.com/outchain/player?type=2&id=514543097&auto=1&height=66"></iframe>
+><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=86 src="//music.163.com/outchain/player?type=2&id=514543097&auto=0&height=66"></iframe>
 
 结束了，算了，无所谓了。
 
