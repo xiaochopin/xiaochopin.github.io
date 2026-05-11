@@ -181,6 +181,9 @@
           if (typeof initCodeCopy === 'function') {
             try { initCodeCopy(); } catch (e) {}
           }
+          if (typeof initImageLoader === 'function') {
+            try { initImageLoader(); } catch (e) {}
+          }
           if (typeof shuffleThings === 'function') {
             try { shuffleThings(); } catch (e) {}
           }
@@ -249,6 +252,9 @@
         }
         if (typeof initCodeCopy === 'function') {
           try { initCodeCopy(); } catch (e) {}
+        }
+        if (typeof initImageLoader === 'function') {
+          try { initImageLoader(); } catch (e) {}
         }
       }
       

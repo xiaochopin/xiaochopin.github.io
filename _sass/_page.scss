@@ -14,29 +14,37 @@
       text-align: left;
     }
 
+    // 图片占位符包装器 - 16:9 宽高比
+    .img-wrapper {
+      margin: 1rem auto;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: #f5f5f5;
+      aspect-ratio: 16 / 9;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      transition: background 0.2s ease-out;
+
+      // 加载完成后隐藏占位符背景
+      &.loaded {
+        background: transparent;
+      }
+
+      @media (max-width: $breakpoint) {
+        margin: 1rem auto;
+        border-radius: 1rem;
+      }
+    }
+
     // 页面正文图片自适应，与文章样式保持一致
     img {
       max-width: 100%;
       width: 100%;
       height: auto;
       display: block;
-      margin: 1rem auto;
       border-radius: 1rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
       min-width: 100%;
 
       @media (max-width: $breakpoint) {
-
-    // 覆盖头像样式，避免被通用 img 规则拉伸
-    .things-avatar img {
-      width: 80px;
-      height: 80px;
-      min-width: auto;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: none;
-      margin: 0;
-    }
         margin: 1rem auto;
         border-radius: 1rem;
         min-width: 100%;
