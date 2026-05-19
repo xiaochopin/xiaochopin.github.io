@@ -1,5 +1,5 @@
 function initImageLoader() {
-  const images = document.querySelectorAll('.article-main img, .page-main img');
+  const images = document.querySelectorAll('.article-main img:not(.things-avatar img), .page-main img:not(.things-avatar img)');
   
   images.forEach(img => {
     // 跳过已经处理过的图片
