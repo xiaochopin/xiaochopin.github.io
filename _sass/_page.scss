@@ -67,12 +67,14 @@
     table {
       display: block;
       width: max-content;
-      min-width: 100%;
+      min-width: 0;
       max-width: 100%;
       table-layout: auto;
       overflow-x: auto;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
+      margin-left: auto;
+      margin-right: auto;
       border-collapse: separate;
       border-spacing: 0;
       background-color: rgba($bg-color, 0.6);

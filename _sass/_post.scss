@@ -118,12 +118,14 @@ ul {
 table {
   display: block;
   width: max-content;
-  min-width: 100%;
+  min-width: 0;
   max-width: 100%;
   table-layout: auto;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  margin-left: auto;
+  margin-right: auto;
   border-collapse: separate;
   border-spacing: 0;
   background-color: rgba($bg-color, 0.6);
@@ -211,14 +213,18 @@ table {
     }
   }
 
-  // 表格在小屏幕上允许横向滚动，但不撑破页面布局
+  // 表格按内容宽度显示，短表居中，宽表可横向滚动
   table {
     display: block;
-    width: 100%;
+    width: max-content;
+    min-width: 0;
     max-width: 100%;
+    table-layout: auto;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   // 代码块和预格式化内容处理
