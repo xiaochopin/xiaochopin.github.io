@@ -56,7 +56,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry_1.outputs.page_url || steps.deployment_retry_2.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -67,16 +67,30 @@ jobs:
         with:
           # Improve resilience against transient Pages API/status polling failures.
           error_count: 30
-      - name: Retry deploy to GitHub Pages
-        id: deployment_retry
+      - name: Wait before first retry
         if: steps.deployment.outcome == 'failure'
+        run: sleep 15
+      - name: Retry deploy to GitHub Pages
+        id: deployment_retry_1
+        if: steps.deployment.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+        with:
+          error_count: 30
+      - name: Wait before second retry
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry_1.outcome == 'failure'
+        run: sleep 30
+      - name: Retry deploy to GitHub Pages again
+        id: deployment_retry_2
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry_1.outcome == 'failure'
+        continue-on-error: true
         uses: actions/deploy-pages@v4
         with:
           error_count: 30
       - name: Fail if deploy ultimately failed
-        if: steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure'
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry_1.outcome == 'failure' && steps.deployment_retry_2.outcome == 'failure'
         run: |
-          echo "Both initial deploy and retry failed."
+          echo "All deploy attempts failed."
           exit 1
 
   notify:
