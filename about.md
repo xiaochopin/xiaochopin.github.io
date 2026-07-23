@@ -20,7 +20,7 @@ permalink: /about
 
 -->
 
-重生云是我的个人博客，基于[Jekyll](https://jekyllrb.com/)和[Github Pages](https://docs.github.com/pages)。
+重生云是我的个人博客，基于 [Jekyll](https://jekyllrb.com/) 和 [Github Pages](https://docs.github.com/pages)。
 
 #### 这里有什么
 
