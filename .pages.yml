@@ -31,3 +31,8 @@ content:
         label: 正文内容
         type: rich-text
         required: true
+    others:
+      - name: title
+        label: 文件中的标题
+        type: string
+        required: true
