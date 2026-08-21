@@ -4,7 +4,6 @@ content:
     type: collection
     path: _posts
     format: yaml-frontmatter
-    # 文件名自动按 Jekyll 标准生成: 2026-08-21-半日闲.md
     filename: "{year}-{month}-{day}-{fields.title}.md"
     fields:
       - name: title
@@ -16,26 +15,23 @@ content:
         label: 日期
         type: date
         required: true
-        default: "{{now}}"   # 新建时默认今天
+        default: "{{now}}"
 
-      # 对应你文章里的 description: 恰若青石的街道向晚
       - name: description
         label: 描述/副标题
         type: string
         required: false
 
-      # ⭐ 核心动态字段：对应你的 tags: [日常, 出外的人]
       - name: tags
         label: 标签
         type: string
-        list: true          # 开启多选/多输入
-        # 故意不写 options，实现完全自由的动态输入
+        list: true
 
       - name: layout
         label: 布局
         type: string
         default: post
-        hidden: true        # 不用管它，默认就是 post
+        hidden: true
 
       - name: body
         label: 正文内容
