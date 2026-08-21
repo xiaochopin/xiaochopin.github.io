@@ -14,7 +14,7 @@ content:
       - name: date
         label: 日期
         type: date
-        required: true
+        required: false
         default: "{{now}}"
 
       - name: description
