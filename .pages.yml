@@ -6,7 +6,7 @@ content:
     format: yaml-frontmatter
     filename:
         template: "{year}-{month}-{day}-{primary}.md"
-        field: create   # 在新建时显示文件名输入框，让你手动编辑
+        field: create
     fields:
       - name: title
         label: 标题
@@ -32,9 +32,4 @@ content:
       - name: body
         label: 正文内容
         type: rich-text
-        required: true
-    others:
-      - name: title
-        label: 文件中的标题
-        type: string
         required: true
