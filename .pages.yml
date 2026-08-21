@@ -4,7 +4,9 @@ content:
     type: collection
     path: _posts
     format: yaml-frontmatter
-    filename: "{year}-{month}-{day}-{others.title}.md"
+    filename:
+        template: "{year}-{month}-{day}-{primary}.md"
+        field: create   # 在新建时显示文件名输入框，让你手动编辑
     fields:
       - name: title
         label: 标题
