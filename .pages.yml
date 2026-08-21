@@ -4,7 +4,7 @@ content:
     type: collection
     path: _posts
     format: yaml-frontmatter
-    filename: "{year}-{month}-{day}-{fields.title}.md"
+    filename: "{year}-{month}-{day}-{others.title}.md"
     fields:
       - name: title
         label: 标题
