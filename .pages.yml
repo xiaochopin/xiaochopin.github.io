@@ -11,12 +11,6 @@ content:
         type: string
         required: true
 
-      - name: date
-        label: 日期
-        type: date
-        required: false
-        default: "{{now}}"
-
       - name: description
         label: 描述/副标题
         type: string
