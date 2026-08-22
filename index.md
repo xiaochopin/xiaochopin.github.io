@@ -1,5 +1,6 @@
 ---
 title: Home
+custom_title: 重生云
 description: "明月装饰了你的窗，你装饰了别人的梦。"
 layout: page
 ---
