@@ -6,7 +6,15 @@
   <link href="https://cdn.jsdmirror.com/npm/hack-font@3.3.0/build/web/hack.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <title>{% if page.custom_title %}{{ page.custom_title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
-  {% seo title=false %}
+  {% capture seo_output %}{% seo title=false %}{% endcapture %}
+  {% capture newline %}
+  {% endcapture %}
+  {% assign seo_lines = seo_output | split: newline %}
+  {% for line in seo_lines %}
+    {% unless line contains 'property="og:title"' or line contains 'name="twitter:' or line contains 'property="twitter:' %}
+      {{ line }}
+    {% endunless %}
+  {% endfor %}
   {% if page.syntax_highlight != false %}
   <link rel="stylesheet" href="{{ "/assets/css/tomorrow-night-eighties.css" | relative_url }} ">
   {% endif %}
