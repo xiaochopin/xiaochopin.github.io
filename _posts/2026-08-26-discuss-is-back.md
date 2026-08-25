@@ -23,7 +23,7 @@ tags: [站点维护]
 
 主要原因是访问速度慢，根本原因是我是傻逼。
 
-这里非常感谢 UpXuu 的文章[《什么？你的vercel还没深绿？一文研究透vercel优选|缓存配置》](https://upxuu.com/posts/vercel-youxuan-cache/)让我得知了 Vercel 原来是可以在大陆地区正常访问的，经过一系列的配置，现在的评论区应该是可以正常使用了。
+这里非常感谢 UpXuu 的文章[《什么？你的vercel还没深绿？一文研究透vercel优选缓存配置》](https://upxuu.com/posts/vercel-youxuan-cache/)让我得知了 Vercel 原来是可以在大陆地区正常访问的，经过一系列的配置，现在的评论区应该是可以正常使用了。
 
 今后也欢迎大家多多来我的评论区互动。
 
