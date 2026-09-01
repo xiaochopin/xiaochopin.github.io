@@ -36,7 +36,9 @@ permalink: /about
 
 这句话放在博客上也同样适用，不过不同的在于，朋友圈的信息过于碎片化，而博客可以更加完整的记录下当时的心情和想法。
 
-再者就是，想督促自己写点东西，锻炼下自己贫瘠的语言表达能力。
+再者就是，想督促自己写点东西，思考一些事情。
+
+毕竟人不能总是逃避。
 
 #### 碎碎念
 
@@ -77,8 +79,8 @@ The shining starlight
 
 #### License
 
-* 本博客所有文章除特别声明外，均采用[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)许可协议。转载请注明来自[xiaochopin](https://github.com/xiaochopin)。
+* 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 许可协议。转载请注明来自 [xiaochopin](https://github.com/xiaochopin)。
 
-* 站点主题以[Jekyll Crisp Minimal Theme](https://github.com/crispgm/minimal)为基础深度修改而来。
+* 站点主题以 [Jekyll Crisp Minimal Theme](https://github.com/crispgm/minimal) 为基础深度修改而来。
 
-* [站点源码](https://github.com/xiaochopin/xiaochopin.github.io)采用[MIT](https://github.com/xiaochopin/xiaochopin.github.io/blob/main/LICENSE)许可协议。
+* [站点源码](https://github.com/xiaochopin/xiaochopin.github.io)采用 [MIT](https://github.com/xiaochopin/xiaochopin.github.io/blob/main/LICENSE) 许可协议。
