@@ -48,15 +48,10 @@ permalink: /about
 
 不管怎么样，很高兴再次遇见你。
 
->I found my way in the light  
-Believe it, I can go anywhere  
-Now I just see the shining polarstar  
-I'll never lose my own way  
-If you are shining like the star in my eyes  
-Lead me by your brilliant light  
-The shining starlight  
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=86 src="//music.163.com/outchain/player?type=2&id=22662067&auto=0&height=66"></iframe>
+>梦的时代我在胡说  
+梦醒时刻才会解脱  
+我不知道我不能去说  
+我不能，不能，不能...
 
 #### 我是谁
 
