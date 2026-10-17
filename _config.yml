@@ -32,7 +32,6 @@ issue_report:
   github: xiaochopin/xiaochopin.github.io
 # Exclusion
 exclude:
-  - Rakefile
   - Gemfile
   - Gemfile.lock
   - LICENSE
