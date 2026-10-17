@@ -7,14 +7,12 @@
     </div>
     <div class="content" id="main-content">
       <div class="content-wrapper">
-        <div id="react-app">
-          {{ content }}
-        </div>
+        <div id="react-app"><div class="page-transition">{{ content }}</div></div>
       </div>
     </div>
     {% include footer.html %}
     {% include syntax_highlight.html %}
     
-    <script src="{{ "/assets/scripts/react.js" | relative_url }}"></script>
+    <script defer src="{{ "/assets/scripts/react.js" | relative_url }}"></script>
   </body>
 </html>

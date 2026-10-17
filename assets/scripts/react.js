@@ -84,9 +84,34 @@
     requestAnimationFrame(() => setTimeout(resolve, FADE_OUT_DURATION));
   });
 
+  // 服务端在 #react-app 里额外包了一层 .page-transition 供首屏水合使用，
+  // SPA 跳转时也只取这层包裹内部的 HTML，避免出现双层包裹。
+  const readAppContent = (appEl) => {
+    if (!appEl) return '';
+    const wrapper = appEl.querySelector(':scope > .page-transition');
+    return (wrapper || appEl).innerHTML;
+  };
+
+  // 只高亮还没处理过的代码块：避免每次 SPA 跳转都把整页 <pre> 重新扫一遍
+  const highlightCodeBlocks = (scope) => {
+    if (!window.hljs) return;
+    const root = scope || document;
+    root.querySelectorAll('pre code').forEach((block) => {
+      if (block.dataset.hljsDone === '1' || block.classList.contains('hljs')) return;
+      try {
+        if (typeof hljs.highlightBlock === 'function') hljs.highlightBlock(block);
+        else if (typeof hljs.highlightElement === 'function') hljs.highlightElement(block);
+        block.dataset.hljsDone = '1';
+      } catch (err) {}
+    });
+  };
+
+  // CDN 版 highlight.js 加载失败时，本地兜底脚本就绪后回调这里补一次高亮
+  window.__hljsReady = () => highlightCodeBlocks(document.getElementById('react-app'));
+
   function App() {
     const initialContainer = document.getElementById('react-app');
-    const [content, setContent] = useState(initialContainer ? initialContainer.innerHTML : '');
+    const [content, setContent] = useState(readAppContent(initialContainer));
     const [loading, setLoading] = useState(false);
     const [instantLoading, setInstantLoading] = useState(false);
     const navId = useRef(0);
@@ -166,7 +191,12 @@
 
         const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
         document.title = doc.title;
-        setContent(doc.getElementById('react-app').innerHTML);
+        // 离开当前页前先销毁评论区实例，避免多次 init 累积
+        if (window.__waline && typeof window.__waline.destroy === 'function') {
+          try { window.__waline.destroy(); } catch (err) {}
+          window.__waline = null;
+        }
+        setContent(readAppContent(doc.getElementById('react-app')));
         if (!isPop) history.pushState({}, '', url);
         lastHrefRef.current = target.href;
 
@@ -174,10 +204,7 @@
           if (curId !== navId.current) return;
           const container = document.getElementById('react-app');
           executeScripts(container);
-          if (window.hljs && typeof hljs.initHighlighting === 'function') {
-            try { hljs.initHighlighting.called = false; } catch (e) {}
-            try { hljs.initHighlighting(); } catch (e) {}
-          }
+          highlightCodeBlocks(container);
           if (typeof initCodeCopy === 'function') {
             try { initCodeCopy(); } catch (e) {}
           }
@@ -239,17 +266,17 @@
     useEffect(() => {
       if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
       
-      // 首次渲染后执行页面内脚本（因为 React 接管后 DOM 被重建）
+      // 首屏若走了水合，服务端 HTML 里的内联脚本在解析阶段已经执行过、
+      // DOM 节点也被 React 保留，无需重跑；只有客户端重建 DOM 时才重新执行。
       const container = document.getElementById('react-app');
       if (container) {
-        executeScripts(container);
+        if (!container.querySelector('script[data-server-executed]')) {
+          executeScripts(container);
+        }
         if (typeof shuffleThings === 'function') {
           try { shuffleThings(); } catch (e) {}
         }
-        if (window.hljs && typeof hljs.initHighlighting === 'function') {
-          try { hljs.initHighlighting.called = false; } catch (e) {}
-          try { hljs.initHighlighting(); } catch (e) {}
-        }
+        highlightCodeBlocks(container);
         if (typeof initCodeCopy === 'function') {
           try { initCodeCopy(); } catch (e) {}
         }
@@ -304,4 +331,24 @@
     return e('div', { className: `page-transition ${loading ? 'loading' : ''} ${instantLoading ? 'instant-loading' : ''}`, dangerouslySetInnerHTML: { __html: content } });
   }
 
-  ReactDOM.createRoot(document.getElementById('react-app')).render(e(App));
+  // 首屏优先水合服务端渲染好的 DOM：React 保留现有节点，不再整段重建
+  // （省一次 HTML 重解析，图片与评论组件也不会被丢弃重建）。
+  // 服务端结构不符合预期时回退到原来的客户端渲染。
+  (function mount() {
+    const container = document.getElementById('react-app');
+    if (!container) return;
+
+    // 标记服务端内联脚本已由浏览器执行过（水合时该属性会被保留）
+    const firstScript = container.querySelector('script');
+    if (firstScript) firstScript.setAttribute('data-server-executed', '1');
+
+    const canHydrate = typeof ReactDOM.hydrateRoot === 'function'
+      && container.firstElementChild
+      && container.firstElementChild.classList.contains('page-transition');
+
+    if (canHydrate) {
+      ReactDOM.hydrateRoot(container, e(App));
+    } else {
+      ReactDOM.createRoot(container).render(e(App));
+    }
+  })();

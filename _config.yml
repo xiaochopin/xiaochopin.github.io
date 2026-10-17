@@ -41,6 +41,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-minifier
 
+# 关闭 Sass sourcemap，避免 43KB 的 style.css.map 随产物发布
+sass:
+  sourcemap: never
+
 defaults:
   - scope:
       path: ""
@@ -48,8 +52,7 @@ defaults:
       image: /favicon.ico
 
 jekyll-minifier:
-  exclude: 'about.md'
-  exclude: 'feed.xml'
+  exclude: ['about.md', 'feed.xml']
   preserve_php: true
   remove_spaces_inside_tags: false
   remove_multi_spaces: false

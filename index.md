@@ -4,7 +4,7 @@ custom_title: 重生云
 description: "明月装饰了你的窗，你装饰了别人的梦。"
 layout: page
 ---
-<p style="margin-top: 0!important;"><img src="https://xiaochopin.dpdns.org/index3.webp" alt="" style="margin-top: 0!important;"></p>
+<p style="margin-top: 0!important;"><img src="https://xiaochopin.dpdns.org/index3.webp" alt="" loading="eager" fetchpriority="high" decoding="async" style="margin-top: 0!important;"></p>
 
 <h1 class="page-title" id="latest-posts">最新最热</h1>
 

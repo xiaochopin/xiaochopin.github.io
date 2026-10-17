@@ -33,15 +33,6 @@ function initImageLoader() {
       aspectRatioApplied = true;
     };
 
-    const watchNaturalSize = () => {
-      applyNaturalAspectRatio();
-      if (aspectRatioApplied || img.complete) {
-        return;
-      }
-
-      requestAnimationFrame(watchNaturalSize);
-    };
-    
     // 当前图片 src，如果已加载则直接标记为 loaded
     const handleLoad = () => {
       applyNaturalAspectRatio();
@@ -57,17 +48,49 @@ function initImageLoader() {
     if (img.complete) {
       handleLoad();
     } else {
-      // 监听 load 和 error 事件
-      img.addEventListener('load', handleLoad);
-      img.addEventListener('error', handleError);
-      watchNaturalSize();
+      // 监听 load 和 error 事件（once，避免 SPA 反复替换后监听器累积）
+      img.addEventListener('load', handleLoad, { once: true });
+      img.addEventListener('error', handleError, { once: true });
+      // 缓存命中但 complete 尚未置位、或 load 事件错过的边界情况：
+      // decode() 解析完成后补一次，替代原来每张图一个 requestAnimationFrame 轮询
+      if (typeof img.decode === 'function') {
+        img.decode().then(() => {
+          if (img.naturalWidth) handleLoad();
+        }).catch(() => {});
+      }
     }
   });
 }
 
-// 页面初始加载时初始化
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initImageLoader);
-} else {
+// 页面初始加载时初始化。
+// 本文件以 defer 加载：执行时 readyState 已是 interactive，但 DOMContentLoaded 还没触发，
+// 因此仍然注册监听，保证在 React 接管并重建 #react-app 之后再处理图片。
+// （直接同步执行会作用在即将被 React 丢弃的服务端 DOM 上，占位容器会一起消失）
+if (document.readyState === 'complete') {
   initImageLoader();
+} else {
+  document.addEventListener('DOMContentLoaded', initImageLoader);
 }
+
+// React 的首次渲染与 SPA 跳转都会整体重建 #react-app 的子树，
+// 用 MutationObserver 兜底：只要内容变了就补一次占位容器（已处理过的图片有 data 标记，不会重复包装）。
+(function observeReactApp() {
+  const app = document.getElementById('react-app');
+  if (!app || typeof MutationObserver !== 'function') {
+    return;
+  }
+
+  let scheduled = false;
+  const observer = new MutationObserver(() => {
+    if (scheduled) {
+      return;
+    }
+    scheduled = true;
+    requestAnimationFrame(() => {
+      scheduled = false;
+      initImageLoader();
+    });
+  });
+
+  observer.observe(app, { childList: true, subtree: true });
+})();
