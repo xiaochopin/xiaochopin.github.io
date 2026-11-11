@@ -1,219 +1,279 @@
+// Theme of 重生云
+// Copyright(c) chopin, 2023
+//
+// Waline 评论区样式覆盖
+// ---------------------------------------------------------------------------
+// 特异性说明（本文件不使用 !important 的原因）：
+//   上游 waline.css 的最高特异性仅到 [data-waline] p (0,1,1) / .wl-card .wl-content (0,2,0)，
+//   站点全局样式（button、input、textarea、p）最高只到 (0,0,1)~(0,1,1)。
+//   #waline 前缀让本文件的每条规则至少达到 (1,0,1)，已稳压全部对手，无需 !important。
+// 注意 style.css 在 head 中早于 waline.css 载入，同特异性时上游会赢在顺序上，因此这里靠 id 权重而非顺序。
+// 组织顺序：先元素级默认值（button 等），再用类级规则细化，避免被默认值反压。
+
 #waline {
   --waline-theme-color: #{$link-color};
   --waline-active-color: #{$link-color};
   --waline-bg-color: #{$bg-color};
   --waline-bg-color-hover: #{$link-color};
+
+  // ---------------------------------------------------------------------------
+  // 布局微调
+  // ---------------------------------------------------------------------------
+  .wl-panel {
+    border-radius: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .wl-comment {
+    padding-top: 2.6rem;
+  }
+
+  .wl-card {
+    padding-top: .5rem;
+  }
+
+  .wl-content {
+    padding: 0;
+  }
+
+  .wl-quote,
+  .wl-header {
+    padding: 0;
+  }
+
   .wl-avatar {
     padding: 0;
+
     img {
       width: 48px;
       height: 48px;
       border-radius: 50%;
     }
   }
-  .wl-comment{
-    padding-top: 2.6rem;
+
+  .wl-editor {
+    margin-bottom: 0;
   }
-  .wl-content {
-    padding: 0;
-  }
-  .wl-card {
-    padding-top: .5rem;
-  }
+
+  // ---------------------------------------------------------------------------
+  // 基础排版
+  // ---------------------------------------------------------------------------
   .wl-cards,
   .wl-card,
   .wl-content,
   .wl-meta {
-    font-size: 1rem !important;
-    line-height: 1.8rem !important;
-    color: $main-color !important;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: $main-color;
   }
-  @at-root {
-    .article-main #waline .wl-content p,
-    .article-main #waline .wl-content.p,
-    .article-main #waline .wl-content.p p,
-    .article-main #waline .wl-content > p {
-      font-size: 1.3rem !important;
-      line-height: 1.3rem !important;
-      color: $main-color !important;
-      margin: 0 !important;
-    }
-    #waline p {
-      margin: 0 !important;
-      padding: 0;
+
+  // 抵消 _post.scss 全局 p 的上外边距
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  // ---------------------------------------------------------------------------
+  // 隐藏不需要的元素
+  // 注：.wl-addr / .wl-browser / .wl-os 是 .wl-meta 里的 IP 归属地、系统、浏览器标签；
+  //     .wl-power 是 "Powered by Waline"。
+  //     v3 的徽章（等级 / 置顶 / 标签）位于 .wl-head .wl-badge，不在 .wl-header 或 .wl-meta 中。
+  // ---------------------------------------------------------------------------
+  .wl-addr,
+  .wl-browser,
+  .wl-os,
+  .wl-power {
+    display: none;
+  }
+
+  // 隐藏表情 / 表情包按钮（文案对应默认 zh-CN locale，post.html 未覆盖表情按钮相关字段）
+  .wl-action[title="表情"],
+  .wl-action[title="表情包"] {
+    display: none;
+  }
+
+  // ---------------------------------------------------------------------------
+  // 输入框：扁平化，聚焦时才出现底色
+  // ---------------------------------------------------------------------------
+  .wl-header {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .wl-header-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    label {
+      font-size: 1rem;
     }
   }
-  .wl-input,
-  .wl-nick {
+
+  .wl-header input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid transparent;
+    border-radius: .5rem;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    padding: 0 .5rem;
+    margin: .5rem .5rem .5rem 0;
+    font-size: 1rem;
+    color: $main-color;
+    transition: border-color .2s ease;
+
+    &:focus {
+      background-color: #fff;
+    }
+  }
+
+  // 注：.wl-nick 同时是评论者昵称的类名，这里只针对输入框（input 同时带 .wl-input）
+  .wl-input {
     border: 1px solid $input-border-color;
     padding: .8rem;
     font-size: 1rem;
     background: #fff;
     color: $main-color;
     transition: border-color .2s ease, box-shadow .2s ease;
-    margin: 0 !important;
-  }
-  .wl-nick::placeholder,
-  .wl-input::placeholder {
-    color: $light-color;
-  }
-  .wl-quote,
-  .wl-header {
-    padding: 0;
-  }
-  .wl-header {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  .wl-header-item {
-    flex: 1;
-    display: flex;
-    align-items: center;
     margin: 0;
   }
-  .wl-addr,
-  .wl-browser,
-  .wl-os,
-  .wl-header .wl-badge {
-    display: none !important;
+
+  .wl-input::placeholder,
+  .wl-nick::placeholder {
+    color: $light-color;
   }
-  .wl-header input {
-    width: 100%;
-    border: none !important;
+
+  // ---------------------------------------------------------------------------
+  // 按钮：默认透明，悬停填充主题色
+  // 元素级规则打底，下面各条类级规则覆盖 wl-action / wl-delete / wl-close / wl-logout-btn
+  // ---------------------------------------------------------------------------
+  button {
+    border: none;
+    padding: .25rem .5rem;
+    line-height: 1.3rem;
     border-radius: .5rem;
-    border-bottom: 1px solid transparent !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    outline: none !important;
-    padding: 0 0.5rem!important;
-    margin: .5rem .5rem .5rem 0 !important;
-    font-size: 1rem;
-    color: $main-color;
-    transition: border-color .2s ease;
-    &:focus {
-      background-color: #fff !important;
-    }
-  }
-  .wl-logout-btn,
-  .wl-btn{
+    color: $link-color;
+    background-color: transparent;
+    transition: background-size .3s ease-out, color .2s ease;
+
     &:hover {
-      background: transparent !important;
-      transition: all 0.3s ease;
+      color: #fff;
+      background-color: $link-color;
+      transition: all .3s ease;
     }
   }
+
+  // 操作栏（点赞 / 回复）
   .wl-action,
   .wl-like,
   .wl-reply {
-    padding: 0 .5rem !important;
-    background: transparent !important;
+    padding: 0 .5rem;
+    background: transparent;
+
     &:hover {
-      transition: all 0.3s ease;
-      background: transparent !important;
-      color: $light-color !important;
+      background: transparent;
+      color: $light-color;
+      transition: all .3s ease;
     }
   }
+
+  // 删除 / 关闭：去掉默认按钮外观
+  .wl-delete,
+  .wl-close {
+    border: none;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent;
+      border: none;
+      outline: none;
+      transition: all .3s ease;
+    }
+  }
+
+  // 退出登录按钮：悬停保持透明（需排在通用 button 规则之后）
+  .wl-logout-btn:hover {
+    background: transparent;
+    transition: all .3s ease;
+  }
+
+  // ---------------------------------------------------------------------------
+  // 登录态头像
+  // ---------------------------------------------------------------------------
+  .wl-login-nick {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // 昵称
+  // 注：.wl-nick 同时是评论者昵称链接（a）的类名，这里只限定在 .wl-head 内；
+  //     不设置 color，保留上游 [data-waline] a 的主题色链接外观
+  // ---------------------------------------------------------------------------
+  .wl-head .wl-nick {
+    background: transparent;
+    border: none;
+    margin-right: .5rem;
+    padding: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  // ---------------------------------------------------------------------------
+  // 回复引用行：@某某: 与正文同行显示
+  // ---------------------------------------------------------------------------
   .wl-content:has(> .wl-reply-to) {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: .25rem;
   }
-  .wl-reply-to {
-    display: inline-flex;
-    align-items: center;
-    gap: .25rem;
-    flex: 0 0 auto;
-    margin: 0 !important;
-  }
+
   .wl-content > .wl-reply-to + div {
     display: inline;
   }
-  .wl-reply-to a,
+
+  .wl-reply-to {
+    align-items: center;
+    gap: .25rem;
+    flex: 0 0 auto;
+  }
+
   .wl-reply-to,
+  .wl-reply-to a,
   .wl-reply-to p,
   .wl-content > .wl-reply-to + div p {
     display: inline;
-    line-height: 1.3rem !important;
-    margin: 0 !important;
-  }
-  .wl-delete,
-  .wl-close {
-    border: none !important;
-    background: transparent !important;
-    outline: none !important;
-    box-shadow: none !important;
-    &:hover,
-    &:active,
-    &:focus {
-      background: transparent !important;
-      transition: all 0.3s ease;
-      border: none !important;
-      outline: none !important;
-    }
-  }
-  .wl-meta .wl-badge,
-  .wl-emoji-trigger,
-  .wl-power,
-  .wl-ua,
-  .wl-action[title="表情"],
-  .wl-action[title="表情包"] {
-    display: none !important;
-  }
-  
-  .wl-btn,
-  .wl-btn.primary,
-  button {
-    border: none !important;
-    padding: 0.25rem .5rem !important;
-    line-height: 1.3rem !important;
-    border-radius: .5rem;
-    color: $link-color !important;
-    transition: background-size .3s ease-out, color .2s ease;
-    background-color: transparent !important;
-    &:hover {
-      transition: all 0.3s ease;
-      color: #fff !important;
-      background-color: $link-color !important;
-    }
-  }
-
-
-  .wl-login-nick {
-    aspect-ratio: 1 / 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important;
-      border-radius: 50% !important;
-    }
-  }
-  .wl-head .wl-nick {
-    background: transparent !important;
-    border: none !important;
-    margin-right: .5rem !important;
-    padding: 0!important;
-    font-size: 1.3rem !important;
-    font-weight: 500 !important;
-  }
-  .wl-header-item label {
-    font-size: 1rem !important;
-  }
-  .wl-panel {
-    border-radius: 1rem;
-    padding: 0;
+    line-height: 1.3rem;
     margin: 0;
   }
-  .wl-editor {
-    margin-bottom: 0;
-  }
+
+  // ---------------------------------------------------------------------------
+  // 移动端适配
+  // ---------------------------------------------------------------------------
   @media (max-width: $breakpoint) {
     .wl-header {
       flex-wrap: wrap;
       flex-direction: column;
     }
+
     .wl-header-item {
       width: 100%;
       flex: 0 0 100%;
