@@ -11,7 +11,7 @@ tags: [技术, 游戏]
 
 ### 视觉
 
-许多经典的作品分辨率可能是720p或者更低，推荐使用 [Magpie](https://github.com/Blinue/Magpie) 来活得更清晰的画面。
+许多经典的作品分辨率可能是720p或者更低，推荐使用 [Magpie](https://github.com/Blinue/Magpie) 来获得更清晰的画面。
 
 个人常用的配置方案如下（屏幕为1440p，9060xt显卡占用极低）
 ![](https://xiaochopin.dpdns.org/95f0fec6d06d4a4ca8567cb7cd3ce18f.webp)
